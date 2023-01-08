@@ -15,6 +15,7 @@
 		D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */; };
 		D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF2296AB40C00F60521 /* UIView+Ext.swift */; };
 		D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF4296AB4D900F60521 /* CoreDataManager.swift */; };
+		D8337FFE296AD90800F60521 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FFD296AD90800F60521 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D8337FE3296AB0AA00F60521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8337FF2296AB40C00F60521 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		D8337FF4296AB4D900F60521 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D8337FFD296AD90800F60521 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		D8337FEF296AB3C100F60521 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D8337FFC296AD8BD00F60521 /* OnboardingScreen */,
 				D8337FFB296ABCBE00F60521 /* LoginScreen */,
 				D8337FD6296AB0A900F60521 /* ViewController.swift */,
 			);
@@ -135,6 +138,14 @@
 			children = (
 			);
 			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		D8337FFC296AD8BD00F60521 /* OnboardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D8337FFD296AD90800F60521 /* OnboardingViewController.swift */,
+			);
+			path = OnboardingScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 			files = (
 				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
+				D8337FFE296AD90800F60521 /* OnboardingViewController.swift in Sources */,
 				D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
