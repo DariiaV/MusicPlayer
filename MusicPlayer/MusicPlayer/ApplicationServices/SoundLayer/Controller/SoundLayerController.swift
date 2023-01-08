@@ -25,6 +25,14 @@ final class SoundLayerController: UIViewController {
         navigationItem.title = "Playing Now"
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        var nav = self.navigationController?.navigationBar
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+       
+    }
 }
 
 

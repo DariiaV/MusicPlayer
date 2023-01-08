@@ -125,8 +125,9 @@ class SoundLayerView: UIView  {
 // MARK: - Setup Constrains
 
  extension SoundLayerView {
-    
+         
     func addSybView() {
+        
         addSubview(imageViewMain)
         addSubview(performerMusicLabel)
         addSubview(nameMusicLabel)
@@ -137,6 +138,7 @@ class SoundLayerView: UIView  {
         addSubview(rightButton)
         addSubview(minuteStartLabel)
         addSubview(minuteFinishLabel)
+        
      
         imageViewMain.translatesAutoresizingMaskIntoConstraints = false
         performerMusicLabel.translatesAutoresizingMaskIntoConstraints = false
