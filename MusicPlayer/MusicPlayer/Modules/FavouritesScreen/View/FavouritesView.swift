@@ -77,7 +77,6 @@ extension FavouritesView {
         imageViewFavorites.translatesAutoresizingMaskIntoConstraints = false
         menuButton.translatesAutoresizingMaskIntoConstraints = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
     }
     
     func setupConstraints() {

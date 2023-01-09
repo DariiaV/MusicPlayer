@@ -48,7 +48,6 @@ extension FavouritesViewController: UITableViewDataSource {
             fatalError("Creating cell from HotelsListViewController failed")
         }
         
-      
         return cell
     }
 }
