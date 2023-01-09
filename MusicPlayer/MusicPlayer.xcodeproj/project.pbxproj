@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306514296ACF9A00E46455 /* SoundLayerController.swift */; };
 		50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306516296ACFB300E46455 /* SoundLayerView.swift */; };
+		50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030651F296BF1D000E46455 /* FavouritesViewController.swift */; };
+		50306523296BF20200E46455 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306522296BF20200E46455 /* FavouritesView.swift */; };
+		50306527296C020300E46455 /* FavouritiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306526296C020300E46455 /* FavouritiesCell.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
 		D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD6296AB0A900F60521 /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		50306514296ACF9A00E46455 /* SoundLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerController.swift; sourceTree = "<group>"; };
 		50306516296ACFB300E46455 /* SoundLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerView.swift; sourceTree = "<group>"; };
+		5030651F296BF1D000E46455 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		50306522296BF20200E46455 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		50306526296C020300E46455 /* FavouritiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritiesCell.swift; sourceTree = "<group>"; };
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,47 @@
 				50306519296ACFDC00E46455 /* Controller */,
 			);
 			path = SoundScreen;
+			sourceTree = "<group>";
+		};
+		5030651D296BF0FF00E46455 /* FavouritesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				50306521296BF1F700E46455 /* View */,
+				50306525296BF21D00E46455 /* Controller */,
+			);
+			path = FavouritesScreen;
+			sourceTree = "<group>";
+		};
+		5030651E296BF17600E46455 /* DownloadsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DownloadsScreen;
+			sourceTree = "<group>";
+		};
+		50306521296BF1F700E46455 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50306524296BF21400E46455 /* Cell */,
+				50306522296BF20200E46455 /* FavouritesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50306524296BF21400E46455 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				50306526296C020300E46455 /* FavouritiesCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		50306525296BF21D00E46455 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5030651F296BF1D000E46455 /* FavouritesViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D8337FC6296AB0A900F60521 = {
@@ -138,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				5030651C296B28A900E46455 /* SoundScreen */,
+				5030651D296BF0FF00E46455 /* FavouritesScreen */,
+				5030651E296BF17600E46455 /* DownloadsScreen */,
 				D8337FFB296ABCBE00F60521 /* LoginScreen */,
 				D8337FD6296AB0A900F60521 /* ViewController.swift */,
 			);
@@ -237,13 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */,
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
 				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */,
+				50306527296C020300E46455 /* FavouritiesCell.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
+				50306523296BF20200E46455 /* FavouritesView.swift in Sources */,
 				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
