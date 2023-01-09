@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048371296C302A00123A53 /* DownloadsViewController.swift */; };
+		50048374296C303A00123A53 /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048373296C303A00123A53 /* DownloadsView.swift */; };
+		50048376296C327900123A53 /* DownloadsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048375296C327900123A53 /* DownloadsCell.swift */; };
 		50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306514296ACF9A00E46455 /* SoundLayerController.swift */; };
 		50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306516296ACFB300E46455 /* SoundLayerView.swift */; };
 		50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030651F296BF1D000E46455 /* FavouritesViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50048371296C302A00123A53 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		50048373296C303A00123A53 /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
+		50048375296C327900123A53 /* DownloadsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsCell.swift; sourceTree = "<group>"; };
 		50306514296ACF9A00E46455 /* SoundLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerController.swift; sourceTree = "<group>"; };
 		50306516296ACFB300E46455 /* SoundLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerView.swift; sourceTree = "<group>"; };
 		5030651F296BF1D000E46455 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5004836E296C2FF300123A53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5004836F296C2FFB00123A53 /* Cell */,
+				50048373296C303A00123A53 /* DownloadsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5004836F296C2FFB00123A53 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				50048375296C327900123A53 /* DownloadsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		50048370296C300200123A53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50048371296C302A00123A53 /* DownloadsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		50306513296ACF5C00E46455 /* SoundLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +126,8 @@
 		5030651E296BF17600E46455 /* DownloadsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				5004836E296C2FF300123A53 /* View */,
+				50048370296C300200123A53 /* Controller */,
 			);
 			path = DownloadsScreen;
 			sourceTree = "<group>";
@@ -287,7 +320,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */,
+				50048374296C303A00123A53 /* DownloadsView.swift in Sources */,
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
+				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
 				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */,
@@ -297,6 +332,7 @@
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
 				50306523296BF20200E46455 /* FavouritesView.swift in Sources */,
 				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
+				50048376296C327900123A53 /* DownloadsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

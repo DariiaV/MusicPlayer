@@ -1,5 +1,5 @@
 //
-//  FavouritiesCell.swift
+//  DownloadsCell.swift
 //  MusicPlayer
 //
 //  Created by Александр Косяков on 09.01.2023.
@@ -7,9 +7,18 @@
 
 import UIKit
 
-final class FavouritiesCell: UITableViewCell {
+final class DownloadsCell: UITableViewCell {
     
     // MARK: - UI Elements
+    
+    lazy var imageViewCell: UIImageView = {
+        
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "imageCell")
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds = true
+        return imageView
+    }()
     
     lazy var performerMusicLabelCell : UILabel = {
         
@@ -18,8 +27,7 @@ final class FavouritiesCell: UITableViewCell {
         let label = UILabel()
         label.text = "Dailamo Dailamo"
         label.font = UIFont.systemFont(ofSize: 18)
-        label.textAlignment = .right
-        label.textColor = .systemMint
+        label.textColor = .white
         return label
     }()
     
@@ -32,17 +40,7 @@ final class FavouritiesCell: UITableViewCell {
         label.textColor = .white
         return label
     }()
-    
-    lazy var playButton : UIButton = {
         
-        let button = UIButton ()
-        button.setImage(UIImage(named: "play2"), for: .normal)
-        button.backgroundColor = .gray
-        button.layer.masksToBounds = true
-        button.layer.cornerRadius = 15
-        return button
-    }()
-    
     // MARK: - Initialization
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -60,32 +58,32 @@ final class FavouritiesCell: UITableViewCell {
 
 // MARK: - Setup Constrains
 
-extension FavouritiesCell {
-
+extension DownloadsCell {
+    
     func addSybViewCell() {
         
+        contentView.addSubview(imageViewCell)
         contentView.addSubview(performerMusicLabelCell)
         contentView.addSubview(nameMusicLabelCell)
-        contentView.addSubview(playButton)
-        
+    
+        imageViewCell.translatesAutoresizingMaskIntoConstraints = false
         performerMusicLabelCell.translatesAutoresizingMaskIntoConstraints = false
         nameMusicLabelCell.translatesAutoresizingMaskIntoConstraints = false
-        playButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func setupConstraintsCell() {
         
         NSLayoutConstraint.activate([
-            performerMusicLabelCell.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 5),
-            performerMusicLabelCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
+            imageViewCell.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 5),
+            imageViewCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
+            imageViewCell.heightAnchor.constraint(equalToConstant:65),
+            imageViewCell.widthAnchor.constraint(equalToConstant:65),
             
-            nameMusicLabelCell.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 30),
-            nameMusicLabelCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
+            performerMusicLabelCell.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 15),
+            performerMusicLabelCell.leadingAnchor.constraint(equalTo: imageViewCell.leadingAnchor,constant: 90),
             
-            playButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -10),
-            playButton.heightAnchor.constraint(equalToConstant:30),
-            playButton.widthAnchor.constraint(equalToConstant:30),
+            nameMusicLabelCell.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 42),
+            nameMusicLabelCell.leadingAnchor.constraint(equalTo: imageViewCell.leadingAnchor,constant: 90),
         ])
     }
 }
