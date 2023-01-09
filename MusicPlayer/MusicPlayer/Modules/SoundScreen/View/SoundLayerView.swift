@@ -60,7 +60,7 @@ class SoundLayerView: UIView  {
     lazy var minuteStartLabel : UILabel = {
         
         let label = UILabel()
-        label.text = "1:30"
+        label.text = "0:00"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .left
         label.textColor = .white
@@ -70,7 +70,7 @@ class SoundLayerView: UIView  {
     lazy var minuteFinishLabel : UILabel = {
         
         let label = UILabel()
-        label.text = "2:30"
+        label.text = "0:00"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .right
         label.textColor = .white
