@@ -21,7 +21,7 @@ final class FavouritesViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         setupDelegate()
     }
     
@@ -47,6 +47,7 @@ extension FavouritesViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath) as? FavouritiesCell  else {
             fatalError("Creating cell from HotelsListViewController failed")
         }
+        cell.data = items[indexPath.item]
         
         return cell
     }

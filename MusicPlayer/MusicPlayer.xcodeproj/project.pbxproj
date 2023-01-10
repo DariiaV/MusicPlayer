@@ -11,6 +11,7 @@
 		50048374296C303A00123A53 /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048373296C303A00123A53 /* DownloadsView.swift */; };
 		50048376296C327900123A53 /* DownloadsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048375296C327900123A53 /* DownloadsCell.swift */; };
 		50048378296C4ED600123A53 /* 01. You Know You're Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */; };
+		5004837A296D4A9100123A53 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048379296D4A9100123A53 /* DataModel.swift */; };
 		50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306514296ACF9A00E46455 /* SoundLayerController.swift */; };
 		50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306516296ACFB300E46455 /* SoundLayerView.swift */; };
 		50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030651F296BF1D000E46455 /* FavouritesViewController.swift */; };
@@ -31,6 +32,7 @@
 		50048373296C303A00123A53 /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
 		50048375296C327900123A53 /* DownloadsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsCell.swift; sourceTree = "<group>"; };
 		50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01. You Know You're Right.mp3"; sourceTree = "<group>"; };
+		50048379296D4A9100123A53 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		50306514296ACF9A00E46455 /* SoundLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerController.swift; sourceTree = "<group>"; };
 		50306516296ACFB300E46455 /* SoundLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerView.swift; sourceTree = "<group>"; };
 		5030651F296BF1D000E46455 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		5030651D296BF0FF00E46455 /* FavouritesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				50048379296D4A9100123A53 /* DataModel.swift */,
 				50306521296BF1F700E46455 /* View */,
 				50306525296BF21D00E46455 /* Controller */,
 			);
@@ -312,6 +315,7 @@
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
 				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
 				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
+				5004837A296D4A9100123A53 /* DataModel.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */,
 				50306527296C020300E46455 /* FavouritiesCell.swift in Sources */,

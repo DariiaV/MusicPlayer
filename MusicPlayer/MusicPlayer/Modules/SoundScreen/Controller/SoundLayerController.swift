@@ -14,7 +14,6 @@ final class SoundLayerController: UIViewController {
     
     private let soundView = SoundLayerView()
     private var player: AVPlayer!
-    private var isFavorite = false
     
     // MARK: - Lifecycle
     
@@ -29,7 +28,6 @@ final class SoundLayerController: UIViewController {
         
         setupTarget()
         setupPlayer()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,11 +35,8 @@ final class SoundLayerController: UIViewController {
         let nav = self.navigationController?.navigationBar
         nav?.tintColor = UIColor.white
         nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
     }
-    
-   
-    
+
     // MARK: - Public Methods
     
     func setupTarget() {
@@ -50,26 +45,33 @@ final class SoundLayerController: UIViewController {
         soundView.musicSlider.addTarget(self, action: #selector(sliderBut), for:.touchUpInside)
     }
     
+    func convertTimeToString(time: CMTime) -> String {
+        guard !CMTimeGetSeconds(time).isNaN else { return "" }
+        let totalSeconds = Int(CMTimeGetSeconds(time))
+        let seconds = totalSeconds % Constats.minute
+        let minutes = totalSeconds / Constats.minute
+        let timeFormatString = String(format: "%2d:%2d", minutes, seconds)
+        return timeFormatString
+    }
+    
+    enum Constats {
+        static let minPlayTime = 3.0
+        static let minute = 60
+    }
+    
     func setupPlayer() {
         
         player = AVPlayer(url:URL(fileURLWithPath:Bundle.main.path(forResource:"01. You Know You're Right",ofType: "mp3")!))
         
         player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1000), queue: DispatchQueue.main) { [self]
             (time) in
-            soundView.minuteStartLabel.text = getStringTime(time: time)
-            
+          
             soundView.musicSlider.maximumValue = Float(player.currentItem?.duration.seconds ?? 0)
             soundView.musicSlider.value = Float(time.seconds)
-            soundView.minuteFinishLabel.text = getStringTime(time: (player.currentItem?.duration ?? CMTime()) - time)
+            soundView.minuteStartLabel.text = convertTimeToString(time: time)
+            soundView.minuteFinishLabel.text = convertTimeToString(time: (player.currentItem?.duration ?? CMTime()) - time)
         }
     }
-    
-    func getStringTime(time: CMTime) -> String {
-        let minutes = Int(time.seconds / 60)
-        let seconds = Int(time.seconds.truncatingRemainder(dividingBy: 60))
-        return "\(minutes):\(seconds)"
-    }
-    
     
     // MARK: - Private Methods
     
@@ -85,7 +87,6 @@ final class SoundLayerController: UIViewController {
             
         }
     }
-    
 
     @objc
     private func sliderBut (){

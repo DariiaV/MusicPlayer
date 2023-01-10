@@ -7,7 +7,16 @@
 
 import UIKit
 
+
 final class FavouritiesCell: UITableViewCell {
+    
+    var data: DataModelFavourities? {
+        didSet {
+            guard let data = data else { return }
+            performerMusicLabelCell.text = data.namePerformer
+            nameMusicLabelCell.text = data.nameMusic
+        }
+    }
     
     // MARK: - UI Elements
     
@@ -16,7 +25,6 @@ final class FavouritiesCell: UITableViewCell {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.white.cgColor, UIColor.blue.cgColor]
         let label = UILabel()
-        label.text = "Dailamo Dailamo"
         label.font = UIFont.systemFont(ofSize: 18)
         label.textAlignment = .right
         label.textColor = .systemMint
@@ -26,7 +34,6 @@ final class FavouritiesCell: UITableViewCell {
     lazy var nameMusicLabelCell : UILabel = {
         
         let label = UILabel()
-        label.text = "Sangeethe Rajeswaran,Vijay Annoty"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .right
         label.textColor = .white
@@ -40,6 +47,7 @@ final class FavouritiesCell: UITableViewCell {
         button.backgroundColor = .gray
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 15
+        button.addTarget(self, action: #selector(playBut), for:.touchUpInside)
         return button
     }()
     
@@ -55,6 +63,11 @@ final class FavouritiesCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func playBut (){
+       
+        print("Кнопка работает Сell")
     }
 }
 
