@@ -47,7 +47,7 @@ extension DownloadsView {
         
         NSLayoutConstraint.activate([
           
-            tableView.topAnchor.constraint(equalTo: self.topAnchor,constant:120),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,constant:25),
             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)

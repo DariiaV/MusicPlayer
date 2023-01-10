@@ -82,20 +82,20 @@ extension FavouritesView {
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            favoritesButton.topAnchor.constraint(equalTo: self.topAnchor,constant: 120),
+            favoritesButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,constant: 40),
             favoritesButton.heightAnchor.constraint(equalToConstant:45),
             favoritesButton.widthAnchor.constraint(equalToConstant:45),
             favoritesButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 15),
             
-            imageViewFavorites.topAnchor.constraint(equalTo: self.topAnchor,constant: 80),
+            imageViewFavorites.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageViewFavorites.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            menuButton.topAnchor.constraint(equalTo: self.topAnchor,constant: 120),
+            menuButton.topAnchor.constraint(equalTo: favoritesButton.topAnchor),
             menuButton.heightAnchor.constraint(equalToConstant:45),
             menuButton.widthAnchor.constraint(equalToConstant:45),
             menuButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -15),
             
-            tableView.topAnchor.constraint(equalTo: self.topAnchor,constant:230),
+            tableView.topAnchor.constraint(equalTo: imageViewFavorites.bottomAnchor,constant: 15),
             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
