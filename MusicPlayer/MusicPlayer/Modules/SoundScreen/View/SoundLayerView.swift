@@ -20,7 +20,7 @@ class SoundLayerView: UIView  {
         return imageView
     }()
     
-    lazy var performerMusicLabel : UILabel = {
+    lazy var authorLabel : UILabel = {
         
         let label = UILabel()
         label.text = "Nirvana"
@@ -81,9 +81,7 @@ class SoundLayerView: UIView  {
         
         let button = UIButton ()
         button.setImage(UIImage(named: "play"), for: .normal)
-        button.setTitleColor(UIColor.blue, for: .normal)
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = 15
         return button
     }()
     
@@ -93,7 +91,6 @@ class SoundLayerView: UIView  {
         button.setImage(UIImage(named: "left 1"), for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = 15
         return button
     }()
     
@@ -103,8 +100,15 @@ class SoundLayerView: UIView  {
         button.setImage(UIImage(named: "right 1"), for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = 15
         return button
+    }()
+    
+    lazy var buttonStack : UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.alignment = .center
+        stack.spacing = 38
+        return stack
     }()
     
     // MARK: - Lifecycle
@@ -124,83 +128,52 @@ class SoundLayerView: UIView  {
 
 // MARK: - Setup Constrains
 
- extension SoundLayerView {
-         
+extension SoundLayerView {
+    
     func addSybView() {
+        addSubviews([
+            imageViewMain,
+            authorLabel,
+            nameMusicLabel,
+            favouritesButton,
+            musicSlider,
+            minuteStartLabel,
+            minuteFinishLabel,
+            buttonStack
+        ])
         
-        addSubview(imageViewMain)
-        addSubview(performerMusicLabel)
-        addSubview(nameMusicLabel)
-        addSubview(favouritesButton)
-        addSubview(musicSlider)
-        addSubview(playButton)
-        addSubview(leftButton)
-        addSubview(rightButton)
-        addSubview(minuteStartLabel)
-        addSubview(minuteFinishLabel)
-        
-     
-        imageViewMain.translatesAutoresizingMaskIntoConstraints = false
-        performerMusicLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameMusicLabel.translatesAutoresizingMaskIntoConstraints = false
-        favouritesButton.translatesAutoresizingMaskIntoConstraints = false
-        musicSlider.translatesAutoresizingMaskIntoConstraints = false
-        playButton.translatesAutoresizingMaskIntoConstraints = false
-        leftButton.translatesAutoresizingMaskIntoConstraints = false
-        rightButton.translatesAutoresizingMaskIntoConstraints = false
-        minuteStartLabel.translatesAutoresizingMaskIntoConstraints = false
-        minuteFinishLabel.translatesAutoresizingMaskIntoConstraints = false
+        [leftButton, playButton, rightButton].forEach { buttonStack.addArrangedSubview($0) }
     }
-     
+    
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            imageViewMain.topAnchor.constraint(equalTo: self.topAnchor,constant: 120),
-            imageViewMain.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -30),
-            imageViewMain.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 30),
-            imageViewMain.heightAnchor.constraint(equalToConstant: 350),
-
-            performerMusicLabel.topAnchor.constraint(equalTo: self.imageViewMain.topAnchor,constant: 185),
-            performerMusicLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -30),
-            performerMusicLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
-            performerMusicLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            imageViewMain.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            imageViewMain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
+            imageViewMain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
+            imageViewMain.heightAnchor.constraint(equalToConstant:  1.halfScreen),
             
-            nameMusicLabel.topAnchor.constraint(equalTo: self.performerMusicLabel.topAnchor,constant: 60),
-            nameMusicLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -30),
-            nameMusicLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
-            nameMusicLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            authorLabel.topAnchor.constraint(equalTo: imageViewMain.bottomAnchor, constant: 50),
+            authorLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
             
-            favouritesButton.topAnchor.constraint(equalTo: self.imageViewMain.topAnchor,constant: 450),
-            favouritesButton.heightAnchor.constraint(equalToConstant:30),
-            favouritesButton.widthAnchor.constraint(equalToConstant:30),
-            favouritesButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -20),
+            nameMusicLabel.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 10),
+            nameMusicLabel.leadingAnchor.constraint(equalTo: authorLabel.leadingAnchor),
             
-            musicSlider.topAnchor.constraint(equalTo: self.nameMusicLabel.topAnchor,constant: 55),
-            musicSlider.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -20),
-            musicSlider.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
-            musicSlider.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            favouritesButton.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: -10),
+            favouritesButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -15),
             
-            playButton.topAnchor.constraint(equalTo: self.musicSlider.topAnchor,constant: 270),
-            playButton.heightAnchor.constraint(equalToConstant:65),
-            playButton.widthAnchor.constraint(equalToConstant:65),
-            playButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            musicSlider.topAnchor.constraint(equalTo: nameMusicLabel.bottomAnchor, constant: 30),
+            musicSlider.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 15),
+            musicSlider.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -15),
             
-            leftButton.topAnchor.constraint(equalTo: self.musicSlider.topAnchor,constant: 280),
-            leftButton.heightAnchor.constraint(equalToConstant:40),
-            leftButton.widthAnchor.constraint(equalToConstant:40),
-            leftButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 100),
+            minuteStartLabel.topAnchor.constraint(equalTo: musicSlider.bottomAnchor, constant: 10),
+            minuteStartLabel.leadingAnchor.constraint(equalTo: musicSlider.leadingAnchor),
             
-            rightButton.topAnchor.constraint(equalTo: self.musicSlider.topAnchor,constant: 280),
-            rightButton.heightAnchor.constraint(equalToConstant:40),
-            rightButton.widthAnchor.constraint(equalToConstant:40),
-            rightButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -100),
+            minuteFinishLabel.topAnchor.constraint(equalTo: minuteStartLabel.topAnchor),
+            minuteFinishLabel.trailingAnchor.constraint(equalTo: musicSlider.trailingAnchor),
             
-            minuteStartLabel.topAnchor.constraint(equalTo: self.musicSlider.topAnchor,constant: 240),
-            minuteStartLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 20),
-            
-            minuteFinishLabel.topAnchor.constraint(equalTo: self.musicSlider.topAnchor,constant: 240),
-            minuteFinishLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -20),
-            
+            buttonStack.topAnchor.constraint(equalTo: minuteFinishLabel.bottomAnchor, constant: 32),
+            buttonStack.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor)
         ])
     }
 }
