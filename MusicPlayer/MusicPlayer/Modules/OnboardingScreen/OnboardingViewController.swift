@@ -38,9 +38,12 @@ class OnboardingViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Next", for: .normal)
         button.addTarget(self, action: #selector(goNextStep(_:)), for: .touchUpInside)
-        button.backgroundColor = .cyan
+        button.layer.insertSublayer(createGradientToNextButton(), at: 0)
+        button.layer.cornerRadius = 5
+        button.clipsToBounds = true
         return button
     }()
+    
     private var isNextButtonTapped = false
     
     override func viewDidLoad() {
@@ -84,6 +87,19 @@ class OnboardingViewController: UIViewController {
                                         action: #selector(skipOnboarding))
         rightItem.tintColor = .white
         navigationItem.rightBarButtonItem = rightItem
+    }
+    
+    private func createGradientToNextButton() -> CAGradientLayer {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        let firstColor = UIColor(named: "OnboardingNextButtonColor1") ?? .red
+        let secondColor = UIColor(named: "OnboardingNextButtonColor2") ?? .red
+        gradient.colors = [firstColor.cgColor, secondColor.cgColor]
+        gradient.locations = [0.0 , 1.0]
+        gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradient.frame = CGRect(x: 0.0, y: 0.0, width: 66, height: 40)
+        
+        return gradient
     }
     
     @objc private func skipOnboarding() {
