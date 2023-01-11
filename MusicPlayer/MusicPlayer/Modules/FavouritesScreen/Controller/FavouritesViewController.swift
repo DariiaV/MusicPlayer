@@ -19,6 +19,7 @@ final class FavouritesViewController: UIViewController {
         super.loadView()
         self.view = favouritesView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
