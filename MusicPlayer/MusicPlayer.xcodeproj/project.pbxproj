@@ -22,7 +22,6 @@
 		D9ACAB7A296D67050000805F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB79296D67050000805F /* LoginView.swift */; };
 		D9ACAB7C296D671A0000805F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB7B296D671A0000805F /* LoginViewController.swift */; };
 		D9ACAB80296D68090000805F /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB7F296D68090000805F /* TitleLabel.swift */; };
-		D9ACAB83296D6DEB0000805F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D9ACAB82296D6DEB0000805F /* SnapKit */; };
 		D9ACAB85296D71BF0000805F /* DescriptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB84296D71BF0000805F /* DescriptionLabel.swift */; };
 		D9ACAB87296D733B0000805F /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB86296D733B0000805F /* DefaultTextField.swift */; };
 		D9ACAB89296D91B10000805F /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB88296D91B10000805F /* DefaultButton.swift */; };
@@ -56,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9ACAB83296D6DEB0000805F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +224,6 @@
 			);
 			name = MusicPlayer;
 			packageProductDependencies = (
-				D9ACAB82296D6DEB0000805F /* SnapKit */,
 			);
 			productName = MusicPlayer;
 			productReference = D8337FCF296AB0A900F60521 /* MusicPlayer.app */;
@@ -257,7 +254,6 @@
 			);
 			mainGroup = D8337FC6296AB0A900F60521;
 			packageReferences = (
-				D9ACAB81296D6DEB0000805F /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = D8337FD0296AB0A900F60521 /* Products */;
 			projectDirPath = "";
@@ -506,25 +502,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D9ACAB81296D6DEB0000805F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D9ACAB82296D6DEB0000805F /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D9ACAB81296D6DEB0000805F /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */ = {

@@ -16,11 +16,11 @@ final class LoginViewController: UIViewController {
         view = customView
     }
 
-    private func tapToLogInButton() {
-        customView.singInButton.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
+    private func tapToSingInButton() {
+        customView.singInButton.addTarget(self, action: #selector(singInButtonTapped), for: .touchUpInside)
     }
 
-    @objc private func logInButtonTapped() {
+    @objc private func singInButtonTapped() {
         
         
     }

@@ -7,22 +7,21 @@
 
 import UIKit
 
-struct Appearance {
-    var baseSpacing: CGFloat { 8 }
-    var baseLightSpacing: CGFloat { 18 }
-    var baseMediumSpacing: CGFloat { 42 }
-    var baseLargeSpacing: CGFloat { 54 }
-    var baseCornerRadius: CGFloat { 10 }
+extension CGFloat {
+    static let baseSpacing: CGFloat = 10
+    static let baseLightSpacing: CGFloat = 18
+    static let baseMediumSpacing: CGFloat = 42
+    static let baseLargeSpacing: CGFloat = 54
+    static let baseCornerRadius: CGFloat = 10 
 }
 
 class BaseView: UIView {
-
-    let appearance = Appearance()
 
     init() {
         super.init(frame: .zero)
         addSubviews()
         makeConstraints()
+        updateConstraints()
         configureView()
     }
 

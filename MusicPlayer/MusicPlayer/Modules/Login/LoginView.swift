@@ -6,22 +6,24 @@
 //
 
 import UIKit
-import SnapKit
 
-private extension Appearance {
-    var height: CGFloat { 50 }
+private extension CGFloat {
+    static let height: CGFloat = 50
+    static let contentStackViewTopAnchor: CGFloat = 170
+    static let contentStackViewBottomAnchor: CGFloat = -200
 }
 
 final class LoginView: BaseView {
 
+    let singInButton = DefaultButton(titleText: "Sing in")
+
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = appearance.baseMediumSpacing
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = CGFloat.baseLightSpacing
         return stackView
     }()
-
-    let singInButton = DefaultButton(titleText: "Sing in")
 
     private let logoImage: UIImageView = {
         let imageView = UIImageView()
@@ -76,21 +78,21 @@ final class LoginView: BaseView {
 
     override func makeConstraints() {
         super.makeConstraints()
-        contentStackView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide).inset(appearance.baseLargeSpacing)
-            make.leading.trailing.equalToSuperview().inset(appearance.baseMediumSpacing)
-            make.bottom.lessThanOrEqualToSuperview()
-        }
+        NSLayoutConstraint.activate([
 
-        [logoImage, name, title, emailTextField, passwordTextField, singInButton].forEach {
-            $0.snp.makeConstraints { make in
-                make.height.equalTo(appearance.height)
-            }
-        }
+            contentStackView.topAnchor.constraint(equalTo: topAnchor, constant: CGFloat.contentStackViewTopAnchor),
+            contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.baseLightSpacing),
+            contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.baseLightSpacing),
+            contentStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: CGFloat.contentStackViewBottomAnchor),
 
-        contentStackView.setCustomSpacing(appearance.baseSpacing, after: logoImage)
-        contentStackView.setCustomSpacing(appearance.baseSpacing, after: emailLabel)
-        contentStackView.setCustomSpacing(appearance.baseSpacing, after: passwordLabel)
-        contentStackView.setCustomSpacing(appearance.baseSpacing, after: passwordTextField)
+            logoImage.heightAnchor.constraint(equalToConstant: CGFloat.height),
+            name.heightAnchor.constraint(equalToConstant: CGFloat.height),
+            title.heightAnchor.constraint(equalToConstant: CGFloat.height),
+            emailLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
+            emailTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
+            passwordLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
+            passwordTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
+            forgotPasswordButton.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing)
+        ])
     }
 }

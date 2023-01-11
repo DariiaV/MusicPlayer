@@ -7,13 +7,11 @@
 
 import UIKit
 
-private extension Appearance {
-    var titleFont: UIFont { .systemFont(ofSize: 30) }
+private extension CGFloat {
+    static let titleLabelFont: CGFloat = 30
 }
 
 final class TitleLabel: UILabel {
-
-    private let appearance = Appearance()
 
     init(title: String) {
         super.init(frame: .zero)
@@ -26,7 +24,7 @@ final class TitleLabel: UILabel {
     }
 
     private func configureTitleLabel() {
-        font = appearance.titleFont
+        font = UIFont.systemFont(ofSize: CGFloat.titleLabelFont)
         textAlignment = .center
         textColor = .white
     }

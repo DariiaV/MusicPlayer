@@ -7,12 +7,8 @@
 
 import UIKit
 
-private extension Appearance {
-    var placeholderFont: UIFont { .systemFont(ofSize: 16) }
-    var placeholderColor: UIColor { .gray }
-    var textFieldColor: CGColor { UIColor.white.cgColor }
-
-    var textPadding: UIEdgeInsets {
+private extension CGFloat {
+    static var textPadding: UIEdgeInsets {
         .init(
             top: 0,
             left: 10,
@@ -23,8 +19,6 @@ private extension Appearance {
 }
 
 final class DefaultTextField: UITextField {
-
-    private let appearance = Appearance()
 
     init(placeholder: String? = nil) {
         super.init(frame: .zero)
@@ -38,12 +32,12 @@ final class DefaultTextField: UITextField {
 
     private func configureTextField() {
         textAlignment = .left
-        layer.backgroundColor = appearance.textFieldColor
-        layer.cornerRadius = appearance.baseCornerRadius
+        layer.backgroundColor = UIColor.white.cgColor
+        layer.cornerRadius = CGFloat.baseCornerRadius
         clearButtonMode = .whileEditing
         attributedPlaceholder = NSAttributedString(
             string: placeholder ?? "",
-            attributes: [NSAttributedString.Key.foregroundColor: appearance.placeholderColor]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]
         )
     }
 }
@@ -51,11 +45,11 @@ final class DefaultTextField: UITextField {
 extension DefaultTextField {
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.textRect(forBounds: bounds)
-        return rect.inset(by: appearance.textPadding)
+        return rect.inset(by: CGFloat.textPadding)
     }
 
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.editingRect(forBounds: bounds)
-        return rect.inset(by: appearance.textPadding)
+        return rect.inset(by: CGFloat.textPadding)
     }
 }

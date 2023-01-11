@@ -7,20 +7,17 @@
 
 import UIKit
 
-private extension Appearance {
-    var buttonColor: UIColor { .systemMint }
-    var buttonFont: UIFont { .systemFont(ofSize: 14) }
+private extension CGFloat {
+    static let buttonFont: CGFloat = 14
 }
 
 final class DefaultButton: UIButton {
 
-    private let appearance = Appearance()
-
     init(titleText: String) {
         super.init(frame: .zero)
         setTitle(titleText, for: .normal)
-        titleLabel?.font = appearance.buttonFont
-        layer.cornerRadius = appearance.baseCornerRadius
+        titleLabel?.font = UIFont.systemFont(ofSize: CGFloat.buttonFont)
+        layer.cornerRadius = CGFloat.baseCornerRadius
         backgroundColor = .systemMint
     }
 
