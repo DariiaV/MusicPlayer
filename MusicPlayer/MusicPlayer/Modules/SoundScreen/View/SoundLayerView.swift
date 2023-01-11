@@ -149,33 +149,44 @@ extension SoundLayerView {
         
         NSLayoutConstraint.activate([
             imageViewMain.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            imageViewMain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
-            imageViewMain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
+            imageViewMain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -.imageViewAnchor),
+            imageViewMain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: .imageViewAnchor),
             imageViewMain.heightAnchor.constraint(equalToConstant:  1.halfScreen),
             
-            authorLabel.topAnchor.constraint(equalTo: imageViewMain.bottomAnchor, constant: 50),
-            authorLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            authorLabel.topAnchor.constraint(equalTo: imageViewMain.bottomAnchor, constant: .authorLabelTopAnchor),
+            authorLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .leadingTrailingAnchor),
             
-            nameMusicLabel.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 10),
+            nameMusicLabel.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: .topAnchor),
             nameMusicLabel.leadingAnchor.constraint(equalTo: authorLabel.leadingAnchor),
             
-            favouritesButton.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: -10),
-            favouritesButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -15),
+            favouritesButton.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: -.topAnchor),
+            favouritesButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -.leadingTrailingAnchor),
             
-            musicSlider.topAnchor.constraint(equalTo: nameMusicLabel.bottomAnchor, constant: 30),
-            musicSlider.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 15),
-            musicSlider.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -15),
+            musicSlider.topAnchor.constraint(equalTo: nameMusicLabel.bottomAnchor, constant: .imageViewAnchor),
+            musicSlider.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: .leadingTrailingAnchor),
+            musicSlider.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -.leadingTrailingAnchor),
             
-            minuteStartLabel.topAnchor.constraint(equalTo: musicSlider.bottomAnchor, constant: 10),
+            minuteStartLabel.topAnchor.constraint(equalTo: musicSlider.bottomAnchor, constant: .topAnchor),
             minuteStartLabel.leadingAnchor.constraint(equalTo: musicSlider.leadingAnchor),
             
             minuteFinishLabel.topAnchor.constraint(equalTo: minuteStartLabel.topAnchor),
             minuteFinishLabel.trailingAnchor.constraint(equalTo: musicSlider.trailingAnchor),
             
-            buttonStack.topAnchor.constraint(equalTo: minuteFinishLabel.bottomAnchor, constant: 32),
+            buttonStack.topAnchor.constraint(equalTo: minuteFinishLabel.bottomAnchor, constant: .buttonStackTopAnchor),
             buttonStack.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor)
         ])
     }
+}
+
+// MARK: - Constant Constraints
+
+private extension CGFloat {
+  
+    static let imageViewAnchor: CGFloat = 30
+    static let topAnchor: CGFloat = 10
+    static let leadingTrailingAnchor: CGFloat = 15
+    static let authorLabelTopAnchor: CGFloat = 50
+    static let buttonStackTopAnchor: CGFloat = 32
 }
 
 

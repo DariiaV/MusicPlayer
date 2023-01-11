@@ -8,6 +8,11 @@
 import UIKit
 import AVFoundation
 
+enum Constants {
+    static let minPlayTime = 3.0
+    static let minute = 60
+}
+
 final class SoundLayerController: UIViewController {
     
     // MARK: - Properties
@@ -48,15 +53,12 @@ final class SoundLayerController: UIViewController {
     func convertTimeToString(time: CMTime) -> String {
         guard !CMTimeGetSeconds(time).isNaN else { return "" }
         let totalSeconds = Int(CMTimeGetSeconds(time))
-        let seconds = totalSeconds % Constats.minute
-        let minutes = totalSeconds / Constats.minute
-        let timeFormatString = String(format: "%2d:%2d", minutes, seconds)
+        let seconds = totalSeconds % Constants.minute
+        let minutes = totalSeconds / Constants.minute
+        let timeFormatString = String(
+            format: "%02d:%02d",minutes, seconds
+        )
         return timeFormatString
-    }
-    
-    enum Constats {
-        static let minPlayTime = 3.0
-        static let minute = 60
     }
     
     func setupPlayer() {
@@ -68,6 +70,7 @@ final class SoundLayerController: UIViewController {
           
             soundView.musicSlider.maximumValue = Float(player.currentItem?.duration.seconds ?? 0)
             soundView.musicSlider.value = Float(time.seconds)
+            
             soundView.minuteStartLabel.text = convertTimeToString(time: time)
             soundView.minuteFinishLabel.text = convertTimeToString(time: (player.currentItem?.duration ?? CMTime()) - time)
         }

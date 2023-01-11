@@ -82,26 +82,34 @@ extension FavouritesView {
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            favoritesButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,constant: 40),
-            favoritesButton.heightAnchor.constraint(equalToConstant:45),
-            favoritesButton.widthAnchor.constraint(equalToConstant:45),
-            favoritesButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 15),
+            favoritesButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,constant: .favoritesButtonTopAnchor),
+            favoritesButton.heightAnchor.constraint(equalToConstant:.sizeAnchor),
+            favoritesButton.widthAnchor.constraint(equalToConstant:.sizeAnchor),
+            favoritesButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: .sizeAnchor),
             
             imageViewFavorites.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageViewFavorites.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
             menuButton.topAnchor.constraint(equalTo: favoritesButton.topAnchor),
-            menuButton.heightAnchor.constraint(equalToConstant:45),
-            menuButton.widthAnchor.constraint(equalToConstant:45),
-            menuButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -15),
+            menuButton.heightAnchor.constraint(equalToConstant:.sizeAnchor),
+            menuButton.widthAnchor.constraint(equalToConstant:.sizeAnchor),
+            menuButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -.sizeAnchor),
             
-            tableView.topAnchor.constraint(equalTo: imageViewFavorites.bottomAnchor,constant: 15),
+            tableView.topAnchor.constraint(equalTo: imageViewFavorites.bottomAnchor,constant: .sizeAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             
         ])
-        
-        
     }
 }
+
+// MARK: - Constant Constraints
+
+private extension CGFloat {
+  
+    static let favoritesButtonTopAnchor: CGFloat = 40
+    static let widthHeightAnchor: CGFloat = 45
+    static let sizeAnchor: CGFloat = 1
+}
+
