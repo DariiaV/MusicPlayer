@@ -56,7 +56,4 @@ extension FavouritesViewController: UITableViewDataSource {
 // MARK: - TableViewDelegate
 
 extension FavouritesViewController: UITableViewDelegate {
-    
 }
-
-

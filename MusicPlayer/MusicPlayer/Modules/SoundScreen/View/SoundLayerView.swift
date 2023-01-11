@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SoundLayerView: UIView  {
+class SoundLayerView: UIView {
     
     // MARK: - UI Elements
     
@@ -20,7 +20,7 @@ class SoundLayerView: UIView  {
         return imageView
     }()
     
-    lazy var authorLabel : UILabel = {
+    lazy var authorLabel: UILabel = {
         
         let label = UILabel()
         label.text = "Nirvana"
@@ -30,7 +30,7 @@ class SoundLayerView: UIView  {
         return label
     }()
     
-    lazy var nameMusicLabel : UILabel = {
+    lazy var nameMusicLabel: UILabel = {
         
         let label = UILabel()
         label.text = "Where did you sleep last night?"
@@ -40,24 +40,24 @@ class SoundLayerView: UIView  {
         return label
     }()
     
-    lazy var favouritesButton : UIButton = {
+    lazy var favouritesButton: UIButton = {
         
-        let button = UIButton ()
+        let button = UIButton()
         button.setTitleColor(UIColor.blue, for: .normal)
         button.setImage(UIImage(named: "heart 1"), for: .normal)
         return button
     }()
     
-    lazy var musicSlider : UISlider = {
+    lazy var musicSlider: UISlider = {
         
-        let slider = UISlider ()
+        let slider = UISlider()
         slider.minimumTrackTintColor = .systemMint
         slider.maximumTrackTintColor = .gray
         slider.thumbTintColor = .systemMint
         return slider
     }()
     
-    lazy var minuteStartLabel : UILabel = {
+    lazy var minuteStartLabel: UILabel = {
         
         let label = UILabel()
         label.text = "0:00"
@@ -67,7 +67,7 @@ class SoundLayerView: UIView  {
         return label
     }()
     
-    lazy var minuteFinishLabel : UILabel = {
+    lazy var minuteFinishLabel: UILabel = {
         
         let label = UILabel()
         label.text = "0:00"
@@ -77,33 +77,33 @@ class SoundLayerView: UIView  {
         return label
     }()
     
-    lazy var playButton : UIButton = {
+    lazy var playButton: UIButton = {
         
-        let button = UIButton ()
+        let button = UIButton()
         button.setImage(UIImage(named: "play"), for: .normal)
         button.layer.masksToBounds = true
         return button
     }()
     
-    lazy var leftButton : UIButton = {
+    lazy var leftButton: UIButton = {
         
-        let button = UIButton ()
+        let button = UIButton()
         button.setImage(UIImage(named: "left 1"), for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         button.layer.masksToBounds = true
         return button
     }()
     
-    lazy var rightButton : UIButton = {
+    lazy var rightButton: UIButton = {
         
-        let button = UIButton ()
+        let button = UIButton()
         button.setImage(UIImage(named: "right 1"), for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         button.layer.masksToBounds = true
         return button
     }()
     
-    lazy var buttonStack : UIStackView = {
+    lazy var buttonStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.alignment = .center
@@ -151,7 +151,7 @@ extension SoundLayerView {
             imageViewMain.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageViewMain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -.imageViewAnchor),
             imageViewMain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: .imageViewAnchor),
-            imageViewMain.heightAnchor.constraint(equalToConstant:  1.halfScreen),
+            imageViewMain.heightAnchor.constraint(equalToConstant: 1.halfScreen),
             
             authorLabel.topAnchor.constraint(equalTo: imageViewMain.bottomAnchor, constant: .authorLabelTopAnchor),
             authorLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .leadingTrailingAnchor),
@@ -188,6 +188,3 @@ private extension CGFloat {
     static let authorLabelTopAnchor: CGFloat = 50
     static let buttonStackTopAnchor: CGFloat = 32
 }
-
-
-

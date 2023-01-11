@@ -5,8 +5,8 @@
 //  Created by Александр Косяков on 08.01.2023.
 //
 
-import UIKit
 import AVFoundation
+import UIKit
 
 enum Constants {
     static let minPlayTime = 3.0
@@ -46,8 +46,8 @@ final class SoundLayerController: UIViewController {
     
     func setupTarget() {
         
-        soundView.playButton.addTarget(self, action: #selector(playBut), for:.touchUpInside)
-        soundView.musicSlider.addTarget(self, action: #selector(sliderBut), for:.touchUpInside)
+        soundView.playButton.addTarget(self, action: #selector(playBut), for: .touchUpInside)
+        soundView.musicSlider.addTarget(self, action: #selector(sliderBut), for: .touchUpInside)
     }
     
     func convertTimeToString(time: CMTime) -> String {
@@ -56,17 +56,16 @@ final class SoundLayerController: UIViewController {
         let seconds = totalSeconds % Constants.minute
         let minutes = totalSeconds / Constants.minute
         let timeFormatString = String(
-            format: "%02d:%02d",minutes, seconds
+            format: "%02d:%02d", minutes, seconds
         )
         return timeFormatString
     }
     
     func setupPlayer() {
         
-        player = AVPlayer(url:URL(fileURLWithPath:Bundle.main.path(forResource:"01. You Know You're Right",ofType: "mp3")!))
+        player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "01. You Know You're Right", ofType: "mp3")!))
         
-        player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1000), queue: DispatchQueue.main) { [self]
-            (time) in
+        player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1000), queue: DispatchQueue.main) { [self]time in
           
             soundView.musicSlider.maximumValue = Float(player.currentItem?.duration.seconds ?? 0)
             soundView.musicSlider.value = Float(time.seconds)
@@ -79,7 +78,7 @@ final class SoundLayerController: UIViewController {
     // MARK: - Private Methods
     
     @objc
-    private func playBut (){
+    private func playBut () {
         
         if player.timeControlStatus == . playing {
             soundView.playButton.setImage(UIImage(named: "play"), for: .normal)
@@ -92,10 +91,11 @@ final class SoundLayerController: UIViewController {
     }
 
     @objc
-    private func sliderBut (){
+    private func sliderBut () {
         
         player.seek(to: CMTime(seconds: Double(soundView.musicSlider.value),
-                              preferredTimescale: 1000))
+                              
+                               preferredTimescale: 1000))
         soundView.minuteStartLabel.text = "\(soundView.musicSlider.value)"
         
     }

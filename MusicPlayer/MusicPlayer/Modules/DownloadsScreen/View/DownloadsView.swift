@@ -47,7 +47,7 @@ extension DownloadsView {
         
         NSLayoutConstraint.activate([
           
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,constant:.tableViewTopAnchor),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: .tableViewTopAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
@@ -61,7 +61,4 @@ private extension CGFloat {
   
     static let tableViewTopAnchor: CGFloat = 25
 }
-
-
-
     

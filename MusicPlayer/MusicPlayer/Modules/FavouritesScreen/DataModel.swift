@@ -13,6 +13,5 @@ struct DataModelFavourities {
 }
 
 let items: [DataModelFavourities] = [
-    DataModelFavourities(namePerformer: "Nirvana", nameMusic: "Where did you sleep last night?" ),
-   
+    DataModelFavourities(namePerformer: "Nirvana", nameMusic: "Where did you sleep last night?" )
 ]

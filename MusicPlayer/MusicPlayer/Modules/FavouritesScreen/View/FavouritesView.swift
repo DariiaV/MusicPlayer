@@ -13,9 +13,9 @@ final class FavouritesView: UIView {
     
     let tableView = UITableView(frame: .zero, style: .plain)
     
-    lazy var favoritesButton : UIButton = {
+    lazy var favoritesButton: UIButton = {
         
-        let button = UIButton ()
+        let button = UIButton()
         button.setImage(UIImage(named: "heart 1"), for: .normal)
         button.backgroundColor = .gray
         button.layer.masksToBounds = true
@@ -32,9 +32,9 @@ final class FavouritesView: UIView {
         return imageView
     }()
     
-    lazy var menuButton : UIButton = {
+    lazy var menuButton: UIButton = {
         
-        let button = UIButton ()
+        let button = UIButton()
         button.setImage(UIImage(named: "menu"), for: .normal)
         button.backgroundColor = .gray
         button.layer.masksToBounds = true
@@ -82,20 +82,20 @@ extension FavouritesView {
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            favoritesButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,constant: .favoritesButtonTopAnchor),
-            favoritesButton.heightAnchor.constraint(equalToConstant:.sizeAnchor),
-            favoritesButton.widthAnchor.constraint(equalToConstant:.sizeAnchor),
-            favoritesButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: .sizeAnchor),
+            favoritesButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: .favoritesButtonTopAnchor),
+            favoritesButton.heightAnchor.constraint(equalToConstant: .sizeAnchor),
+            favoritesButton.widthAnchor.constraint(equalToConstant: .sizeAnchor),
+            favoritesButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .sizeAnchor),
             
             imageViewFavorites.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageViewFavorites.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
             menuButton.topAnchor.constraint(equalTo: favoritesButton.topAnchor),
-            menuButton.heightAnchor.constraint(equalToConstant:.sizeAnchor),
-            menuButton.widthAnchor.constraint(equalToConstant:.sizeAnchor),
-            menuButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -.sizeAnchor),
+            menuButton.heightAnchor.constraint(equalToConstant: .sizeAnchor),
+            menuButton.widthAnchor.constraint(equalToConstant: .sizeAnchor),
+            menuButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.sizeAnchor),
             
-            tableView.topAnchor.constraint(equalTo: imageViewFavorites.bottomAnchor,constant: .sizeAnchor),
+            tableView.topAnchor.constraint(equalTo: imageViewFavorites.bottomAnchor, constant: .sizeAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
@@ -112,4 +112,3 @@ private extension CGFloat {
     static let widthHeightAnchor: CGFloat = 45
     static let sizeAnchor: CGFloat = 1
 }
-

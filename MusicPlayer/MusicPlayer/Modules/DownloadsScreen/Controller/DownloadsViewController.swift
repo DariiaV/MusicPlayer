@@ -64,7 +64,4 @@ extension DownloadsViewController: UITableViewDataSource {
 // MARK: - TableViewDelegate
 
 extension DownloadsViewController: UITableViewDelegate {
-    
 }
-
-    

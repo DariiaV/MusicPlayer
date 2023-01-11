@@ -49,7 +49,7 @@ class TabBarController: UITabBarController {
         ]
     }
     
-    private func generateVC(viewController: UIViewController,image: UIImage?) -> UIViewController {
+    private func generateVC(viewController: UIViewController, image: UIImage?) -> UIViewController {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = image
         return UINavigationController(rootViewController: viewController)
