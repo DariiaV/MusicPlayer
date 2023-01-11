@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306514296ACF9A00E46455 /* SoundLayerController.swift */; };
 		50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306516296ACFB300E46455 /* SoundLayerView.swift */; };
+		848DE103296C4ED600366F30 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DE102296C4ED600366F30 /* MainScreenView.swift */; };
+		848DE105296C4FD500366F30 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DE104296C4FD500366F30 /* MainScreenController.swift */; };
+		849ECD68296DC76F000D0A3B /* DitailPlaylistViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD67296DC76F000D0A3B /* DitailPlaylistViewCell.swift */; };
+		849ECD6E296EF993000D0A3B /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD6D296EF993000D0A3B /* MusicTableViewCell.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
 		D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD6296AB0A900F60521 /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		50306514296ACF9A00E46455 /* SoundLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerController.swift; sourceTree = "<group>"; };
 		50306516296ACFB300E46455 /* SoundLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerView.swift; sourceTree = "<group>"; };
+		848DE102296C4ED600366F30 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		848DE104296C4FD500366F30 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		849ECD67296DC76F000D0A3B /* DitailPlaylistViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DitailPlaylistViewCell.swift; sourceTree = "<group>"; };
+		849ECD6D296EF993000D0A3B /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,48 @@
 				50306514296ACF9A00E46455 /* SoundLayerController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		848DE100296C44A800366F30 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		848DE101296C4E8F00366F30 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				848DE107296C4FFC00366F30 /* Controller */,
+				848DE106296C4FF200366F30 /* View */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		848DE106296C4FF200366F30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				848DE102296C4ED600366F30 /* MainScreenView.swift */,
+				849ECD6C296EF41C000D0A3B /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		848DE107296C4FFC00366F30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				848DE104296C4FD500366F30 /* MainScreenController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		849ECD6C296EF41C000D0A3B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				849ECD67296DC76F000D0A3B /* DitailPlaylistViewCell.swift */,
+				849ECD6D296EF993000D0A3B /* MusicTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D8337FC6296AB0A900F60521 = {
@@ -119,8 +169,8 @@
 		D8337FEE296AB2C600F60521 /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
+				848DE100296C44A800366F30 /* NetworkLayer */,
 				D8337FEA296AB1F800F60521 /* Extensions */,
-				D8337FF0296AB3CC00F60521 /* NetworkLayer */,
 				50306513296ACF5C00E46455 /* SoundLayer */,
 				D8337FF1296AB3DD00F60521 /* StorageLayer */,
 			);
@@ -130,17 +180,10 @@
 		D8337FEF296AB3C100F60521 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				D8337FFB296ABCBE00F60521 /* LoginScreen */,
+				848DE101296C4E8F00366F30 /* MainScreen */,
 				D8337FD6296AB0A900F60521 /* ViewController.swift */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		D8337FF0296AB3CC00F60521 /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		D8337FF1296AB3DD00F60521 /* StorageLayer */ = {
@@ -150,13 +193,6 @@
 				D8337FF4296AB4D900F60521 /* CoreDataManager.swift */,
 			);
 			path = StorageLayer;
-			sourceTree = "<group>";
-		};
-		D8337FFB296ABCBE00F60521 /* LoginScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +270,13 @@
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
+				848DE105296C4FD500366F30 /* MainScreenController.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
+				849ECD68296DC76F000D0A3B /* DitailPlaylistViewCell.swift in Sources */,
+				848DE103296C4ED600366F30 /* MainScreenView.swift in Sources */,
 				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
+				849ECD6E296EF993000D0A3B /* MusicTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
