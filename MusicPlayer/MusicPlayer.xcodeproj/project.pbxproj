@@ -13,6 +13,8 @@
 		50048378296C4ED600123A53 /* 01. You Know You're Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */; };
 		5004837A296D4A9100123A53 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048379296D4A9100123A53 /* DataModel.swift */; };
 		5004837E296D971900123A53 /* Int+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5004837D296D971900123A53 /* Int+Scaling.swift */; };
+		50048382296E91B400123A53 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048381296E91B400123A53 /* TabBarController.swift */; };
+		50048384296E948D00123A53 /* UIColorExtension+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048383296E948D00123A53 /* UIColorExtension+TabBar.swift */; };
 		50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306514296ACF9A00E46455 /* SoundLayerController.swift */; };
 		50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306516296ACFB300E46455 /* SoundLayerView.swift */; };
 		50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030651F296BF1D000E46455 /* FavouritesViewController.swift */; };
@@ -35,6 +37,8 @@
 		50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01. You Know You're Right.mp3"; sourceTree = "<group>"; };
 		50048379296D4A9100123A53 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		5004837D296D971900123A53 /* Int+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Scaling.swift"; sourceTree = "<group>"; };
+		50048381296E91B400123A53 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		50048383296E948D00123A53 /* UIColorExtension+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColorExtension+TabBar.swift"; sourceTree = "<group>"; };
 		50306514296ACF9A00E46455 /* SoundLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerController.swift; sourceTree = "<group>"; };
 		50306516296ACFB300E46455 /* SoundLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerView.swift; sourceTree = "<group>"; };
 		5030651F296BF1D000E46455 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 				50048371296C302A00123A53 /* DownloadsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		50048387296E9CC400123A53 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				50048381296E91B400123A53 /* TabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		50306513296ACF5C00E46455 /* SoundLayer */ = {
@@ -196,6 +208,7 @@
 			children = (
 				D8337FF2296AB40C00F60521 /* UIView+AddSubviews.swift */,
 				5004837D296D971900123A53 /* Int+Scaling.swift */,
+				50048383296E948D00123A53 /* UIColorExtension+TabBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,6 +228,7 @@
 		D8337FEE296AB2C600F60521 /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
+				50048387296E9CC400123A53 /* TabBar */,
 				D8337FEA296AB1F800F60521 /* Extensions */,
 				50306513296ACF5C00E46455 /* SoundLayer */,
 				D8337FF1296AB3DD00F60521 /* StorageLayer */,
@@ -318,7 +332,9 @@
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
 				5004837E296D971900123A53 /* Int+Scaling.swift in Sources */,
 				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
+				50048384296E948D00123A53 /* UIColorExtension+TabBar.swift in Sources */,
 				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
+				50048382296E91B400123A53 /* TabBarController.swift in Sources */,
 				5004837A296D4A9100123A53 /* DataModel.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D8337FF3296AB40C00F60521 /* UIView+AddSubviews.swift in Sources */,
