@@ -204,7 +204,6 @@
 		D8337FD1296AB0A900F60521 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				D9ACAB7D296D67C80000805F /* Common */,
 				50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */,
 				D8337FEE296AB2C600F60521 /* ApplicationServices */,
 				D8337FEF296AB3C100F60521 /* Modules */,
@@ -228,7 +227,7 @@
 		D8337FEE296AB2C600F60521 /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
-				D9B29E65296F3503003E8825 /* Extensions */,
+				D9ACAB7D296D67C80000805F /* Common */,
 				D8337FF1296AB3DD00F60521 /* StorageLayer */,
 			);
 			path = ApplicationServices;
@@ -276,10 +275,12 @@
 		D9ACAB7D296D67C80000805F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D9ACAB7E296D67E40000805F /* UIElements */,
 				D9ACAB75296D64090000805F /* Base */,
+				D9B29E65296F3503003E8825 /* Extensions */,
+				D9ACAB7E296D67E40000805F /* UIElements */,
 			);
-			path = Common;
+			name = Common;
+			path = ../Common;
 			sourceTree = "<group>";
 		};
 		D9ACAB7E296D67E40000805F /* UIElements */ = {
@@ -301,7 +302,8 @@
 				D9B29E61296F34E5003E8825 /* UIView+AddSubviews.swift */,
 				D9B29E66296F3531003E8825 /* UIStackView+Ext.swift */,
 			);
-			path = Extensions;
+			name = Extensions;
+			path = ../ApplicationServices/Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,7 +406,6 @@
 				D9B29E63296F34E5003E8825 /* UIColorExtension+TabBar.swift in Sources */,
 				D9ACAB89296D91B10000805F /* DefaultButton.swift in Sources */,
 				50306523296BF20200E46455 /* FavouritesView.swift in Sources */,
-				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
 				50048376296C327900123A53 /* DownloadsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
