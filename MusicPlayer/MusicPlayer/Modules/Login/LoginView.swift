@@ -9,8 +9,8 @@ import UIKit
 
 private extension CGFloat {
     static let height: CGFloat = 50
-    static let contentStackViewTopAnchor: CGFloat = 170
-    static let contentStackViewBottomAnchor: CGFloat = -200
+    static let contentStackViewTopAnchor: CGFloat = 20
+    static let contentStackViewBottomAnchor: CGFloat = -180
 }
 
 final class LoginView: BaseView {
@@ -21,7 +21,7 @@ final class LoginView: BaseView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = CGFloat.baseLightSpacing
+        stackView.spacing = CGFloat.baseMediumSpacing
         return stackView
     }()
 
@@ -80,19 +80,25 @@ final class LoginView: BaseView {
         super.makeConstraints()
         NSLayoutConstraint.activate([
 
-            contentStackView.topAnchor.constraint(equalTo: topAnchor, constant: CGFloat.contentStackViewTopAnchor),
+            contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: CGFloat.contentStackViewTopAnchor),
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.baseLightSpacing),
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.baseLightSpacing),
-            contentStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: CGFloat.contentStackViewBottomAnchor),
+            contentStackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
 
             logoImage.heightAnchor.constraint(equalToConstant: CGFloat.height),
-            name.heightAnchor.constraint(equalToConstant: CGFloat.height),
             title.heightAnchor.constraint(equalToConstant: CGFloat.height),
+            name.heightAnchor.constraint(equalToConstant: CGFloat.height),
             emailLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
             emailTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
             passwordLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
             passwordTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
-            forgotPasswordButton.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing)
+            forgotPasswordButton.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
+            singInButton.heightAnchor.constraint(equalToConstant: CGFloat.height)
         ])
+
+        contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: emailLabel)
+        contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: name)
+        contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: passwordLabel)
+        contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: passwordTextField)
     }
 }
