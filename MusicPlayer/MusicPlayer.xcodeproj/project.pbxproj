@@ -116,13 +116,6 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		50306513296ACF5C00E46455 /* SoundLayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SoundLayer;
-			sourceTree = "<group>";
-		};
 		50306518296ACFB900E46455 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,12 +244,16 @@
 			isa = PBXGroup;
 			children = (
 
+
 				D8337FF0296AB3CC00F60521 /* NetworkLayer */,
 
 				50048387296E9CC400123A53 /* TabBar */,
 				D8337FEA296AB1F800F60521 /* Extensions */,
 
 				50306513296ACF5C00E46455 /* SoundLayer */,
+
+				D8337FEA296AB1F800F60521 /* Extensions */,
+
 				D8337FF1296AB3DD00F60521 /* StorageLayer */,
 			);
 			path = ApplicationServices;
@@ -266,6 +263,10 @@
 			isa = PBXGroup;
 			children = (
 
+
+
+
+				50048387296E9CC400123A53 /* TabBar */,
 
 				5030651C296B28A900E46455 /* SoundScreen */,
 				5030651D296BF0FF00E46455 /* FavouritesScreen */,
