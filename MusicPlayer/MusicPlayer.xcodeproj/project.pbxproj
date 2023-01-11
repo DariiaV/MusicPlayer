@@ -7,21 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048371296C302A00123A53 /* DownloadsViewController.swift */; };
+		50048374296C303A00123A53 /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048373296C303A00123A53 /* DownloadsView.swift */; };
+		50048376296C327900123A53 /* DownloadsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048375296C327900123A53 /* DownloadsCell.swift */; };
+		50048378296C4ED600123A53 /* 01. You Know You're Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */; };
+		5004837A296D4A9100123A53 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048379296D4A9100123A53 /* DataModel.swift */; };
+		5004837E296D971900123A53 /* Int+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5004837D296D971900123A53 /* Int+Scaling.swift */; };
+		50048382296E91B400123A53 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048381296E91B400123A53 /* TabBarController.swift */; };
+		50048384296E948D00123A53 /* UIColorExtension+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048383296E948D00123A53 /* UIColorExtension+TabBar.swift */; };
 		50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306514296ACF9A00E46455 /* SoundLayerController.swift */; };
 		50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306516296ACFB300E46455 /* SoundLayerView.swift */; };
+		50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030651F296BF1D000E46455 /* FavouritesViewController.swift */; };
+		50306523296BF20200E46455 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306522296BF20200E46455 /* FavouritesView.swift */; };
+		50306527296C020300E46455 /* FavouritiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306526296C020300E46455 /* FavouritiesCell.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
 		D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD6296AB0A900F60521 /* ViewController.swift */; };
 		D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */; };
 		D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8337FDE296AB0AA00F60521 /* Assets.xcassets */; };
 		D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */; };
-		D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF2296AB40C00F60521 /* UIView+Ext.swift */; };
+		D8337FF3296AB40C00F60521 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF2296AB40C00F60521 /* UIView+AddSubviews.swift */; };
 		D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF4296AB4D900F60521 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50048371296C302A00123A53 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		50048373296C303A00123A53 /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
+		50048375296C327900123A53 /* DownloadsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsCell.swift; sourceTree = "<group>"; };
+		50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01. You Know You're Right.mp3"; sourceTree = "<group>"; };
+		50048379296D4A9100123A53 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		5004837D296D971900123A53 /* Int+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Scaling.swift"; sourceTree = "<group>"; };
+		50048381296E91B400123A53 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		50048383296E948D00123A53 /* UIColorExtension+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColorExtension+TabBar.swift"; sourceTree = "<group>"; };
 		50306514296ACF9A00E46455 /* SoundLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerController.swift; sourceTree = "<group>"; };
 		50306516296ACFB300E46455 /* SoundLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerView.swift; sourceTree = "<group>"; };
+		5030651F296BF1D000E46455 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		50306522296BF20200E46455 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		50306526296C020300E46455 /* FavouritiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritiesCell.swift; sourceTree = "<group>"; };
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +52,7 @@
 		D8337FDE296AB0AA00F60521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8337FE1296AB0AA00F60521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8337FE3296AB0AA00F60521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8337FF2296AB40C00F60521 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		D8337FF2296AB40C00F60521 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
 		D8337FF4296AB4D900F60521 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,11 +67,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5004836E296C2FF300123A53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5004836F296C2FFB00123A53 /* Cell */,
+				50048373296C303A00123A53 /* DownloadsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5004836F296C2FFB00123A53 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				50048375296C327900123A53 /* DownloadsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		50048370296C300200123A53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50048371296C302A00123A53 /* DownloadsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		50048387296E9CC400123A53 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				50048381296E91B400123A53 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		50306513296ACF5C00E46455 /* SoundLayer */ = {
 			isa = PBXGroup;
 			children = (
-				50306518296ACFB900E46455 /* View */,
-				50306519296ACFDC00E46455 /* Controller */,
 			);
 			path = SoundLayer;
 			sourceTree = "<group>";
@@ -66,6 +119,59 @@
 			isa = PBXGroup;
 			children = (
 				50306514296ACF9A00E46455 /* SoundLayerController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5030651C296B28A900E46455 /* SoundScreen */ = {
+			isa = PBXGroup;
+			children = (
+				50306518296ACFB900E46455 /* View */,
+				50306519296ACFDC00E46455 /* Controller */,
+			);
+			path = SoundScreen;
+			sourceTree = "<group>";
+		};
+		5030651D296BF0FF00E46455 /* FavouritesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				50048379296D4A9100123A53 /* DataModel.swift */,
+				50306521296BF1F700E46455 /* View */,
+				50306525296BF21D00E46455 /* Controller */,
+			);
+			path = FavouritesScreen;
+			sourceTree = "<group>";
+		};
+		5030651E296BF17600E46455 /* DownloadsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5004836E296C2FF300123A53 /* View */,
+				50048370296C300200123A53 /* Controller */,
+			);
+			path = DownloadsScreen;
+			sourceTree = "<group>";
+		};
+		50306521296BF1F700E46455 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50306524296BF21400E46455 /* Cell */,
+				50306522296BF20200E46455 /* FavouritesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50306524296BF21400E46455 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				50306526296C020300E46455 /* FavouritiesCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		50306525296BF21D00E46455 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5030651F296BF1D000E46455 /* FavouritesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -89,6 +195,7 @@
 		D8337FD1296AB0A900F60521 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */,
 				D8337FEE296AB2C600F60521 /* ApplicationServices */,
 				D8337FEF296AB3C100F60521 /* Modules */,
 				D8337FED296AB2BA00F60521 /* System */,
@@ -99,7 +206,9 @@
 		D8337FEA296AB1F800F60521 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D8337FF2296AB40C00F60521 /* UIView+Ext.swift */,
+				D8337FF2296AB40C00F60521 /* UIView+AddSubviews.swift */,
+				5004837D296D971900123A53 /* Int+Scaling.swift */,
+				50048383296E948D00123A53 /* UIColorExtension+TabBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,8 +228,8 @@
 		D8337FEE296AB2C600F60521 /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
+				50048387296E9CC400123A53 /* TabBar */,
 				D8337FEA296AB1F800F60521 /* Extensions */,
-				D8337FF0296AB3CC00F60521 /* NetworkLayer */,
 				50306513296ACF5C00E46455 /* SoundLayer */,
 				D8337FF1296AB3DD00F60521 /* StorageLayer */,
 			);
@@ -130,17 +239,12 @@
 		D8337FEF296AB3C100F60521 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				D8337FFB296ABCBE00F60521 /* LoginScreen */,
+				5030651C296B28A900E46455 /* SoundScreen */,
+				5030651D296BF0FF00E46455 /* FavouritesScreen */,
+				5030651E296BF17600E46455 /* DownloadsScreen */,
 				D8337FD6296AB0A900F60521 /* ViewController.swift */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		D8337FF0296AB3CC00F60521 /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		D8337FF1296AB3DD00F60521 /* StorageLayer */ = {
@@ -150,13 +254,6 @@
 				D8337FF4296AB4D900F60521 /* CoreDataManager.swift */,
 			);
 			path = StorageLayer;
-			sourceTree = "<group>";
-		};
-		D8337FFB296ABCBE00F60521 /* LoginScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +316,7 @@
 			files = (
 				D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */,
 				D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */,
+				50048378296C4ED600123A53 /* 01. You Know You're Right.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,14 +327,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */,
+				50048374296C303A00123A53 /* DownloadsView.swift in Sources */,
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
+				5004837E296D971900123A53 /* Int+Scaling.swift in Sources */,
+				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
+				50048384296E948D00123A53 /* UIColorExtension+TabBar.swift in Sources */,
 				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
+				50048382296E91B400123A53 /* TabBarController.swift in Sources */,
+				5004837A296D4A9100123A53 /* DataModel.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
-				D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */,
+				D8337FF3296AB40C00F60521 /* UIView+AddSubviews.swift in Sources */,
+				50306527296C020300E46455 /* FavouritiesCell.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
+				50306523296BF20200E46455 /* FavouritesView.swift in Sources */,
 				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
+				50048376296C327900123A53 /* DownloadsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
