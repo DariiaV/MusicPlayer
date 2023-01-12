@@ -23,7 +23,7 @@ class TabBarController: UITabBarController {
         viewControllers = [
             
             generateVC(
-                viewController: ViewController(),
+                viewController: RegistrationViewController(),
                 image: UIImage(systemName: "house.fill")
             ),
             
@@ -43,7 +43,7 @@ class TabBarController: UITabBarController {
             ),
             
             generateVC(
-                viewController: ViewController(),
+                viewController: RegistrationViewController(),
                 image: UIImage(systemName: "person")
             )
         ]
