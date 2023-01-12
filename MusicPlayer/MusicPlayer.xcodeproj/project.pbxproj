@@ -24,6 +24,7 @@
 		D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8337FDE296AB0AA00F60521 /* Assets.xcassets */; };
 		D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */; };
 		D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF4296AB4D900F60521 /* CoreDataManager.swift */; };
+		D878618229704972004F112E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878618129704972004F112E /* OnboardingViewController.swift */; };
 		D9ACAB77296D64200000805F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB76296D64200000805F /* BaseView.swift */; };
 		D9ACAB7A296D67050000805F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB79296D67050000805F /* LoginView.swift */; };
 		D9ACAB7C296D671A0000805F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB7B296D671A0000805F /* LoginViewController.swift */; };
@@ -60,6 +61,7 @@
 		D8337FE1296AB0AA00F60521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8337FE3296AB0AA00F60521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8337FF4296AB4D900F60521 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D878618129704972004F112E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D9ACAB76296D64200000805F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D9ACAB79296D67050000805F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D9ACAB7B296D671A0000805F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -240,12 +242,13 @@
 		D8337FEF296AB3C100F60521 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				50048387296E9CC400123A53 /* TabBar */,
-				5030651C296B28A900E46455 /* SoundScreen */,
-				5030651D296BF0FF00E46455 /* FavouritesScreen */,
 				5030651E296BF17600E46455 /* DownloadsScreen */,
+				5030651D296BF0FF00E46455 /* FavouritesScreen */,
 				D9ACAB78296D66F40000805F /* Login */,
+				D878618029704972004F112E /* OnboardingScreen */,
 				D9B29EF5296FF01D003E8825 /* Registration */,
+				5030651C296B28A900E46455 /* SoundScreen */,
+				50048387296E9CC400123A53 /* TabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -257,6 +260,14 @@
 				D8337FF4296AB4D900F60521 /* CoreDataManager.swift */,
 			);
 			path = StorageLayer;
+			sourceTree = "<group>";
+		};
+		D878618029704972004F112E /* OnboardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D878618129704972004F112E /* OnboardingViewController.swift */,
+			);
+			path = OnboardingScreen;
 			sourceTree = "<group>";
 		};
 		D9ACAB75296D64090000805F /* Base */ = {
@@ -402,6 +413,7 @@
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
 				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
 				D9ACAB80296D68090000805F /* TitleLabel.swift in Sources */,
+				D878618229704972004F112E /* OnboardingViewController.swift in Sources */,
 				50048382296E91B400123A53 /* TabBarController.swift in Sources */,
 				5004837A296D4A9100123A53 /* DataModel.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
