@@ -20,11 +20,11 @@
 		50306527296C020300E46455 /* FavouritiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306526296C020300E46455 /* FavouritiesCell.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
-		D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD6296AB0A900F60521 /* ViewController.swift */; };
 		D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */; };
 		D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8337FDE296AB0AA00F60521 /* Assets.xcassets */; };
 		D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */; };
 		D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF4296AB4D900F60521 /* CoreDataManager.swift */; };
+		D878618229704972004F112E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878618129704972004F112E /* OnboardingViewController.swift */; };
 		D9ACAB77296D64200000805F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB76296D64200000805F /* BaseView.swift */; };
 		D9ACAB7A296D67050000805F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB79296D67050000805F /* LoginView.swift */; };
 		D9ACAB7C296D671A0000805F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB7B296D671A0000805F /* LoginViewController.swift */; };
@@ -36,7 +36,9 @@
 		D9B29E63296F34E5003E8825 /* UIColorExtension+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29E60296F34E5003E8825 /* UIColorExtension+TabBar.swift */; };
 		D9B29E64296F34E5003E8825 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29E61296F34E5003E8825 /* UIView+AddSubviews.swift */; };
 		D9B29E67296F3531003E8825 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29E66296F3531003E8825 /* UIStackView+Ext.swift */; };
-		D8337FFE296AD90800F60521 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FFD296AD90800F60521 /* OnboardingViewController.swift */; };
+		D9B29EF7296FF095003E8825 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EF6296FF095003E8825 /* RegistrationView.swift */; };
+		D9B29EF9296FF0B1003E8825 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */; };
+		D9B29EFB297037EB003E8825 /* UITapGestureRecognizer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,12 +56,12 @@
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8337FD6296AB0A900F60521 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8337FDC296AB0A900F60521 /* MusicPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicPlayer.xcdatamodel; sourceTree = "<group>"; };
 		D8337FDE296AB0AA00F60521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8337FE1296AB0AA00F60521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8337FE3296AB0AA00F60521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8337FF4296AB4D900F60521 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D878618129704972004F112E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D9ACAB76296D64200000805F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D9ACAB79296D67050000805F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D9ACAB7B296D671A0000805F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +73,9 @@
 		D9B29E60296F34E5003E8825 /* UIColorExtension+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColorExtension+TabBar.swift"; sourceTree = "<group>"; };
 		D9B29E61296F34E5003E8825 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
 		D9B29E66296F3531003E8825 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
-		D8337FFD296AD90800F60521 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		D9B29EF6296FF095003E8825 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,14 +242,13 @@
 		D8337FEF296AB3C100F60521 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				50048387296E9CC400123A53 /* TabBar */,
-				5030651C296B28A900E46455 /* SoundScreen */,
-				5030651D296BF0FF00E46455 /* FavouritesScreen */,
 				5030651E296BF17600E46455 /* DownloadsScreen */,
-				D8337FFC296AD8BD00F60521 /* OnboardingScreen */,
-				D8337FFB296ABCBE00F60521 /* LoginScreen */,
-				D8337FD6296AB0A900F60521 /* ViewController.swift */,
+				5030651D296BF0FF00E46455 /* FavouritesScreen */,
 				D9ACAB78296D66F40000805F /* Login */,
+				D878618029704972004F112E /* OnboardingScreen */,
+				D9B29EF5296FF01D003E8825 /* Registration */,
+				5030651C296B28A900E46455 /* SoundScreen */,
+				50048387296E9CC400123A53 /* TabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -257,6 +260,14 @@
 				D8337FF4296AB4D900F60521 /* CoreDataManager.swift */,
 			);
 			path = StorageLayer;
+			sourceTree = "<group>";
+		};
+		D878618029704972004F112E /* OnboardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D878618129704972004F112E /* OnboardingViewController.swift */,
+			);
+			path = OnboardingScreen;
 			sourceTree = "<group>";
 		};
 		D9ACAB75296D64090000805F /* Base */ = {
@@ -305,17 +316,19 @@
 				D9B29E60296F34E5003E8825 /* UIColorExtension+TabBar.swift */,
 				D9B29E61296F34E5003E8825 /* UIView+AddSubviews.swift */,
 				D9B29E66296F3531003E8825 /* UIStackView+Ext.swift */,
+				D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */,
 			);
 			name = Extensions;
 			path = ../ApplicationServices/Extensions;
 			sourceTree = "<group>";
 		};
-		D8337FFC296AD8BD00F60521 /* OnboardingScreen */ = {
+		D9B29EF5296FF01D003E8825 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				D8337FFD296AD90800F60521 /* OnboardingViewController.swift */,
+				D9B29EF6296FF095003E8825 /* RegistrationView.swift */,
+				D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */,
 			);
-			path = OnboardingScreen;
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,17 +409,18 @@
 				D9ACAB7C296D671A0000805F /* LoginViewController.swift in Sources */,
 				50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */,
 				50048374296C303A00123A53 /* DownloadsView.swift in Sources */,
+				D9B29EF7296FF095003E8825 /* RegistrationView.swift in Sources */,
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
 				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
-				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
 				D9ACAB80296D68090000805F /* TitleLabel.swift in Sources */,
+				D878618229704972004F112E /* OnboardingViewController.swift in Sources */,
 				50048382296E91B400123A53 /* TabBarController.swift in Sources */,
 				5004837A296D4A9100123A53 /* DataModel.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
+				D9B29EFB297037EB003E8825 /* UITapGestureRecognizer+Ext.swift in Sources */,
 				50306527296C020300E46455 /* FavouritiesCell.swift in Sources */,
 				D9B29E62296F34E5003E8825 /* Int+Scaling.swift in Sources */,
-				D8337FFE296AD90800F60521 /* OnboardingViewController.swift in Sources */,
-				D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */,
+				D9B29EF9296FF0B1003E8825 /* RegistrationViewController.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
 				D9ACAB85296D71BF0000805F /* DescriptionLabel.swift in Sources */,

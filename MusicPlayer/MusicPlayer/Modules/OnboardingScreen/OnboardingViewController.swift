@@ -59,23 +59,23 @@ class OnboardingViewController: UIViewController {
         view.addSubviews([imageView, welcomeLabel, descriptionLabel, nextButton])
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 225),
-            imageView.heightAnchor.constraint(equalToConstant: 207),
-            imageView.widthAnchor.constraint(equalToConstant: 207),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: .imageViewTopAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: .imageViewHeightAnchorAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: .imageViewHeightAnchorAnchor),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            welcomeLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24),
-            welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
-            welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80),
+            welcomeLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: .welcomeLabelTopAnchor),
+            welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .welcomeDefaultOffset),
+            welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.welcomeDefaultOffset),
             welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            descriptionLabel.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 8),
+            descriptionLabel.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: .descriptionLabelTopAnchor),
             descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            nextButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 49),
-            nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -29),
-            nextButton.widthAnchor.constraint(equalToConstant: 66),
-            nextButton.heightAnchor.constraint(equalToConstant: 40)
+            nextButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: .nextButtonTopAnchor),
+            nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: .nextButtonTrailingAnchor),
+            nextButton.widthAnchor.constraint(equalToConstant: .nextButtonWidthAnchor),
+            nextButton.heightAnchor.constraint(equalToConstant: .nextButtonHeightAnchor)
             
         ])
     }
@@ -120,4 +120,21 @@ class OnboardingViewController: UIViewController {
         }
     }
     
+}
+
+// MARK: - Constant Constraints
+
+private extension CGFloat {
+    static let imageViewTopAnchor: CGFloat = 225
+    static let imageViewHeightAnchorAnchor: CGFloat = 207
+    
+    static let welcomeLabelTopAnchor: CGFloat = 24
+    static let welcomeDefaultOffset: CGFloat = 80
+    
+    static let descriptionLabelTopAnchor: CGFloat = 8
+    
+    static let nextButtonTopAnchor: CGFloat = 49
+    static let nextButtonTrailingAnchor: CGFloat = -29
+    static let nextButtonWidthAnchor: CGFloat = 66
+    static let nextButtonHeightAnchor: CGFloat = 40
 }
