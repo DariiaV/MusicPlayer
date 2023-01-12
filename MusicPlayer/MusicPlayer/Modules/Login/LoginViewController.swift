@@ -21,5 +21,6 @@ final class LoginViewController: UIViewController {
     }
 
     @objc private func singInButtonTapped() {
+        ///Переход на главный экран
     }
 }

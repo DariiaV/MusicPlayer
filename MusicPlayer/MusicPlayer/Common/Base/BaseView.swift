@@ -9,7 +9,7 @@ import UIKit
 
 extension CGFloat {
     static let baseSpacing: CGFloat = 10
-    static let baseLightSpacing: CGFloat = 18
+    static let baseLightSpacing: CGFloat = 25
     static let baseMediumSpacing: CGFloat = 42
     static let baseLargeSpacing: CGFloat = 54
     static let baseCornerRadius: CGFloat = 10 
