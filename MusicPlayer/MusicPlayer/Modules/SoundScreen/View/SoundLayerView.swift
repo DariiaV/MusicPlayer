@@ -185,6 +185,6 @@ private extension CGFloat {
     static let imageViewAnchor: CGFloat = 30
     static let topAnchor: CGFloat = 10
     static let leadingTrailingAnchor: CGFloat = 15
-    static let authorLabelTopAnchor: CGFloat = 50
-    static let buttonStackTopAnchor: CGFloat = 32
+    static let authorLabelTopAnchor: CGFloat = 75
+    static let buttonStackTopAnchor: CGFloat = 15
 }
