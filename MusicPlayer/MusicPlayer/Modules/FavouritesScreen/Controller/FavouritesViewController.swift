@@ -12,7 +12,7 @@ final class FavouritesViewController: UIViewController {
     // MARK: - Properties
     
     private let favouritesView = FavouritesView()
-    
+  
     // MARK: - Lifecycle
     
     override func loadView() {
@@ -24,6 +24,7 @@ final class FavouritesViewController: UIViewController {
         super.viewDidLoad()
       
         setupDelegate()
+       
     }
     
     // MARK: - Private Method
@@ -48,6 +49,7 @@ extension FavouritesViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath) as? FavouritiesCell  else {
             fatalError("Creating cell from HotelsListViewController failed")
         }
+     
         cell.data = items[indexPath.item]
         
         return cell

@@ -18,6 +18,12 @@
 		50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030651F296BF1D000E46455 /* FavouritesViewController.swift */; };
 		50306523296BF20200E46455 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306522296BF20200E46455 /* FavouritesView.swift */; };
 		50306527296C020300E46455 /* FavouritiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306526296C020300E46455 /* FavouritiesCell.swift */; };
+		5070BCD129704CA900927221 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCD029704CA900927221 /* MainScreenController.swift */; };
+		5070BCD329704CAD00927221 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCD229704CAD00927221 /* MainScreenView.swift */; };
+		5070BCDB29704CEC00927221 /* DitailPlaylistViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCD929704CEC00927221 /* DitailPlaylistViewCell.swift */; };
+		5070BCDC29704CEC00927221 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCDA29704CEC00927221 /* MusicTableViewCell.swift */; };
+		5070BCF12971623600927221 /* SoundNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCF02971623600927221 /* SoundNetworkManager.swift */; };
+		5070BCF4297168B200927221 /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCF3297168B200927221 /* SoundModel.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
 		D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD6296AB0A900F60521 /* ViewController.swift */; };
@@ -50,6 +56,12 @@
 		5030651F296BF1D000E46455 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		50306522296BF20200E46455 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		50306526296C020300E46455 /* FavouritiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritiesCell.swift; sourceTree = "<group>"; };
+		5070BCD029704CA900927221 /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		5070BCD229704CAD00927221 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		5070BCD929704CEC00927221 /* DitailPlaylistViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DitailPlaylistViewCell.swift; sourceTree = "<group>"; };
+		5070BCDA29704CEC00927221 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		5070BCF02971623600927221 /* SoundNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundNetworkManager.swift; sourceTree = "<group>"; };
+		5070BCF3297168B200927221 /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +197,58 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		5070BCD429704CBA00927221 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5070BCD629704CCC00927221 /* View */,
+				5070BCD529704CC500927221 /* Controller */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		5070BCD529704CC500927221 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5070BCD029704CA900927221 /* MainScreenController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5070BCD629704CCC00927221 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5070BCDD29704CF500927221 /* Cell */,
+				5070BCD229704CAD00927221 /* MainScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5070BCDD29704CF500927221 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5070BCD929704CEC00927221 /* DitailPlaylistViewCell.swift */,
+				5070BCDA29704CEC00927221 /* MusicTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5070BCDE2970500A00927221 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				5070BCF2297168A000927221 /* Model */,
+				5070BCF02971623600927221 /* SoundNetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		5070BCF2297168A000927221 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5070BCF3297168B200927221 /* SoundModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D8337FC6296AB0A900F60521 = {
 			isa = PBXGroup;
 			children = (
@@ -227,8 +291,9 @@
 		D8337FEE296AB2C600F60521 /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
-				D9ACAB7D296D67C80000805F /* Common */,
+				5070BCDE2970500A00927221 /* NetworkManager */,
 				D8337FF1296AB3DD00F60521 /* StorageLayer */,
+				D9ACAB7D296D67C80000805F /* Common */,
 			);
 			path = ApplicationServices;
 			sourceTree = "<group>";
@@ -236,6 +301,7 @@
 		D8337FEF296AB3C100F60521 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5070BCD429704CBA00927221 /* MainScreen */,
 				50048387296E9CC400123A53 /* TabBar */,
 				5030651C296B28A900E46455 /* SoundScreen */,
 				5030651D296BF0FF00E46455 /* FavouritesScreen */,
@@ -408,6 +474,8 @@
 				50048374296C303A00123A53 /* DownloadsView.swift in Sources */,
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
 				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
+				5070BCF4297168B200927221 /* SoundModel.swift in Sources */,
+				5070BCDC29704CEC00927221 /* MusicTableViewCell.swift in Sources */,
 				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
 				D9ACAB80296D68090000805F /* TitleLabel.swift in Sources */,
 				50048382296E91B400123A53 /* TabBarController.swift in Sources */,
@@ -417,15 +485,19 @@
 				D9B29E62296F34E5003E8825 /* Int+Scaling.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
+				5070BCF12971623600927221 /* SoundNetworkManager.swift in Sources */,
 				D9ACAB85296D71BF0000805F /* DescriptionLabel.swift in Sources */,
 				D9B29E67296F3531003E8825 /* UIStackView+Ext.swift in Sources */,
 				D9ACAB77296D64200000805F /* BaseView.swift in Sources */,
 				D9ACAB7A296D67050000805F /* LoginView.swift in Sources */,
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
 				D9B29E64296F34E5003E8825 /* UIView+AddSubviews.swift in Sources */,
+				5070BCD129704CA900927221 /* MainScreenController.swift in Sources */,
 				D9ACAB87296D733B0000805F /* DefaultTextField.swift in Sources */,
 				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
+				5070BCD329704CAD00927221 /* MainScreenView.swift in Sources */,
 				D9B29E63296F34E5003E8825 /* UIColorExtension+TabBar.swift in Sources */,
+				5070BCDB29704CEC00927221 /* DitailPlaylistViewCell.swift in Sources */,
 				D9ACAB89296D91B10000805F /* DefaultButton.swift in Sources */,
 				50306523296BF20200E46455 /* FavouritesView.swift in Sources */,
 				50048376296C327900123A53 /* DownloadsCell.swift in Sources */,

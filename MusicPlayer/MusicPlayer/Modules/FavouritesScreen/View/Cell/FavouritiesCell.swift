@@ -16,7 +16,7 @@ final class FavouritiesCell: UITableViewCell {
             nameMusicLabelCell.text = data.nameMusic
         }
     }
-
+    
     // MARK: - UI Elements
 
     lazy var performerMusicLabelCell: UILabel = {

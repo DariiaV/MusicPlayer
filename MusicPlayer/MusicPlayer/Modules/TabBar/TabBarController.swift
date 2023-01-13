@@ -23,7 +23,7 @@ class TabBarController: UITabBarController {
         viewControllers = [
             
             generateVC(
-                viewController: LoginViewController(),
+                viewController: MainScreenViewController(),
                 image: UIImage(systemName: "house.fill")
             ),
             

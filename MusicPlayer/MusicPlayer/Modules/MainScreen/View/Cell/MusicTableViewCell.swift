@@ -11,7 +11,7 @@ class MusicTableViewCell: UITableViewCell {
     
     static let indetifire = "MusicTableViewCell"
     
-    private let imageBack : UIImageView = {
+     let imageBack: UIImageView = {
         let imageBack = UIImageView()
         imageBack.image = UIImage(named: "1111")
         imageBack.layer.cornerRadius = 20
@@ -25,12 +25,12 @@ class MusicTableViewCell: UITableViewCell {
         button.setImage(UIImage(named: "play.circle.fill"), for: .normal)
         button.backgroundColor = .orange
         button.layer.cornerRadius = 30
-        //button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        // button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
         
     }()
     
-    private lazy var songLbl : UILabel = {
+    private lazy var songLbl: UILabel = {
         let label = UILabel()
         label.text = "La Ritournelle"
         label.font = UIFont.systemFont(ofSize: 19)
@@ -39,7 +39,7 @@ class MusicTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var artistLbl : UILabel = {
+    private lazy var artistLbl: UILabel = {
         let label = UILabel()
         label.text = "Sébastien Tellier"
         label.font = UIFont.systemFont(ofSize: 15)
@@ -48,7 +48,7 @@ class MusicTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var timeLbl : UILabel = {
+    private lazy var timeLbl: UILabel = {
         let label = UILabel()
         label.text = "2:35"
         label.font = UIFont.systemFont(ofSize: 16)
@@ -57,7 +57,7 @@ class MusicTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var longLbl : UILabel = {
+    private lazy var longLbl: UILabel = {
         let label = UILabel()
         label.text = "5:00"
         label.font = UIFont.systemFont(ofSize: 16)
@@ -65,7 +65,6 @@ class MusicTableViewCell: UITableViewCell {
         label.textColor = .white
         return label
     }()
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -86,7 +85,7 @@ class MusicTableViewCell: UITableViewCell {
     }
     
     func createConfig() {
-        [imageBack,playButton,songLbl,artistLbl,timeLbl,longLbl].forEach {
+        [imageBack, playButton, songLbl, artistLbl, timeLbl, longLbl].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)
         }
@@ -101,10 +100,10 @@ class MusicTableViewCell: UITableViewCell {
             imageBack.heightAnchor.constraint(equalToConstant: 32),
             imageBack.widthAnchor.constraint(equalToConstant: 90),
             
-            playButton.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 40),
-            playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -10),
-            playButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 310),
-            playButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -40),
+            playButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40),
+            playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            playButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 310),
+            playButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -40),
             
             songLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             songLbl.leadingAnchor.constraint(equalTo: imageBack.trailingAnchor, constant: 10 ),
@@ -124,13 +123,10 @@ class MusicTableViewCell: UITableViewCell {
             longLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 60),
             longLbl.leadingAnchor.constraint(equalTo: timeLbl.leadingAnchor, constant: 45 ),
             longLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            longLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            
-            
+            longLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
             
         ])
     }
-    
     
 }
 

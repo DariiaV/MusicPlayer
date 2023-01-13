@@ -11,6 +11,11 @@ class MainScreenViewController: UIViewController {
     
     private let mainView = MainScreenView()
     
+    override func loadView() {
+        super.loadView()
+        self.view = mainView
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,21 +24,14 @@ class MainScreenViewController: UIViewController {
         mainView.collectionView.dataSource = self
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+  
     }
-    
-    override func loadView() {
-        super.loadView()
-        self.view = mainView
-        
-    }
-    
-    
 }
 
 extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        8
+     return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,8 +43,6 @@ extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDa
         
         return cell
     }
-    
-    
     
 }
 
@@ -74,17 +70,9 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
 
     }
     
-    
-    
-    
-    
-    
 }
-
-

@@ -11,7 +11,7 @@ class DitailPlaylistViewCell: UICollectionViewCell {
     
     static let indetifire = "DitailPlaylistViewCell"
     
-    private let imageBack : UIImageView = {
+     let imageBack: UIImageView = {
         let imageBack = UIImageView()
         imageBack.image = UIImage(named: "1111")
         imageBack.layer.cornerRadius = 20
@@ -20,7 +20,7 @@ class DitailPlaylistViewCell: UICollectionViewCell {
         return imageBack
     }()
     
-    private lazy var nameLbl : UILabel = {
+     lazy var nameLbl: UILabel = {
         let label = UILabel()
         label.text = "Friday mood!"
         label.font = UIFont.systemFont(ofSize: 16)
@@ -29,7 +29,7 @@ class DitailPlaylistViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var disLbl : UILabel = {
+    private lazy var disLbl: UILabel = {
         let label = UILabel()
         label.text = "Lets dance!"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -43,13 +43,10 @@ class DitailPlaylistViewCell: UICollectionViewCell {
         button.setImage(UIImage(named: "play.circle.fill"), for: .normal)
         button.backgroundColor = .orange
         button.layer.cornerRadius = 30
-        //button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        // button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
         
     }()
-    
-    
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -63,7 +60,7 @@ class DitailPlaylistViewCell: UICollectionViewCell {
     }
     
     func createConfig() {
-        [imageBack,nameLbl,disLbl,playButton].forEach {
+        [imageBack, nameLbl, disLbl, playButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)
         }
@@ -82,30 +79,23 @@ class DitailPlaylistViewCell: UICollectionViewCell {
             imageBack.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             imageBack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            nameLbl.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 120),
-            nameLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -10),
-            nameLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
+            nameLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 120),
+            nameLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            nameLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             nameLbl.heightAnchor.constraint(equalToConstant: 30),
             
-            disLbl.topAnchor.constraint(equalTo: nameLbl.topAnchor,constant: 20),
-            disLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -10),
-            disLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
+            disLbl.topAnchor.constraint(equalTo: nameLbl.topAnchor, constant: 20),
+            disLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            disLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             disLbl.heightAnchor.constraint(equalToConstant: 30),
             
-            playButton.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 125),
-            playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -10),
-            playButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 120),
-            playButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -20),
-            playButton.heightAnchor.constraint(equalToConstant: 30),
-            
-            
+            playButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 125),
+            playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            playButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 120),
+            playButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+            playButton.heightAnchor.constraint(equalToConstant: 30)
             
         ])
     }
     
-    
-    
-    
 }
-
-
