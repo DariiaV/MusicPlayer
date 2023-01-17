@@ -11,20 +11,64 @@ class MainScreenViewController: UIViewController {
     
     private let mainView = MainScreenView()
     
+    var trecks = [TrackModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchTreck(treckName: "оборотень+лис")
         view.backgroundColor = .black
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+        
     }
     
     override func loadView() {
         super.loadView()
         self.view = mainView
         
+    }
+    
+//    private func makeRequest() {
+//
+//        var request = URLRequest(url:URL(string: "https://itunes.apple.com/search?term=оборотень+лис&entity=song&media=music")!)
+//
+//            request.httpMethod = "GET"
+//
+//            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//                print(String(decoding: data!, as: UTF8.self))
+//                print(error)
+//            }
+//            task.resume()
+//        }
+    
+    
+    func fetchTreck(treckName: String) {
+
+        //let url = "https://itunes.apple.com/search?term=\(treckName)&entity=song&media=music"
+        
+        let url =  "https://itunes.apple.com/search?term=\(treckName)&entity=song&media=music"
+
+        print(url)
+        
+        NetworkDataFetch.shared.fetchTreck(urlString: url) { [weak self] treckName, error in
+
+            if error == nil {
+
+
+                guard let treckName = treckName else {return}
+
+                self?.trecks = treckName.results
+    
+                print(treckName.results)
+               
+
+            } else {
+                print(error!.localizedDescription)
+            }
+        }
+
     }
     
     

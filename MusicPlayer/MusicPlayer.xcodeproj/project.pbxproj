@@ -13,6 +13,11 @@
 		848DE105296C4FD500366F30 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DE104296C4FD500366F30 /* MainScreenController.swift */; };
 		849ECD68296DC76F000D0A3B /* DitailPlaylistViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD67296DC76F000D0A3B /* DitailPlaylistViewCell.swift */; };
 		849ECD6E296EF993000D0A3B /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD6D296EF993000D0A3B /* MusicTableViewCell.swift */; };
+		849ECD732972DE75000D0A3B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD722972DE75000D0A3B /* NetworkService.swift */; };
+		849ECD752972DEB7000D0A3B /* TreckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD742972DEB7000D0A3B /* TreckModel.swift */; };
+		849ECD772972DECB000D0A3B /* Route+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD762972DECB000D0A3B /* Route+Method.swift */; };
+		849ECD7B2972E4DC000D0A3B /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD7A2972E4DC000D0A3B /* PlaylistModel.swift */; };
+		849ECD7D2972E89E000D0A3B /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ECD7C2972E89E000D0A3B /* NetworkDataFetch.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
 		D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD6296AB0A900F60521 /* ViewController.swift */; };
@@ -30,6 +35,11 @@
 		848DE104296C4FD500366F30 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
 		849ECD67296DC76F000D0A3B /* DitailPlaylistViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DitailPlaylistViewCell.swift; sourceTree = "<group>"; };
 		849ECD6D296EF993000D0A3B /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		849ECD722972DE75000D0A3B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		849ECD742972DEB7000D0A3B /* TreckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreckModel.swift; sourceTree = "<group>"; };
+		849ECD762972DECB000D0A3B /* Route+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Method.swift"; sourceTree = "<group>"; };
+		849ECD7A2972E4DC000D0A3B /* PlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
+		849ECD7C2972E89E000D0A3B /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +91,9 @@
 		848DE100296C44A800366F30 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				849ECD712971BFDA000D0A3B /* NetworkService */,
+				849ECD702971BFCA000D0A3B /* Extension */,
+				849ECD6F2971BFB5000D0A3B /* Model */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -118,6 +131,32 @@
 				849ECD6D296EF993000D0A3B /* MusicTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		849ECD6F2971BFB5000D0A3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				849ECD742972DEB7000D0A3B /* TreckModel.swift */,
+				849ECD7A2972E4DC000D0A3B /* PlaylistModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		849ECD702971BFCA000D0A3B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		849ECD712971BFDA000D0A3B /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				849ECD722972DE75000D0A3B /* NetworkService.swift */,
+				849ECD7C2972E89E000D0A3B /* NetworkDataFetch.swift */,
+				849ECD762972DECB000D0A3B /* Route+Method.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		D8337FC6296AB0A900F60521 = {
@@ -266,9 +305,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
+				849ECD7B2972E4DC000D0A3B /* PlaylistModel.swift in Sources */,
 				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D8337FF3296AB40C00F60521 /* UIView+Ext.swift in Sources */,
+				849ECD772972DECB000D0A3B /* Route+Method.swift in Sources */,
+				849ECD752972DEB7000D0A3B /* TreckModel.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
 				848DE105296C4FD500366F30 /* MainScreenController.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
@@ -276,6 +318,8 @@
 				849ECD68296DC76F000D0A3B /* DitailPlaylistViewCell.swift in Sources */,
 				848DE103296C4ED600366F30 /* MainScreenView.swift in Sources */,
 				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
+				849ECD7D2972E89E000D0A3B /* NetworkDataFetch.swift in Sources */,
+				849ECD732972DE75000D0A3B /* NetworkService.swift in Sources */,
 				849ECD6E296EF993000D0A3B /* MusicTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

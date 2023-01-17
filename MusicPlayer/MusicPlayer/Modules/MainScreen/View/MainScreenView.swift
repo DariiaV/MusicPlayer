@@ -15,8 +15,6 @@ class MainScreenView: UIView {
         let label = UILabel()
         label.text = "Hello Nikita,"
         label.font = UIFont.systemFont(ofSize: 20)
-        label.textAlignment = .left
-        label.textColor = .white
         return label
     }()
     
@@ -24,20 +22,14 @@ class MainScreenView: UIView {
         let label = UILabel()
         label.text = "What You want to hear today?"
         label.font = UIFont.systemFont(ofSize: 15)
-        label.textAlignment = .left
-        label.textColor = .white
         return label
     }()
     
     lazy var justLbl : UILabel = {
         let label = UILabel()
-        label.text = "What You want to hear today?"
         label.frame = CGRect.init(x: 5, y: 5, width: self.frame.width, height: self.frame.height)
         label.text = "Recently play"
         label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
-        label.textColor = .white
-        label.textAlignment = .left
-        label.textColor = .white
         return label
     }()
     
@@ -73,10 +65,6 @@ class MainScreenView: UIView {
     lazy var recommendation: UIButton = {
         let button = UIButton()
         button.setTitle("Recommendation", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        button.setTitleColor(.cyan, for: .normal)
-        button.backgroundColor = .orange
-        button.layer.cornerRadius = 10
         //button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
         
@@ -85,10 +73,6 @@ class MainScreenView: UIView {
     lazy var trending: UIButton = {
         let button = UIButton()
         button.setTitle("Trending", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        button.setTitleColor(.cyan, for: .normal)
-        button.backgroundColor = .orange
-        button.layer.cornerRadius = 10
         //button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
         
@@ -97,10 +81,6 @@ class MainScreenView: UIView {
     lazy var beauty: UIButton = {
         let button = UIButton()
         button.setTitle("Beauty", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        button.setTitleColor(.cyan, for: .normal)
-        button.backgroundColor = .orange
-        button.layer.cornerRadius = 10
         //button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
         
@@ -109,10 +89,6 @@ class MainScreenView: UIView {
     lazy var buisnes: UIButton = {
         let button = UIButton()
         button.setTitle("Buisnes", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        button.setTitleColor(.cyan, for: .normal)
-        button.backgroundColor = .orange
-        button.layer.cornerRadius = 10
         //button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
         
@@ -139,6 +115,7 @@ class MainScreenView: UIView {
         backgroundColor = .black
         createConfig()
         setConstraint()
+        viewSeting()
         collectionView.frame = self.bounds
     }
     
@@ -157,6 +134,25 @@ extension MainScreenView {
             addSubview($0)
         }
     }
+    
+    func viewSeting() {
+        [recommendation,trending,beauty,buisnes].forEach {
+            $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+            $0.setTitleColor(.cyan, for: .normal)
+            //$0.backgroundColor = .orange
+            $0.layer.cornerRadius = 10
+            
+        }
+        
+        [helloLbl,questionLbl,justLbl].forEach {
+            $0.textAlignment = .left
+            $0.textColor = .white
+            
+        }
+    }
+
+    
+    
     
     func setConstraint() {
         
