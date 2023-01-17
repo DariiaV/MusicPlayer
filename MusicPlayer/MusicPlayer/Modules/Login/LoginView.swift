@@ -44,11 +44,11 @@ final class LoginView: BaseView {
 
     private let emailLabel = DescriptionLabel(title: "Email address")
 
-    private let emailTextField = DefaultTextField(placeholder: "Email")
+    let emailTextField = DefaultTextField(placeholder: "Email")
 
     private let passwordLabel = DescriptionLabel(title: "Password")
 
-    private let passwordTextField = DefaultTextField(placeholder: "Password")
+    let passwordTextField = DefaultTextField(placeholder: "Password")
 
     private let forgotPasswordButton: UIButton = {
         let button = UIButton()

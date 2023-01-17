@@ -38,6 +38,9 @@
 		D9B29EF7296FF095003E8825 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EF6296FF095003E8825 /* RegistrationView.swift */; };
 		D9B29EF9296FF0B1003E8825 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */; };
 		D9B29EFB297037EB003E8825 /* UITapGestureRecognizer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */; };
+		D9B29EFE29704727003E8825 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D9B29EFD29704727003E8825 /* FirebaseAuth */; };
+		D9B29F0029704727003E8825 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D9B29EFF29704727003E8825 /* FirebaseFirestore */; };
+		D9B29F0229704A61003E8825 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9B29F0129704A61003E8825 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,7 @@
 		D9B29EF6296FF095003E8825 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Ext.swift"; sourceTree = "<group>"; };
+		D9B29F0129704A61003E8825 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B29EFE29704727003E8825 /* FirebaseAuth in Frameworks */,
+				D9B29F0029704727003E8825 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +225,7 @@
 		D8337FED296AB2BA00F60521 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				D9B29F0129704A61003E8825 /* GoogleService-Info.plist */,
 				D8337FD2296AB0A900F60521 /* AppDelegate.swift */,
 				D8337FD4296AB0A900F60521 /* SceneDelegate.swift */,
 				D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */,
@@ -337,6 +344,8 @@
 			);
 			name = MusicPlayer;
 			packageProductDependencies = (
+				D9B29EFD29704727003E8825 /* FirebaseAuth */,
+				D9B29EFF29704727003E8825 /* FirebaseFirestore */,
 			);
 			productName = MusicPlayer;
 			productReference = D8337FCF296AB0A900F60521 /* MusicPlayer.app */;
@@ -367,6 +376,7 @@
 			);
 			mainGroup = D8337FC6296AB0A900F60521;
 			packageReferences = (
+				D9B29EFC29704727003E8825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D8337FD0296AB0A900F60521 /* Products */;
 			projectDirPath = "";
@@ -383,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */,
+				D9B29F0229704A61003E8825 /* GoogleService-Info.plist in Resources */,
 				D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */,
 				50048378296C4ED600123A53 /* 01. You Know You're Right.mp3 in Resources */,
 			);
@@ -628,6 +639,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9B29EFC29704727003E8825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9B29EFD29704727003E8825 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9B29EFC29704727003E8825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D9B29EFF29704727003E8825 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9B29EFC29704727003E8825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */ = {
