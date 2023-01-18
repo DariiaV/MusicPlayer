@@ -191,8 +191,8 @@ extension MainScreenViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            #warning("Открыть экран с музыкой")
-        
+        let track = countryTracks[indexPath.row]
+        #warning("Открыть экран с музыкой модель track выше")
     }
     
         

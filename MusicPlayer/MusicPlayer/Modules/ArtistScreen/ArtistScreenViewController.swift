@@ -111,8 +111,8 @@ extension ArtistScreenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        #warning("Открыть экран с музыкой")
+        let track = trackList[indexPath.row]
+        #warning("Открыть экран с музыкой модель track выше")
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
