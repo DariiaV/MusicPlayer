@@ -14,7 +14,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateTabBar()
-        setTabBarAppearance()
+        setupTabBar()
     }
   
     // MARK: - Private Method
@@ -23,7 +23,7 @@ class TabBarController: UITabBarController {
         viewControllers = [
             
             generateVC(
-                viewController: RegistrationViewController(),
+                viewController: MainScreenViewController(),
                 image: UIImage(systemName: "house.fill")
             ),
             
@@ -55,29 +55,8 @@ class TabBarController: UITabBarController {
         return UINavigationController(rootViewController: viewController)
     }
     
-    private func setTabBarAppearance() {
-        let positionOnX: CGFloat = 3
-        let positionOnY: CGFloat = 3
-        let width = tabBar.bounds.width - positionOnX * 2
-        let height = tabBar.bounds.height + positionOnY * 2
-        let roundLayer = CAShapeLayer()
-
-        let bezierPath = UIBezierPath(
-            roundedRect: CGRect(
-                x: positionOnX,
-                y: tabBar.bounds.minY - positionOnY,
-                width: width,
-                height: height
-            ),
-            cornerRadius: 1
-        )
-
-        roundLayer.path = bezierPath.cgPath
-        roundLayer.fillColor = UIColor.mainWhite.cgColor
-        
-        tabBar.layer.insertSublayer(roundLayer, at: 0)
-        tabBar.itemWidth = width / 5
-        tabBar.itemPositioning = .centered
+    private func setupTabBar() {
+        tabBar.backgroundColor = .gray
         tabBar.tintColor = .tabBarItemAccent
         tabBar.unselectedItemTintColor = .tabBarItemLight
     }
