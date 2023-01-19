@@ -146,29 +146,3 @@ final class SoundLayerController: UIViewController {
     }
 }
 
-//func didUpdateDetailRecipe(track: TrackModel) {
-//    DispatchQueue.main.async { [weak self] in
-//        guard let self else {
-//            return
-//        }
-
-//        self.trackSound = track
-//
-//        self.authorLabel.text = track.artistName
-//        self.nameMusicLabel.text = track.trackName
-//        self.descriptionLabel.text = recipe.summary.htmlToString
-//        self.text = recipe.summary.htmlToString
-//
-//        self.manager.downloadImage(from: track.image) { [weak self] image in
-//            DispatchQueue.main.async {
-//                self?.image.image = image
-//            }
-//        }
-//        self.tableView.reloadData()
-
-
-//                imageViewMain.image = data.artworkUrl100
-//                musicSlider.text = data.previewUrl
-//    }
-//}
-
