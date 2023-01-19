@@ -27,6 +27,7 @@
 		D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8337FDE296AB0AA00F60521 /* Assets.xcassets */; };
 		D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */; };
 		D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF4296AB4D900F60521 /* CoreDataManager.swift */; };
+
 		D864CBC32977D2550059E68D /* PopularAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */; };
 		D864CBC52977EB3D0059E68D /* SelectorCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC42977EB3D0059E68D /* SelectorCountriesView.swift */; };
 		D864CBC72977EBC60059E68D /* CountryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC62977EBC60059E68D /* CountryButtonView.swift */; };
@@ -37,6 +38,17 @@
 		D873171D2978807D00AC8ECD /* MusicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873171C2978807D00AC8ECD /* MusicError.swift */; };
 		D873171F2978811500AC8ECD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873171E2978811500AC8ECD /* Country.swift */; };
 		D878618229704972004F112E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878618129704972004F112E /* OnboardingViewController.swift */; };
+
+		D933390329782EBD00BC720A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933390229782EBD00BC720A /* AuthService.swift */; };
+		D93339062978326500BC720A /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93339052978326500BC720A /* RegisterUserRequest.swift */; };
+		D93339082978397400BC720A /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93339072978397400BC720A /* LoginUserRequest.swift */; };
+		D933390B2978961300BC720A /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933390A2978961300BC720A /* UserInfoView.swift */; };
+		D933390D2978981C00BC720A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933390C2978981C00BC720A /* UserInfoViewController.swift */; };
+		D933390F29789C8C00BC720A /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933390E29789C8C00BC720A /* UserInfoModel.swift */; };
+		D933391129799B5A00BC720A /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933391029799B5A00BC720A /* DetailUserViewController.swift */; };
+		D93339142979AB5500BC720A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93339132979AB5500BC720A /* AlertManager.swift */; };
+		D93339172979B30B00BC720A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93339162979B30B00BC720A /* Validator.swift */; };
+
 		D9ACAB77296D64200000805F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB76296D64200000805F /* BaseView.swift */; };
 		D9ACAB7A296D67050000805F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB79296D67050000805F /* LoginView.swift */; };
 		D9ACAB7C296D671A0000805F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB7B296D671A0000805F /* LoginViewController.swift */; };
@@ -79,6 +91,7 @@
 		D8337FE1296AB0AA00F60521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8337FE3296AB0AA00F60521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8337FF4296AB4D900F60521 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+
 		D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAlbumsCell.swift; sourceTree = "<group>"; };
 		D864CBC42977EB3D0059E68D /* SelectorCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCountriesView.swift; sourceTree = "<group>"; };
 		D864CBC62977EBC60059E68D /* CountryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryButtonView.swift; sourceTree = "<group>"; };
@@ -89,6 +102,17 @@
 		D873171C2978807D00AC8ECD /* MusicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicError.swift; sourceTree = "<group>"; };
 		D873171E2978811500AC8ECD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		D878618129704972004F112E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+
+		D933390229782EBD00BC720A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D93339052978326500BC720A /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		D93339072978397400BC720A /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
+		D933390A2978961300BC720A /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		D933390C2978981C00BC720A /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		D933390E29789C8C00BC720A /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		D933391029799B5A00BC720A /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
+		D93339132979AB5500BC720A /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		D93339162979B30B00BC720A /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+
 		D9ACAB76296D64200000805F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D9ACAB79296D67050000805F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D9ACAB7B296D671A0000805F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -318,7 +342,13 @@
 		D8337FEE296AB2C600F60521 /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
+
 				D8281E822977086C006EF86F /* NetworkLayer */,
+
+				D93339152979B30100BC720A /* Validator */,
+				D93339122979AB3E00BC720A /* AlertService */,
+				D933390129782E8D00BC720A /* AuthService */,
+
 				D9ACAB7D296D67C80000805F /* Common */,
 				D8337FF1296AB3DD00F60521 /* StorageLayer */,
 			);
@@ -335,8 +365,12 @@
 				D9ACAB78296D66F40000805F /* Login */,
 				D878618029704972004F112E /* OnboardingScreen */,
 				D9B29EF5296FF01D003E8825 /* Registration */,
+
 				5030651C296B28A900E46455 /* SoundScreen */,
 				50048387296E9CC400123A53 /* TabBar */,
+
+				D9333909297895D500BC720A /* UserInfo */,
+
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -350,6 +384,7 @@
 			path = StorageLayer;
 			sourceTree = "<group>";
 		};
+
 		D873171629786DDA00AC8ECD /* ArtistScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +408,107 @@
 				D878618129704972004F112E /* OnboardingViewController.swift */,
 			);
 			path = OnboardingScreen;
+
+		D933390129782E8D00BC720A /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				D933390229782EBD00BC720A /* AuthService.swift */,
+				D93339042978324100BC720A /* Models */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		D93339042978324100BC720A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D93339052978326500BC720A /* RegisterUserRequest.swift */,
+				D93339072978397400BC720A /* LoginUserRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9333909297895D500BC720A /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D933391D2979B75D00BC720A /* View */,
+				D933391E2979B76400BC720A /* Controllers */,
+				D933391F2979B77800BC720A /* Model */,
+				D933391029799B5A00BC720A /* DetailUserViewController.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		D93339122979AB3E00BC720A /* AlertService */ = {
+			isa = PBXGroup;
+			children = (
+				D93339132979AB5500BC720A /* AlertManager.swift */,
+			);
+			path = AlertService;
+			sourceTree = "<group>";
+		};
+		D93339152979B30100BC720A /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				D93339162979B30B00BC720A /* Validator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		D93339192979B73500BC720A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9ACAB79296D67050000805F /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D933391A2979B74500BC720A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9ACAB7B296D671A0000805F /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D933391B2979B74E00BC720A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9B29EF6296FF095003E8825 /* RegistrationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D933391C2979B75400BC720A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D933391D2979B75D00BC720A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D933390A2978961300BC720A /* UserInfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D933391E2979B76400BC720A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D933390C2978981C00BC720A /* UserInfoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D933391F2979B77800BC720A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D933390E29789C8C00BC720A /* UserInfoModel.swift */,
+			);
+			path = Model;
+
 			sourceTree = "<group>";
 		};
 		D9ACAB75296D64090000805F /* Base */ = {
@@ -386,8 +522,8 @@
 		D9ACAB78296D66F40000805F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				D9ACAB79296D67050000805F /* LoginView.swift */,
-				D9ACAB7B296D671A0000805F /* LoginViewController.swift */,
+				D93339192979B73500BC720A /* View */,
+				D933391A2979B74500BC720A /* Controller */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -432,8 +568,8 @@
 		D9B29EF5296FF01D003E8825 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				D9B29EF6296FF095003E8825 /* RegistrationView.swift */,
-				D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */,
+				D933391B2979B74E00BC720A /* View */,
+				D933391C2979B75400BC720A /* Controller */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -522,12 +658,18 @@
 				D873171529785B1C00AC8ECD /* ArtistModel.swift in Sources */,
 				50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */,
 				50048374296C303A00123A53 /* DownloadsView.swift in Sources */,
+
 				D8281E9C29771CFA006EF86F /* NetworkManager.swift in Sources */,
 				D864CBC52977EB3D0059E68D /* SelectorCountriesView.swift in Sources */,
+
+				D93339062978326500BC720A /* RegisterUserRequest.swift in Sources */,
+				D933390F29789C8C00BC720A /* UserInfoModel.swift in Sources */,
+
 				D9B29EF7296FF095003E8825 /* RegistrationView.swift in Sources */,
 				D8281E9E29772285006EF86F /* MainScreenViewController.swift in Sources */,
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
 				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
+				D93339142979AB5500BC720A /* AlertManager.swift in Sources */,
 				D9ACAB80296D68090000805F /* TitleLabel.swift in Sources */,
 				D864CBC32977D2550059E68D /* PopularAlbumsCell.swift in Sources */,
 				D873171B2978773600AC8ECD /* TrackListCell.swift in Sources */,
@@ -537,18 +679,27 @@
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D873171829786E5A00AC8ECD /* ArtistScreenViewController.swift in Sources */,
 				D9B29EFB297037EB003E8825 /* UITapGestureRecognizer+Ext.swift in Sources */,
+				D933390329782EBD00BC720A /* AuthService.swift in Sources */,
+				D93339172979B30B00BC720A /* Validator.swift in Sources */,
 				50306527296C020300E46455 /* FavouritiesCell.swift in Sources */,
 				D9B29E62296F34E5003E8825 /* Int+Scaling.swift in Sources */,
 				D9B29EF9296FF0B1003E8825 /* RegistrationViewController.swift in Sources */,
+				D933390D2978981C00BC720A /* UserInfoViewController.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
 				D8281E8D2977086C006EF86F /* TreckModel.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
 				D9ACAB85296D71BF0000805F /* DescriptionLabel.swift in Sources */,
+				D933390B2978961300BC720A /* UserInfoView.swift in Sources */,
 				D9B29E67296F3531003E8825 /* UIStackView+Ext.swift in Sources */,
 				D864CBC72977EBC60059E68D /* CountryButtonView.swift in Sources */,
 				D9ACAB77296D64200000805F /* BaseView.swift in Sources */,
+				D93339082978397400BC720A /* LoginUserRequest.swift in Sources */,
 				D9ACAB7A296D67050000805F /* LoginView.swift in Sources */,
+
 				D873171D2978807D00AC8ECD /* MusicError.swift in Sources */,
+
+				D933391129799B5A00BC720A /* DetailUserViewController.swift in Sources */,
+
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
 				D9B29E64296F34E5003E8825 /* UIView+AddSubviews.swift in Sources */,
 				D9ACAB87296D733B0000805F /* DefaultTextField.swift in Sources */,
