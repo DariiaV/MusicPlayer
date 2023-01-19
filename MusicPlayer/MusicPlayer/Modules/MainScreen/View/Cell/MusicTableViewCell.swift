@@ -25,7 +25,6 @@ class MusicTableViewCell: UITableViewCell {
         button.setImage(UIImage(named: "play.circle.fill"), for: .normal)
         button.backgroundColor = .orange
         button.layer.cornerRadius = 30
-        // button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
         
     }()

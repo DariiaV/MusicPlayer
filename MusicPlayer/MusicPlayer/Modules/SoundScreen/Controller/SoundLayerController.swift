@@ -18,7 +18,9 @@ final class SoundLayerController: UIViewController {
     // MARK: - Properties
     
     private let soundView = SoundLayerView()
-    private var player: AVPlayer!
+    private var audioPlayer: AVPlayer!
+    private var isFavorite = false
+    private var id: Int?
     
     // MARK: - Lifecycle
     
@@ -41,13 +43,14 @@ final class SoundLayerController: UIViewController {
         nav?.tintColor = UIColor.white
         nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-
+    
     // MARK: - Public Methods
     
     func setupTarget() {
         
         soundView.playButton.addTarget(self, action: #selector(playBut), for: .touchUpInside)
         soundView.musicSlider.addTarget(self, action: #selector(sliderBut), for: .touchUpInside)
+        soundView.favouritesButton.addTarget(self, action: #selector(favouritesTapButton), for: .touchUpInside)
     }
     
     func convertTimeToString(time: CMTime) -> String {
@@ -63,15 +66,23 @@ final class SoundLayerController: UIViewController {
     
     func setupPlayer() {
         
-        player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "01. You Know You're Right", ofType: "mp3")!))
+        audioPlayer = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "01. You Know You're Right", ofType: "mp3")!))
         
-        player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1000), queue: DispatchQueue.main) { [self]time in
-          
-            soundView.musicSlider.maximumValue = Float(player.currentItem?.duration.seconds ?? 0)
+        audioPlayer.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1000), queue: DispatchQueue.main) { [self]time in
+            
+            soundView.musicSlider.maximumValue = Float(audioPlayer.currentItem?.duration.seconds ?? 0)
             soundView.musicSlider.value = Float(time.seconds)
             
             soundView.minuteStartLabel.text = convertTimeToString(time: time)
-            soundView.minuteFinishLabel.text = convertTimeToString(time: (player.currentItem?.duration ?? CMTime()) - time)
+            soundView.minuteFinishLabel.text = convertTimeToString(time: (audioPlayer.currentItem?.duration ?? CMTime()) - time)
+        }
+    }
+    
+    private func changeFavorite() {
+        if isFavorite {
+            soundView.favouritesButton.setImage(UIImage(named: "heart1"), for: .normal)
+        } else {
+            soundView.favouritesButton.setImage(UIImage(named: "heart2"), for: .normal)
         }
     }
     
@@ -80,23 +91,30 @@ final class SoundLayerController: UIViewController {
     @objc
     private func playBut () {
         
-        if player.timeControlStatus == . playing {
+        if audioPlayer.timeControlStatus == . playing {
             soundView.playButton.setImage(UIImage(named: "play"), for: .normal)
-            player.pause()
+            audioPlayer.pause()
         } else {
             soundView.playButton.setImage(UIImage(named: "pause"), for: .normal)
-            player.play()
+            audioPlayer.play()
             
         }
     }
-
+    
     @objc
     private func sliderBut () {
         
-        player.seek(to: CMTime(seconds: Double(soundView.musicSlider.value),
-                              
-                               preferredTimescale: 1000))
+        audioPlayer.seek(to: CMTime(seconds: Double(soundView.musicSlider.value),
+                                    
+                                    preferredTimescale: 1000))
         soundView.minuteStartLabel.text = "\(soundView.musicSlider.value)"
         
+    }
+    
+    @objc
+    private func favouritesTapButton () {
+     
+            isFavorite.toggle()
+            changeFavorite()
     }
 }

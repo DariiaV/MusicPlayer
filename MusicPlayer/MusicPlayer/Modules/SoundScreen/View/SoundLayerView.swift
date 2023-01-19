@@ -44,7 +44,7 @@ class SoundLayerView: UIView {
         
         let button = UIButton()
         button.setTitleColor(UIColor.blue, for: .normal)
-        button.setImage(UIImage(named: "heart 1"), for: .normal)
+        button.setImage(UIImage(named: "heart1"), for: .normal)
         return button
     }()
     
