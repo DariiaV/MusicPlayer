@@ -28,7 +28,6 @@ final class LoginViewController: UIViewController {
     }
     
     @objc private func singInButtonTapped() {
-        print("hello")
         let loginRequest = LoginUserRequest(email: customView.emailTextField.text ?? "",
                                             password: customView.passwordTextField.text ?? "")
 
