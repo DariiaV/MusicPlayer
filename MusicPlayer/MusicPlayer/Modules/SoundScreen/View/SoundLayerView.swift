@@ -8,6 +8,18 @@
 import UIKit
 
 class SoundLayerView: UIView {
+
+//    var data: TrackModel? {
+//        didSet {
+//            guard let data = data else { return }
+//            authorLabel.text = data.artistName
+//            nameMusicLabel.text = data.trackName
+//            imageViewMain.image = data.artworkUrl100
+//            musicSlider.text = data.previewUrl
+            
+    
+//        }
+//    }
     
     // MARK: - UI Elements
     
@@ -44,7 +56,7 @@ class SoundLayerView: UIView {
         
         let button = UIButton()
         button.setTitleColor(UIColor.blue, for: .normal)
-        button.setImage(UIImage(named: "heart1"), for: .normal)
+        button.setImage(UIImage(named: "heart2"), for: .normal)
         return button
     }()
     

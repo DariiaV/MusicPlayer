@@ -19,8 +19,34 @@ final class SoundLayerController: UIViewController {
     
     private let soundView = SoundLayerView()
     private var audioPlayer: AVPlayer!
+    private var audioPlayer1: AVPlayerItem!
     private var isFavorite = false
-    private var id: Int?
+    private var trackSound = [TrackModel]()
+    
+    var data: TrackModel? {
+        didSet {
+            guard let data = data else { return }
+            soundView.authorLabel.text = data.artistName
+            soundView.nameMusicLabel.text = data.trackName
+            
+            // сетим мелодию
+            guard let url = URL(string: data.previewUrl!) else {
+                return
+            }
+            audioPlayer = AVPlayer(url: url)
+            
+            // сетим картинку
+            guard let imageURL = data.artworkUrl100 else {
+                return
+            }
+            
+            NetworkManager.shared.downloadImage(from: imageURL) { image in
+                DispatchQueue.main.async { [self] in
+                    soundView.imageViewMain.image = image
+                }
+            }
+        }
+    }
     
     // MARK: - Lifecycle
     
@@ -35,6 +61,7 @@ final class SoundLayerController: UIViewController {
         
         setupTarget()
         setupPlayer()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +93,7 @@ final class SoundLayerController: UIViewController {
     
     func setupPlayer() {
         
-        audioPlayer = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "01. You Know You're Right", ofType: "mp3")!))
+        //        audioPlayer = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "01. You Know You're Right", ofType: "mp3")!))
         
         audioPlayer.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1000), queue: DispatchQueue.main) { [self]time in
             
@@ -113,8 +140,35 @@ final class SoundLayerController: UIViewController {
     
     @objc
     private func favouritesTapButton () {
-     
-            isFavorite.toggle()
-            changeFavorite()
+        
+        isFavorite.toggle()
+        changeFavorite()
     }
 }
+
+//func didUpdateDetailRecipe(track: TrackModel) {
+//    DispatchQueue.main.async { [weak self] in
+//        guard let self else {
+//            return
+//        }
+
+//        self.trackSound = track
+//
+//        self.authorLabel.text = track.artistName
+//        self.nameMusicLabel.text = track.trackName
+//        self.descriptionLabel.text = recipe.summary.htmlToString
+//        self.text = recipe.summary.htmlToString
+//
+//        self.manager.downloadImage(from: track.image) { [weak self] image in
+//            DispatchQueue.main.async {
+//                self?.image.image = image
+//            }
+//        }
+//        self.tableView.reloadData()
+
+
+//                imageViewMain.image = data.artworkUrl100
+//                musicSlider.text = data.previewUrl
+//    }
+//}
+

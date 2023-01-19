@@ -90,9 +90,10 @@ class ArtistScreenViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension ArtistScreenViewController: UITableViewDataSource {
     
-    // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         trackList.count
     }
@@ -102,17 +103,22 @@ extension ArtistScreenViewController: UITableViewDataSource {
         cell.setup(nameTrack: trackList[indexPath.row].trackName ?? "")
         return cell
     }
-    
-    
 }
 
+// MARK: - UITableViewDelegate
+
 extension ArtistScreenViewController: UITableViewDelegate {
-    // MARK: - UITableViewDelegate
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let track = trackList[indexPath.row]
-        #warning("Открыть экран с музыкой модель track выше")
+        
+        let soundVC = SoundLayerController()
+    
+        soundVC.data = trackList[indexPath.row]
+        navigationController?.pushViewController(soundVC, animated: true)
+        
+#warning("Переход на экран музыки с альбомов")
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

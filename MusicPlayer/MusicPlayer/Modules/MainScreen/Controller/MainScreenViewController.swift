@@ -9,6 +9,8 @@ import UIKit
 import AVKit
 class MainScreenViewController: UIViewController {
     
+    private var trackList = [TrackModel]()
+    
     private let selectorCountriesView = SelectorCountriesView()
     private let cellReuseIdentifier = "cell"
     private let identifierCollectionView = "cell"
@@ -156,9 +158,10 @@ extension MainScreenViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension MainScreenViewController: UICollectionViewDelegate {
-    // MARK: - UICollectionViewDelegate
-    
+   
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let artistVC = ArtistScreenViewController()
         artistVC.nameArtist = artists[indexPath.item].name
@@ -191,11 +194,13 @@ extension MainScreenViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let track = countryTracks[indexPath.row]
-        #warning("Открыть экран с музыкой модель track выше")
-    }
-    
         
+//        let soundVC = SoundLayerController()
+//
+//        soundVC.data = trackList[indexPath.row]
+//        navigationController?.pushViewController(soundVC, animated: true)
+#warning("Открыть экран с музыкой ,одна песня")
+    }
 }
 
 extension MainScreenViewController: SelectorCountriesViewDelegate {

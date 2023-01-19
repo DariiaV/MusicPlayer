@@ -12,6 +12,7 @@ final class FavouritesViewController: UIViewController {
     // MARK: - Properties
     
     private let favouritesView = FavouritesView()
+    private var trackSound = [TrackModel]()
   
     // MARK: - Lifecycle
     
@@ -51,7 +52,7 @@ extension FavouritesViewController: UITableViewDataSource {
         }
      
         cell.data = items[indexPath.item]
-        
+
         return cell
     }
 }

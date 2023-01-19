@@ -15,7 +15,7 @@ struct ArtistModel {
         let adelAlbum = ArtistModel(image: UIImage(named: "adele"),
                                    name: "Adele")
         let theWeeknd = ArtistModel(image: UIImage(named: "theWeekndDawn"),
-                                   name: "The Weeknd")
+                                   name: "The Weekend")
         let daftPunk = ArtistModel(image: UIImage(named: "daftPunk"),
                                   name: "Daft Punk")
         let sia = ArtistModel(image: UIImage(named: "sia"),

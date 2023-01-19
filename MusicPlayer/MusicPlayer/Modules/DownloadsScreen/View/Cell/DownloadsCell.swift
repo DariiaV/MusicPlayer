@@ -8,7 +8,9 @@
 import UIKit
 
 final class DownloadsCell: UITableViewCell {
+    
     // MARK: - UI Elements
+    
     lazy var imageViewCell: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "imageCell")
