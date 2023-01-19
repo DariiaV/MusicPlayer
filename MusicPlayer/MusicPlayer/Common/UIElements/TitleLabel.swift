@@ -27,6 +27,5 @@ final class TitleLabel: UILabel {
         font = UIFont.systemFont(ofSize: CGFloat.titleLabelFont)
         textAlignment = .center
         textColor = .white
-        translatesAutoresizingMaskIntoConstraints = false
     }
 }

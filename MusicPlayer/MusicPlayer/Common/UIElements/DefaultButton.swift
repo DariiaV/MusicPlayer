@@ -19,7 +19,6 @@ final class DefaultButton: UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: CGFloat.buttonFont)
         layer.cornerRadius = CGFloat.baseCornerRadius
         backgroundColor = .systemMint
-        translatesAutoresizingMaskIntoConstraints = false
     }
 
     required init?(coder: NSCoder) {

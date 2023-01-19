@@ -43,7 +43,7 @@ class TabBarController: UITabBarController {
             ),
             
             generateVC(
-                viewController: UserInfoViewController(),
+                viewController: RegistrationViewController(),
                 image: UIImage(systemName: "person")
             )
         ]
