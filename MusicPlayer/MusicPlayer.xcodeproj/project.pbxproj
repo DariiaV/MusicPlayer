@@ -18,17 +18,13 @@
 		50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030651F296BF1D000E46455 /* FavouritesViewController.swift */; };
 		50306523296BF20200E46455 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306522296BF20200E46455 /* FavouritesView.swift */; };
 		50306527296C020300E46455 /* FavouritiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306526296C020300E46455 /* FavouritiesCell.swift */; };
-		5070BCD129704CA900927221 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCD029704CA900927221 /* MainScreenController.swift */; };
-		5070BCD329704CAD00927221 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCD229704CAD00927221 /* MainScreenView.swift */; };
-		5070BCDB29704CEC00927221 /* DitailPlaylistViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCD929704CEC00927221 /* DitailPlaylistViewCell.swift */; };
-		5070BCDC29704CEC00927221 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BCDA29704CEC00927221 /* MusicTableViewCell.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
-		D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD6296AB0A900F60521 /* ViewController.swift */; };
 		D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */; };
 		D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8337FDE296AB0AA00F60521 /* Assets.xcassets */; };
 		D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */; };
 		D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF4296AB4D900F60521 /* CoreDataManager.swift */; };
+		D878618229704972004F112E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878618129704972004F112E /* OnboardingViewController.swift */; };
 		D9ACAB77296D64200000805F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB76296D64200000805F /* BaseView.swift */; };
 		D9ACAB7A296D67050000805F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB79296D67050000805F /* LoginView.swift */; };
 		D9ACAB7C296D671A0000805F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB7B296D671A0000805F /* LoginViewController.swift */; };
@@ -40,6 +36,12 @@
 		D9B29E63296F34E5003E8825 /* UIColorExtension+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29E60296F34E5003E8825 /* UIColorExtension+TabBar.swift */; };
 		D9B29E64296F34E5003E8825 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29E61296F34E5003E8825 /* UIView+AddSubviews.swift */; };
 		D9B29E67296F3531003E8825 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29E66296F3531003E8825 /* UIStackView+Ext.swift */; };
+		D9B29EF7296FF095003E8825 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EF6296FF095003E8825 /* RegistrationView.swift */; };
+		D9B29EF9296FF0B1003E8825 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */; };
+		D9B29EFB297037EB003E8825 /* UITapGestureRecognizer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */; };
+		D9B29EFE29704727003E8825 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D9B29EFD29704727003E8825 /* FirebaseAuth */; };
+		D9B29F0029704727003E8825 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D9B29EFF29704727003E8825 /* FirebaseFirestore */; };
+		D9B29F0229704A61003E8825 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9B29F0129704A61003E8825 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,19 +56,15 @@
 		5030651F296BF1D000E46455 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		50306522296BF20200E46455 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		50306526296C020300E46455 /* FavouritiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritiesCell.swift; sourceTree = "<group>"; };
-		5070BCD029704CA900927221 /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
-		5070BCD229704CAD00927221 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
-		5070BCD929704CEC00927221 /* DitailPlaylistViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DitailPlaylistViewCell.swift; sourceTree = "<group>"; };
-		5070BCDA29704CEC00927221 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8337FD6296AB0A900F60521 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8337FDC296AB0A900F60521 /* MusicPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicPlayer.xcdatamodel; sourceTree = "<group>"; };
 		D8337FDE296AB0AA00F60521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8337FE1296AB0AA00F60521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8337FE3296AB0AA00F60521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8337FF4296AB4D900F60521 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D878618129704972004F112E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D9ACAB76296D64200000805F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D9ACAB79296D67050000805F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D9ACAB7B296D671A0000805F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +76,10 @@
 		D9B29E60296F34E5003E8825 /* UIColorExtension+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColorExtension+TabBar.swift"; sourceTree = "<group>"; };
 		D9B29E61296F34E5003E8825 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
 		D9B29E66296F3531003E8825 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
+		D9B29EF6296FF095003E8825 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Ext.swift"; sourceTree = "<group>"; };
+		D9B29F0129704A61003E8825 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B29EFE29704727003E8825 /* FirebaseAuth in Frameworks */,
+				D9B29F0029704727003E8825 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,56 +197,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		5070BCD429704CBA00927221 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				5070BCD629704CCC00927221 /* View */,
-				5070BCD529704CC500927221 /* Controller */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		5070BCD529704CC500927221 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5070BCD029704CA900927221 /* MainScreenController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5070BCD629704CCC00927221 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5070BCDD29704CF500927221 /* Cell */,
-				5070BCD229704CAD00927221 /* MainScreenView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5070BCDD29704CF500927221 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				5070BCD929704CEC00927221 /* DitailPlaylistViewCell.swift */,
-				5070BCDA29704CEC00927221 /* MusicTableViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		5070BCDE2970500A00927221 /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				5070BCF2297168A000927221 /* Model */,
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
-		5070BCF2297168A000927221 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		D8337FC6296AB0A900F60521 = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +227,7 @@
 		D8337FED296AB2BA00F60521 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				D9B29F0129704A61003E8825 /* GoogleService-Info.plist */,
 				D8337FD2296AB0A900F60521 /* AppDelegate.swift */,
 				D8337FD4296AB0A900F60521 /* SceneDelegate.swift */,
 				D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */,
@@ -285,9 +240,8 @@
 		D8337FEE296AB2C600F60521 /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
-				5070BCDE2970500A00927221 /* NetworkManager */,
-				D8337FF1296AB3DD00F60521 /* StorageLayer */,
 				D9ACAB7D296D67C80000805F /* Common */,
+				D8337FF1296AB3DD00F60521 /* StorageLayer */,
 			);
 			path = ApplicationServices;
 			sourceTree = "<group>";
@@ -295,13 +249,13 @@
 		D8337FEF296AB3C100F60521 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5070BCD429704CBA00927221 /* MainScreen */,
-				50048387296E9CC400123A53 /* TabBar */,
-				5030651C296B28A900E46455 /* SoundScreen */,
-				5030651D296BF0FF00E46455 /* FavouritesScreen */,
 				5030651E296BF17600E46455 /* DownloadsScreen */,
-				D8337FD6296AB0A900F60521 /* ViewController.swift */,
+				5030651D296BF0FF00E46455 /* FavouritesScreen */,
 				D9ACAB78296D66F40000805F /* Login */,
+				D878618029704972004F112E /* OnboardingScreen */,
+				D9B29EF5296FF01D003E8825 /* Registration */,
+				5030651C296B28A900E46455 /* SoundScreen */,
+				50048387296E9CC400123A53 /* TabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -313,6 +267,14 @@
 				D8337FF4296AB4D900F60521 /* CoreDataManager.swift */,
 			);
 			path = StorageLayer;
+			sourceTree = "<group>";
+		};
+		D878618029704972004F112E /* OnboardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D878618129704972004F112E /* OnboardingViewController.swift */,
+			);
+			path = OnboardingScreen;
 			sourceTree = "<group>";
 		};
 		D9ACAB75296D64090000805F /* Base */ = {
@@ -361,9 +323,19 @@
 				D9B29E60296F34E5003E8825 /* UIColorExtension+TabBar.swift */,
 				D9B29E61296F34E5003E8825 /* UIView+AddSubviews.swift */,
 				D9B29E66296F3531003E8825 /* UIStackView+Ext.swift */,
+				D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */,
 			);
 			name = Extensions;
 			path = ../ApplicationServices/Extensions;
+			sourceTree = "<group>";
+		};
+		D9B29EF5296FF01D003E8825 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				D9B29EF6296FF095003E8825 /* RegistrationView.swift */,
+				D9B29EF8296FF0B1003E8825 /* RegistrationViewController.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,7 +348,6 @@
 				D8337FCB296AB0A900F60521 /* Sources */,
 				D8337FCC296AB0A900F60521 /* Frameworks */,
 				D8337FCD296AB0A900F60521 /* Resources */,
-				5072C44B296ED82F0094FC73 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -384,6 +355,8 @@
 			);
 			name = MusicPlayer;
 			packageProductDependencies = (
+				D9B29EFD29704727003E8825 /* FirebaseAuth */,
+				D9B29EFF29704727003E8825 /* FirebaseFirestore */,
 			);
 			productName = MusicPlayer;
 			productReference = D8337FCF296AB0A900F60521 /* MusicPlayer.app */;
@@ -414,6 +387,7 @@
 			);
 			mainGroup = D8337FC6296AB0A900F60521;
 			packageReferences = (
+				D9B29EFC29704727003E8825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D8337FD0296AB0A900F60521 /* Products */;
 			projectDirPath = "";
@@ -430,33 +404,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */,
+				D9B29F0229704A61003E8825 /* GoogleService-Info.plist in Resources */,
 				D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */,
 				50048378296C4ED600123A53 /* 01. You Know You're Right.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5072C44B296ED82F0094FC73 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8337FCB296AB0A900F60521 /* Sources */ = {
@@ -466,16 +420,18 @@
 				D9ACAB7C296D671A0000805F /* LoginViewController.swift in Sources */,
 				50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */,
 				50048374296C303A00123A53 /* DownloadsView.swift in Sources */,
+				D9B29EF7296FF095003E8825 /* RegistrationView.swift in Sources */,
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
 				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
-				5070BCDC29704CEC00927221 /* MusicTableViewCell.swift in Sources */,
-				D8337FD7296AB0A900F60521 /* ViewController.swift in Sources */,
 				D9ACAB80296D68090000805F /* TitleLabel.swift in Sources */,
+				D878618229704972004F112E /* OnboardingViewController.swift in Sources */,
 				50048382296E91B400123A53 /* TabBarController.swift in Sources */,
 				5004837A296D4A9100123A53 /* DataModel.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
+				D9B29EFB297037EB003E8825 /* UITapGestureRecognizer+Ext.swift in Sources */,
 				50306527296C020300E46455 /* FavouritiesCell.swift in Sources */,
 				D9B29E62296F34E5003E8825 /* Int+Scaling.swift in Sources */,
+				D9B29EF9296FF0B1003E8825 /* RegistrationViewController.swift in Sources */,
 				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
 				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
 				D9ACAB85296D71BF0000805F /* DescriptionLabel.swift in Sources */,
@@ -484,12 +440,9 @@
 				D9ACAB7A296D67050000805F /* LoginView.swift in Sources */,
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
 				D9B29E64296F34E5003E8825 /* UIView+AddSubviews.swift in Sources */,
-				5070BCD129704CA900927221 /* MainScreenController.swift in Sources */,
 				D9ACAB87296D733B0000805F /* DefaultTextField.swift in Sources */,
 				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
-				5070BCD329704CAD00927221 /* MainScreenView.swift in Sources */,
 				D9B29E63296F34E5003E8825 /* UIColorExtension+TabBar.swift in Sources */,
-				5070BCDB29704CEC00927221 /* DitailPlaylistViewCell.swift in Sources */,
 				D9ACAB89296D91B10000805F /* DefaultButton.swift in Sources */,
 				50306523296BF20200E46455 /* FavouritesView.swift in Sources */,
 				50048376296C327900123A53 /* DownloadsCell.swift in Sources */,
@@ -698,6 +651,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9B29EFC29704727003E8825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9B29EFD29704727003E8825 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9B29EFC29704727003E8825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D9B29EFF29704727003E8825 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9B29EFC29704727003E8825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */ = {

@@ -1,26 +1,46 @@
 //
-//  LoginView.swift
+//  RegistrationView.swift
 //  MusicPlayer
 //
-//  Created by Артем Галай on 10.01.23.
+//  Created by Артем Галай on 12.01.23.
 //
 
 import UIKit
 
 private extension CGFloat {
     static let height: CGFloat = 50
-    static let contentStackViewTopAnchor: CGFloat = 20
 }
 
-final class LoginView: BaseView {
+final class RegistrationView: BaseView {
 
     let singInButton = DefaultButton(titleText: "Sing in")
+
+    let signInLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Already have an account? Sign in"
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 16)
+        label.isUserInteractionEnabled = true
+        label.textAlignment = .center
+
+        let attributeLabel = NSMutableAttributedString(string: label.text ?? "")
+        let range = (label.text as? NSString)?.range(of: "Sign in")
+        attributeLabel.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 16),
+                                    range: range ?? NSRange())
+        attributeLabel.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemMint,
+                                    range: range ?? NSRange())
+        label.attributedText = attributeLabel
+
+        let tapGesture = UITapGestureRecognizer()
+        label.addGestureRecognizer(tapGesture)
+        return label
+    }()
 
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = CGFloat.baseMediumSpacing
+        stackView.spacing = CGFloat.baseLightSpacing
         return stackView
     }()
 
@@ -33,14 +53,18 @@ final class LoginView: BaseView {
 
     private let name: UILabel = {
         let label = UILabel()
-        label.text = "Music Player"
+        label.text = "Welcome to Music Player"
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 24, weight: .bold)
         label.textColor = .systemBlue
         return label
     }()
 
-    private let title = TitleLabel(title: "Sign in to your account")
+    private let title = TitleLabel(title: "Create your account")
+
+    private let nameLabel = DescriptionLabel(title: "Name")
+
+    let nameTextField = DefaultTextField(placeholder: "Name")
 
     private let emailLabel = DescriptionLabel(title: "Email address")
 
@@ -50,16 +74,6 @@ final class LoginView: BaseView {
 
     let passwordTextField = DefaultTextField(placeholder: "Password")
 
-    private let forgotPasswordButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Forgot your password?", for: .normal)
-        button.contentHorizontalAlignment = .left
-        button.titleLabel?.font = .systemFont(ofSize: 14)
-        button.setTitleColor(.systemPink, for: .normal)
-
-        return button
-    }()
-
     override func addSubviews() {
         super.addSubviews()
         addSubview(contentStackView)
@@ -68,12 +82,14 @@ final class LoginView: BaseView {
             logoImage,
             name,
             title,
+            nameLabel,
+            nameTextField,
             emailLabel,
             emailTextField,
             passwordLabel,
             passwordTextField,
-            forgotPasswordButton,
-            singInButton
+            singInButton,
+            signInLabel
         ])
     }
 
@@ -81,7 +97,7 @@ final class LoginView: BaseView {
         super.makeConstraints()
         NSLayoutConstraint.activate([
 
-            contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: CGFloat.contentStackViewTopAnchor),
+            contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.baseLightSpacing),
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.baseLightSpacing),
             contentStackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
@@ -89,17 +105,18 @@ final class LoginView: BaseView {
             logoImage.heightAnchor.constraint(equalToConstant: CGFloat.height),
             title.heightAnchor.constraint(equalToConstant: CGFloat.height),
             name.heightAnchor.constraint(equalToConstant: CGFloat.height),
+            nameLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
+            nameTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
             emailLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
             emailTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
             passwordLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
             passwordTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
-            forgotPasswordButton.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
             singInButton.heightAnchor.constraint(equalToConstant: CGFloat.height)
         ])
 
         contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: emailLabel)
         contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: name)
         contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: passwordLabel)
-        contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: passwordTextField)
+        contentStackView.setCustomSpacing(CGFloat.baseSpacing, after: nameLabel)
     }
 }
