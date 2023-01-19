@@ -64,15 +64,15 @@ final class RegistrationView: BaseView {
 
     private let nameLabel = DescriptionLabel(title: "Name")
 
-    let nameTextField = DefaultTextField(placeholder: "Name")
+    let nameTextField = DefaultTextField(placeholder: "Name", isSecureTextEntry: false)
 
     private let emailLabel = DescriptionLabel(title: "Email address")
 
-    let emailTextField = DefaultTextField(placeholder: "Email")
+    let emailTextField = DefaultTextField(placeholder: "Email", isSecureTextEntry: false)
 
     private let passwordLabel = DescriptionLabel(title: "Password")
 
-    let passwordTextField = DefaultTextField(placeholder: "Password")
+    let passwordTextField = DefaultTextField(placeholder: "Password", isSecureTextEntry: true)
 
     override func addSubviews() {
         super.addSubviews()

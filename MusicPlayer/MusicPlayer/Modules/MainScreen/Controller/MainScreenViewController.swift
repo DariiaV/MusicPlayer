@@ -77,6 +77,7 @@ class MainScreenViewController: UIViewController {
         setupViews()
         fetchAlbum(from: .usa)
         selectorCountriesView.delegate = self
+        fetchInfoUser()
     }
     
     private func setupViews() {
@@ -121,6 +122,17 @@ class MainScreenViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: .trailingMargin),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+
+    private func fetchInfoUser() {
+        AuthService.shared.fetchUser { user, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            if let user = user {
+                self.greetingLabel.text = "Hello, \(user.username)"
+            }
+        }
     }
     
     
