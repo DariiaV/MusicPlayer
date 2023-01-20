@@ -8,14 +8,13 @@
 import UIKit
 
 protocol TrackListCellDelegate: AnyObject {
-    func didTapPlayButton()
+    func didTapPlayButton(with index: Int?)
 }
 
 class TrackListCell: UITableViewCell {
     
     weak var delegate: TrackListCellDelegate?
-    private let soundView = SoundLayerController()
-    private var id: Int?
+    var index: Int?
     
     private let trackLabel: UILabel = {
         let label = UILabel()
@@ -27,8 +26,7 @@ class TrackListCell: UITableViewCell {
         return label
     }()
     
-    lazy var playButton: UIButton = {
-        
+    private lazy var playButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "play"), for: .normal)
         button.layer.masksToBounds = true
@@ -40,36 +38,25 @@ class TrackListCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         configure()
+        selectionStyle = .none
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(nameTrack: String?) {
+    func setup(nameTrack: String?, index: Int?) {
         trackLabel.text = nameTrack
+        self.index = index
     }
     
-    func playButtonSetup () {
-        if soundView.audioPlayer.timeControlStatus == . playing {
-            playButton.setImage(UIImage(named: "play"), for: .normal)
-            soundView.audioPlayer.pause()
-        } else {
-            playButton.setImage(UIImage(named: "pause"), for: .normal)
-            soundView.audioPlayer.play()
-        }
+    @objc private func playButtonTap(_ sender: UIButton) {
+        delegate?.didTapPlayButton(with: index)
     }
-    @objc
-    private func playButtonTap(_ sender: UIButton!) {
-        
-        print("Кнопка музыки работает UpTableViewCell")
-#warning("Не воспроизводится музыка в главном экране")
-    }
-    
     
     private func configure() {
         backgroundColor = .black
-        addSubviews([trackLabel, playButton])
+        contentView.addSubviews([trackLabel, playButton])
         
         NSLayoutConstraint.activate([
             trackLabel.topAnchor.constraint(equalTo: topAnchor),

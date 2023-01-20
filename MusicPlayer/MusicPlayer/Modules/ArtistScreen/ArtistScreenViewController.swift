@@ -23,12 +23,15 @@ class ArtistScreenViewController: UIViewController {
     
     private var trackList = [TrackModel]()
     
+    private let musicManager = MusicManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         setupView()
-        getTracksArtist()    }
+        getTracksArtist()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -78,9 +81,9 @@ class ArtistScreenViewController: UIViewController {
         NetworkManager.shared.getArtistAlbum(name: nameArtist) { result in
             switch result {
             case .success(let album):
-                DispatchQueue.main.async {
-                    self.trackList = album.results.filter { $0.trackName != nil }
-                    self.tableView.reloadData()
+                DispatchQueue.main.async { [self] in
+                    trackList = album.results.filter { $0.trackName != nil && $0.previewUrl != nil }
+                    tableView.reloadData()
                 }
             case .failure(let error):
                 print(error)
@@ -99,7 +102,8 @@ extension ArtistScreenViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TrackListCell else { return UITableViewCell() }
-        cell.setup(nameTrack: trackList[indexPath.row].trackName ?? "")
+        cell.setup(nameTrack: trackList[indexPath.row].trackName, index: indexPath.row)
+        cell.delegate = self
         return cell
     }
 }
@@ -107,37 +111,23 @@ extension ArtistScreenViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension ArtistScreenViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        let soundVC = SoundLayerController()
-
-        soundVC.data = trackList[indexPath.row]
-        navigationController?.pushViewController(soundVC, animated: true)
-                
-    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
 }
 
-// MARK: - MyOwnCellDelegate
+// MARK: - TrackListCellDelegate
 
 extension ArtistScreenViewController: TrackListCellDelegate {
     
-    func didTapPlayButton() {
-        print("Кнопка работает")
+    func didTapPlayButton(with index: Int?) {
+        guard let index else {
+            return
+        }
+        musicManager.createTrackList(trackList)
+        musicManager.playTrack(by: index)
         
-//        if soundView.audioPlayer.timeControlStatus == . playing {
-//            playButton.setImage(UIImage(named: "play"), for: .normal)
-//            soundView.audioPlayer.pause()
-//        } else {
-//            playButton.setImage(UIImage(named: "pause"), for: .normal)
-//            soundView.audioPlayer.play()
-//            
-//        }
     }
 }
 

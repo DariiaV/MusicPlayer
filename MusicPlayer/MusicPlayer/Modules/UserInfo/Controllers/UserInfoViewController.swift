@@ -68,6 +68,7 @@ extension UserInfoViewController: UITableViewDataSource {
         cell.backgroundColor = .clear
         cell.textLabel?.textColor = .white
         cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .none
         return cell
     }
 }

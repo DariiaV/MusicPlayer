@@ -74,7 +74,7 @@ class MainScreenViewController: UIViewController {
         return label
     }()
     
-
+    private let musicManager = MusicManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,12 +141,11 @@ class MainScreenViewController: UIViewController {
     
     
     private func fetchAlbum(from country: Country) {
-        NetworkManager.shared.getAllMusic(from: country) { result in
+        NetworkManager.shared.getAllMusic(from: country) { [self] result in
             switch result {
-                
             case .success(let album):
                 DispatchQueue.main.async {
-                    self.countryTracks = album.results
+                    self.countryTracks = album.results.filter { $0.trackName != nil && $0.previewUrl != nil }
                     self.tableView.reloadData()
                     
                 }
@@ -198,7 +197,13 @@ extension MainScreenViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let album = countryTracks[indexPath.row]
-        cell.setup(nameArtist: album.artistName, nameTrack: album.trackName, minutesTrack: album.trackTimeMillis, imageURL: album.artworkUrl100, previewUrl: album.previewUrl)
+        cell.setup(nameArtist: album.artistName,
+                   nameTrack: album.trackName,
+                   minutesTrack: album.trackTimeMillis,
+                   imageURL: album.artworkUrl100,
+                   previewUrl: album.previewUrl)
+        cell.index = indexPath.row
+        cell.delegate = self
         return cell
     }
 }
@@ -210,14 +215,16 @@ extension MainScreenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        let soundVC = SoundLayerController()
+}
 
-        soundVC.data = countryTracks[indexPath.row]
-        navigationController?.pushViewController(soundVC, animated: true)
+extension MainScreenViewController: TopCountryCellDelegate {
+    func didTapPlayButton(with index: Int?) {
+        guard let index else {
+            return
+        }
+        musicManager.createTrackList(countryTracks)
+        musicManager.playTrack(by: index)
+        
     }
 }
 

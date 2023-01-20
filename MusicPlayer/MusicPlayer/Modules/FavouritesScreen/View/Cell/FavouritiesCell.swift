@@ -7,36 +7,26 @@
 
 import UIKit
 
+protocol FavouritiesCellDelegate: AnyObject {
+    func didTapPlayButton(with index: Int?) 
+}
+
 final class FavouritiesCell: UITableViewCell {
 
-    var data: DataModelFavourities? {
+    weak var delegate: FavouritiesCellDelegate?
+    var index: Int?
+    
+    var data: TrackModel? {
         didSet {
             guard let data = data else { return }
-            performerMusicLabelCell.text = data.namePerformer
-            nameMusicLabelCell.text = data.nameMusic
+            performerMusicLabelCell.text = data.artistName
+            nameMusicLabelCell.text = data.trackName
         }
     }
-    
-//    var data: TrackModel? {
-//        didSet {
-//            guard let data = data else { return }
-//            soundView.authorLabel.text = data.artistName
-//            soundView.nameMusicLabel.text = data.trackName
-//
-//            // сетим мелодию
-//            guard let url = URL(string: data.previewUrl!) else {
-//                return
-//            }
-//            soundViewController.audioPlayer = AVPlayer(url: url)
-//
-//
-//        }
-//    }
         
     // MARK: - UI Elements
 
     lazy var performerMusicLabelCell: UILabel = {
-
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.white.cgColor, UIColor.blue.cgColor]
         let label = UILabel()
@@ -47,7 +37,6 @@ final class FavouritiesCell: UITableViewCell {
     }()
 
     lazy var nameMusicLabelCell: UILabel = {
-
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .right
@@ -56,10 +45,8 @@ final class FavouritiesCell: UITableViewCell {
     }()
 
     lazy var playButton: UIButton = {
-
         let button = UIButton()
-        button.setImage(UIImage(named: "play2"), for: .normal)
-        button.backgroundColor = .gray
+        button.setImage(UIImage(named: "play"), for: .normal)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 15
         button.addTarget(self, action: #selector(playBut), for: .touchUpInside)
@@ -80,8 +67,8 @@ final class FavouritiesCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func playBut () {
-        print("Кнопка работает Сell")
+    @objc func playBut() {
+        delegate?.didTapPlayButton(with: index)
     }
 }
 

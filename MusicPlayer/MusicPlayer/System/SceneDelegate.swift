@@ -28,14 +28,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     public func checkAuthentication() {
         if Auth.auth().currentUser == nil {
-            goToController(with: RegistrationViewController())
+            goToController(with: UINavigationController(rootViewController: RegistrationViewController()))
         } else {
             goToController(with: TabBarController())
         }
     }
 
     private func goToController(with viewController: UIViewController) {
-        let nav = UINavigationController(rootViewController: viewController)
+        let nav = viewController
         nav.modalPresentationStyle = .fullScreen
         window?.rootViewController = nav
     }

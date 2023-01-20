@@ -23,23 +23,18 @@ class TabBarController: UITabBarController {
         viewControllers = [
             
             generateVC(
-                viewController: MainScreenViewController(),
+                viewController: UINavigationController(rootViewController: MainScreenViewController()),
                 image: UIImage(systemName: "house.fill")
+            ),
+            
+            generateVC(
+                viewController: SoundLayerController(),
+                image: UIImage(systemName: "play.circle")
             ),
             
             generateVC(
                 viewController: FavouritesViewController(),
                 image: UIImage(systemName: "heart")
-            ),
-            
-//            generateVC(
-//                viewController: SoundLayerController(),
-//                image: UIImage(systemName: "play.circle")
-//            ),
-            
-            generateVC(
-                viewController: DownloadsViewController(),
-                image: UIImage(systemName: "square.and.arrow.down")
             ),
             
             generateVC(
@@ -52,7 +47,7 @@ class TabBarController: UITabBarController {
     private func generateVC(viewController: UIViewController,image: UIImage?) -> UIViewController {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = image
-        return UINavigationController(rootViewController: viewController)
+        return viewController
     }
     
     private func setupTabBar() {

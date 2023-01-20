@@ -6,17 +6,15 @@
 //
 
 import UIKit
-import AVFoundation
+
 protocol TopCountryCellDelegate: AnyObject {
-    func didTapPlayButtonMain()
+    func didTapPlayButton(with index: Int?)
 }
 
 class TopCountryCell: UITableViewCell {
     
     weak var delegate: TopCountryCellDelegate?
-    private let soundViewmMain = SoundLayerController()
-    private var isFavorite = false
-    private var audioPlayer: AVPlayer!
+    var index: Int?
     
     private let imageTrack: UIImageView = {
         let image = UIImageView()
@@ -55,8 +53,7 @@ class TopCountryCell: UITableViewCell {
         return label
     }()
     
-    lazy var playTrack: UIButton = {
-        
+    private lazy var playTrack: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "play"), for: .normal)
         button.addTarget(self, action: #selector(playButMain), for: .touchUpInside)
@@ -102,27 +99,10 @@ class TopCountryCell: UITableViewCell {
                 self.imageTrack.image = image
             }
         }
-        
-//        guard let url = URL(string: (setup.previewUrl)) else {
-//            return
-//        }
-//        audioPlayer = AVPlayer(url: url)
     }
     
-    @objc
-    private func playButMain () {
-//        delegate?.didTapPlayButtonMain()
-        
-#warning("Не воспроизводится музыка в главном экране")
-//        if audioPlayer.timeControlStatus == . playing {
-//            playTrack.setImage(UIImage(named: "play"), for: .normal)
-//            audioPlayer.pause()
-//        } else {
-//            playTrack.setImage(UIImage(named: "pause"), for: .normal)
-//            audioPlayer.play()
-//
-//        }
-        print("Кнопка музыки работает TableViewCell")
+    @objc private func playButMain () {
+        delegate?.didTapPlayButton(with: index)
     }
     
     private func configure() {
@@ -142,6 +122,7 @@ class TopCountryCell: UITableViewCell {
             
             nameArtistLabel.topAnchor.constraint(equalTo: imageTrack.topAnchor),
             nameArtistLabel.leadingAnchor.constraint(equalTo: imageTrack.trailingAnchor, constant: .leadingMargin),
+            nameArtistLabel.trailingAnchor.constraint(equalTo: playTrack.leadingAnchor, constant: .trailingMargin),
             
             nameTrackLabel.topAnchor.constraint(equalTo: nameArtistLabel.bottomAnchor, constant: .nameTrackTopMargin),
             nameTrackLabel.leadingAnchor.constraint(equalTo: imageTrack.trailingAnchor, constant: .leadingMargin),

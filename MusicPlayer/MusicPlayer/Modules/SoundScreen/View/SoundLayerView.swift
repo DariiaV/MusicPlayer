@@ -12,9 +12,7 @@ class SoundLayerView: UIView {
     // MARK: - UI Elements
     
     lazy var imageViewMain: UIImageView = {
-        
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "nirvana")
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
@@ -22,9 +20,8 @@ class SoundLayerView: UIView {
     }()
     
     lazy var authorLabel: UILabel = {
-        
         let label = UILabel()
-        label.text = "Nirvana"
+        label.text = "Loading..."
         label.font = UIFont.systemFont(ofSize: 20)
         label.textAlignment = .left
         label.textColor = .white
@@ -32,9 +29,7 @@ class SoundLayerView: UIView {
     }()
     
     lazy var nameMusicLabel: UILabel = {
-        
         let label = UILabel()
-        label.text = "Where did you sleep last night?"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .left
         label.textColor = .white
@@ -42,7 +37,6 @@ class SoundLayerView: UIView {
     }()
     
     lazy var favouritesButton: UIButton = {
-        
         let button = UIButton()
         button.setTitleColor(UIColor.blue, for: .normal)
         button.setImage(UIImage(named: "heart2"), for: .normal)
@@ -50,7 +44,6 @@ class SoundLayerView: UIView {
     }()
     
     lazy var musicSlider: UISlider = {
-        
         let slider = UISlider()
         slider.minimumTrackTintColor = .systemMint
         slider.maximumTrackTintColor = .gray
@@ -59,7 +52,6 @@ class SoundLayerView: UIView {
     }()
     
     lazy var minuteStartLabel: UILabel = {
-        
         let label = UILabel()
         label.text = "0:00"
         label.font = UIFont.systemFont(ofSize: 16)
@@ -69,7 +61,6 @@ class SoundLayerView: UIView {
     }()
     
     lazy var minuteFinishLabel: UILabel = {
-        
         let label = UILabel()
         label.text = "0:00"
         label.font = UIFont.systemFont(ofSize: 16)
@@ -79,7 +70,6 @@ class SoundLayerView: UIView {
     }()
     
     lazy var playButton: UIButton = {
-        
         let button = UIButton()
         button.setImage(UIImage(named: "play"), for: .normal)
         button.layer.masksToBounds = true
@@ -87,7 +77,6 @@ class SoundLayerView: UIView {
     }()
     
     lazy var leftButton: UIButton = {
-        
         let button = UIButton()
         button.setImage(UIImage(named: "left 1"), for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
@@ -96,7 +85,6 @@ class SoundLayerView: UIView {
     }()
     
     lazy var rightButton: UIButton = {
-        
         let button = UIButton()
         button.setImage(UIImage(named: "right 1"), for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
@@ -112,12 +100,15 @@ class SoundLayerView: UIView {
         return stack
     }()
     
+    let activityIndicator = UIActivityIndicatorView(style: .large)
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         backgroundColor = .black
+        activityIndicator.color = .cyan
         addSybView()
         setupConstraints()
     }

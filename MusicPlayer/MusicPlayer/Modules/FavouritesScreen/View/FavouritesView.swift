@@ -14,7 +14,6 @@ final class FavouritesView: UIView {
     let tableView = UITableView(frame: .zero, style: .plain)
     
     lazy var favoritesButton: UIButton = {
-        
         let button = UIButton()
         button.setImage(UIImage(named: "heart 1"), for: .normal)
         button.backgroundColor = .gray
@@ -24,16 +23,14 @@ final class FavouritesView: UIView {
     }()
     
     lazy var imageViewFavorites: UIImageView = {
-        
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "contact")
+        imageView.image = UIImage(named: "OnboardingSecond")
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
         return imageView
     }()
     
     lazy var menuButton: UIButton = {
-        
         let button = UIButton()
         button.setImage(UIImage(named: "menu"), for: .normal)
         button.backgroundColor = .gray

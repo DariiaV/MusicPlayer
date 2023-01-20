@@ -20,3 +20,14 @@ struct TrackModel: Decodable {
     let trackTimeMillis: Int? // delete to 60000 -> minutes
     let trackName: String?
 }
+
+extension TrackModel {
+    init(trackData: TrackData) {
+        self.artistName = trackData.artistName
+        self.trackName = trackData.trackName
+        self.artistId = nil
+        self.artworkUrl100 = trackData.imageURL
+        self.previewUrl = trackData.trackURL
+        self.trackTimeMillis = nil
+    }
+}
