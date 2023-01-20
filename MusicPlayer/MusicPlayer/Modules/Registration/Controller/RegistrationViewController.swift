@@ -22,6 +22,12 @@ final class RegistrationViewController: UIViewController {
         super.viewDidLoad()
         addTarget()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showOnboarding()
+    }
 
     private func addTarget() {
         customView.singInButton.addTarget(self, action: #selector(singInButtonTapped), for: .touchUpInside)
@@ -75,6 +81,16 @@ final class RegistrationViewController: UIViewController {
         if gesture.didTapAttributedTextInLabel(label: customView.signInLabel, inRange: range) {
             let viewController = LoginViewController()
             navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
+    private func showOnboarding() {
+        let userDefaults = UserDefaults.standard
+        let onBoardingWasViewed = userDefaults.bool(forKey: "OnBoardingWasViewed")
+        if !onBoardingWasViewed {
+            let onboardingViewController = OnboardingViewController()
+            onboardingViewController.modalPresentationStyle = .fullScreen
+            present(onboardingViewController, animated: false)
         }
     }
 }
