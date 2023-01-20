@@ -32,10 +32,10 @@ class TabBarController: UITabBarController {
                 image: UIImage(systemName: "heart")
             ),
             
-            generateVC(
-                viewController: SoundLayerController(),
-                image: UIImage(systemName: "play.circle")
-            ),
+//            generateVC(
+//                viewController: SoundLayerController(),
+//                image: UIImage(systemName: "play.circle")
+//            ),
             
             generateVC(
                 viewController: DownloadsViewController(),

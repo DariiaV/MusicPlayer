@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import AVFoundation
+protocol TopCountryCellDelegate: AnyObject {
+    func didTapPlayButtonMain()
+}
 
 class TopCountryCell: UITableViewCell {
+    
+    weak var delegate: TopCountryCellDelegate?
+    private let soundViewmMain = SoundLayerController()
+    private var isFavorite = false
+    private var audioPlayer: AVPlayer!
     
     private let imageTrack: UIImageView = {
         let image = UIImageView()
@@ -46,11 +55,13 @@ class TopCountryCell: UITableViewCell {
         return label
     }()
     
-    private let playTrack: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "play")
-        image.contentMode = .scaleAspectFill
-        return image
+    lazy var playTrack: UIButton = {
+        
+        let button = UIButton()
+        button.setImage(UIImage(named: "play"), for: .normal)
+        button.addTarget(self, action: #selector(playButMain), for: .touchUpInside)
+        button.layer.masksToBounds = true
+        return button
     }()
     
     private let activityIndicator = UIActivityIndicatorView(style: .large)
@@ -74,9 +85,10 @@ class TopCountryCell: UITableViewCell {
         imageTrack.image = nil
     }
     
-    func setup(nameArtist: String?, nameTrack: String?, minutesTrack: Int?, imageURL: String?) {
+    func setup(nameArtist: String?, nameTrack: String?, minutesTrack: Int?, imageURL: String?,previewUrl:String?) {
         nameArtistLabel.text = nameArtist
         nameTrackLabel.text = nameTrack
+     
         if let minutesTrack {
             timeTrackLabel.text = String(format: "%.2f", Double(minutesTrack) / 60000)
         }
@@ -90,6 +102,27 @@ class TopCountryCell: UITableViewCell {
                 self.imageTrack.image = image
             }
         }
+        
+//        guard let url = URL(string: (setup.previewUrl)) else {
+//            return
+//        }
+//        audioPlayer = AVPlayer(url: url)
+    }
+    
+    @objc
+    private func playButMain () {
+//        delegate?.didTapPlayButtonMain()
+        
+#warning("Не воспроизводится музыка в главном экране")
+//        if audioPlayer.timeControlStatus == . playing {
+//            playTrack.setImage(UIImage(named: "play"), for: .normal)
+//            audioPlayer.pause()
+//        } else {
+//            playTrack.setImage(UIImage(named: "pause"), for: .normal)
+//            audioPlayer.play()
+//
+//        }
+        print("Кнопка музыки работает TableViewCell")
     }
     
     private func configure() {

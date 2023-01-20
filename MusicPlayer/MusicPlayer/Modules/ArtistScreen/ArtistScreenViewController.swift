@@ -10,7 +10,7 @@ import UIKit
 class ArtistScreenViewController: UIViewController {
     
     var nameArtist: String?
-    
+
     private let cellReuseIdentifier = "cell"
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -113,15 +113,32 @@ extension ArtistScreenViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let soundVC = SoundLayerController()
-    
+
         soundVC.data = trackList[indexPath.row]
         navigationController?.pushViewController(soundVC, animated: true)
-        
-#warning("Переход на экран музыки с альбомов")
-        
+                
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
 }
+
+// MARK: - MyOwnCellDelegate
+
+extension ArtistScreenViewController: TrackListCellDelegate {
+    
+    func didTapPlayButton() {
+        print("Кнопка работает")
+        
+//        if soundView.audioPlayer.timeControlStatus == . playing {
+//            playButton.setImage(UIImage(named: "play"), for: .normal)
+//            soundView.audioPlayer.pause()
+//        } else {
+//            playButton.setImage(UIImage(named: "pause"), for: .normal)
+//            soundView.audioPlayer.play()
+//            
+//        }
+    }
+}
+

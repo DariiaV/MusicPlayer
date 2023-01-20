@@ -7,7 +7,15 @@
 
 import UIKit
 
+protocol TrackListCellDelegate: AnyObject {
+    func didTapPlayButton()
+}
+
 class TrackListCell: UITableViewCell {
+    
+    weak var delegate: TrackListCellDelegate?
+    private let soundView = SoundLayerController()
+    private var id: Int?
     
     private let trackLabel: UILabel = {
         let label = UILabel()
@@ -19,16 +27,18 @@ class TrackListCell: UITableViewCell {
         return label
     }()
     
-    private let playTrack: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "play")
-        image.contentMode = .scaleAspectFill
-        return image
+    lazy var playButton: UIButton = {
+        
+        let button = UIButton()
+        button.setImage(UIImage(named: "play"), for: .normal)
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(playButtonTap), for: .touchUpInside)
+        return button
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-       
+        
         configure()
     }
     
@@ -40,20 +50,37 @@ class TrackListCell: UITableViewCell {
         trackLabel.text = nameTrack
     }
     
+    func playButtonSetup () {
+        if soundView.audioPlayer.timeControlStatus == . playing {
+            playButton.setImage(UIImage(named: "play"), for: .normal)
+            soundView.audioPlayer.pause()
+        } else {
+            playButton.setImage(UIImage(named: "pause"), for: .normal)
+            soundView.audioPlayer.play()
+        }
+    }
+    @objc
+    private func playButtonTap(_ sender: UIButton!) {
+        
+        print("Кнопка музыки работает UpTableViewCell")
+#warning("Не воспроизводится музыка в главном экране")
+    }
+    
+    
     private func configure() {
         backgroundColor = .black
-        addSubviews([trackLabel, playTrack])
+        addSubviews([trackLabel, playButton])
         
         NSLayoutConstraint.activate([
             trackLabel.topAnchor.constraint(equalTo: topAnchor),
             trackLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             trackLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .leadingMargin),
-            trackLabel.trailingAnchor.constraint(equalTo: playTrack.leadingAnchor, constant: .trailingMargin),
+            trackLabel.trailingAnchor.constraint(equalTo: playButton.leadingAnchor, constant: .trailingMargin),
             
-            playTrack.centerYAnchor.constraint(equalTo: centerYAnchor),
-            playTrack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .trailingMargin),
-            playTrack.heightAnchor.constraint(equalToConstant: .playTrackHeight),
-            playTrack.widthAnchor.constraint(equalToConstant: .playTrackHeight),
+            playButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            playButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .trailingMargin),
+            playButton.heightAnchor.constraint(equalToConstant: .playTrackHeight),
+            playButton.widthAnchor.constraint(equalToConstant: .playTrackHeight),
         ])
     }
 }
@@ -61,5 +88,5 @@ class TrackListCell: UITableViewCell {
 private extension CGFloat {
     static let leadingMargin: CGFloat = 10
     static let trailingMargin: CGFloat = -10
-    static let playTrackHeight: CGFloat = 20
+    static let playTrackHeight: CGFloat = 40
 }

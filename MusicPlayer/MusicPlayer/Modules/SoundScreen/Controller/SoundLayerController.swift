@@ -18,10 +18,11 @@ final class SoundLayerController: UIViewController {
     // MARK: - Properties
     
     private let soundView = SoundLayerView()
-    private var audioPlayer: AVPlayer!
-    private var audioPlayer1: AVPlayerItem!
-    private var isFavorite = false
+    var audioPlayer: AVPlayer!
     private var trackSound = [TrackModel]()
+    private var isFavorite = false
+    private var artistId: Int?
+    private var favoriteIds: Set<Int> = []
     
     var data: TrackModel? {
         didSet {
@@ -78,6 +79,8 @@ final class SoundLayerController: UIViewController {
         soundView.playButton.addTarget(self, action: #selector(playBut), for: .touchUpInside)
         soundView.musicSlider.addTarget(self, action: #selector(sliderBut), for: .touchUpInside)
         soundView.favouritesButton.addTarget(self, action: #selector(favouritesTapButton), for: .touchUpInside)
+        soundView.leftButton.addTarget(self, action: #selector(leftBut), for: .touchUpInside)
+        soundView.rightButton.addTarget(self, action: #selector(rightBut), for: .touchUpInside)
     }
     
     func convertTimeToString(time: CMTime) -> String {
@@ -92,8 +95,6 @@ final class SoundLayerController: UIViewController {
     }
     
     func setupPlayer() {
-        
-        //        audioPlayer = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "01. You Know You're Right", ofType: "mp3")!))
         
         audioPlayer.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1000), queue: DispatchQueue.main) { [self]time in
             
@@ -143,6 +144,23 @@ final class SoundLayerController: UIViewController {
         
         isFavorite.toggle()
         changeFavorite()
+#warning("Описать логику сохранения в избранное")
     }
-}
+    
+    @objc
+    private func leftBut () {
+#warning("Не понятно как листать мелодии влево")
+        print("Промотка влево")
+        
+    }
+    
+    @objc
+    private func rightBut () {
+#warning("Не понятно как листать мелодии вправо")
+            print("Промотка вправо")
+        }
+        
+    }
+
+
 

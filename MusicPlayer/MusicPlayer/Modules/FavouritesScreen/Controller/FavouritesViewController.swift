@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 final class FavouritesViewController: UIViewController {
     
@@ -13,7 +14,10 @@ final class FavouritesViewController: UIViewController {
     
     private let favouritesView = FavouritesView()
     private var trackSound = [TrackModel]()
-  
+    private let soundViewController = SoundLayerController()
+    private let soundView = SoundLayerView()
+    private var trackList = [TrackModel]()
+    
     // MARK: - Lifecycle
     
     override func loadView() {
@@ -60,4 +64,22 @@ extension FavouritesViewController: UITableViewDataSource {
 // MARK: - TableViewDelegate
 
 extension FavouritesViewController: UITableViewDelegate {
-}
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+          
+        }
+    }
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            let soundVC = SoundLayerController()
+
+            soundVC.data = trackList[indexPath.row]
+            navigationController?.pushViewController(soundVC, animated: true)
+                    
+        }
+    }
+

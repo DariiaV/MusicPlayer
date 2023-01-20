@@ -16,6 +16,22 @@ final class FavouritiesCell: UITableViewCell {
             nameMusicLabelCell.text = data.nameMusic
         }
     }
+    
+//    var data: TrackModel? {
+//        didSet {
+//            guard let data = data else { return }
+//            soundView.authorLabel.text = data.artistName
+//            soundView.nameMusicLabel.text = data.trackName
+//
+//            // сетим мелодию
+//            guard let url = URL(string: data.previewUrl!) else {
+//                return
+//            }
+//            soundViewController.audioPlayer = AVPlayer(url: url)
+//
+//
+//        }
+//    }
         
     // MARK: - UI Elements
 

@@ -17,6 +17,7 @@ class SoundLayerView: UIView {
         imageView.image = UIImage(named: "nirvana")
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     

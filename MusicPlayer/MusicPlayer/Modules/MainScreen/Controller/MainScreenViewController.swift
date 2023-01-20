@@ -7,13 +7,16 @@
 
 import UIKit
 import AVKit
+
 class MainScreenViewController: UIViewController {
     
-    private var trackList = [TrackModel]()
+    private var artists = ArtistModel.createArtists()
+    private var countryTracks = [TrackModel]()
     
     private let selectorCountriesView = SelectorCountriesView()
     private let cellReuseIdentifier = "cell"
     private let identifierCollectionView = "cell"
+    
     private let greetingLabel: UILabel = {
         let label = UILabel()
         label.text = "Hello!"
@@ -71,8 +74,7 @@ class MainScreenViewController: UIViewController {
         return label
     }()
     
-    private var artists = ArtistModel.createArtists()
-    private var countryTracks = [TrackModel]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -143,8 +145,10 @@ class MainScreenViewController: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDataSource
+
 extension MainScreenViewController: UICollectionViewDataSource {
-    // MARK: - UICollectionViewDataSource
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         artists.count
     }
@@ -169,8 +173,10 @@ extension MainScreenViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension MainScreenViewController: UITableViewDataSource {
-    // MARK: - UITableViewDataSource
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         countryTracks.count
     }
@@ -180,26 +186,26 @@ extension MainScreenViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let album = countryTracks[indexPath.row]
-        cell.setup(nameArtist: album.artistName, nameTrack: album.trackName, minutesTrack: album.trackTimeMillis, imageURL: album.artworkUrl100)
+        cell.setup(nameArtist: album.artistName, nameTrack: album.trackName, minutesTrack: album.trackTimeMillis, imageURL: album.artworkUrl100, previewUrl: album.previewUrl)
         return cell
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension MainScreenViewController: UITableViewDelegate {
-    
-    // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-//        let soundVC = SoundLayerController()
-//
-//        soundVC.data = trackList[indexPath.row]
-//        navigationController?.pushViewController(soundVC, animated: true)
-#warning("Открыть экран с музыкой ,одна песня")
+        let soundVC = SoundLayerController()
+
+        soundVC.data = countryTracks[indexPath.row]
+        navigationController?.pushViewController(soundVC, animated: true)
     }
 }
 
