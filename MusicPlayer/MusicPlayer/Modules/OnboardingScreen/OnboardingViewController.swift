@@ -53,6 +53,13 @@ class OnboardingViewController: UIViewController {
         
         setupView()
         setupNavigationItem()
+        saveUserDefaults()
+    }
+    
+    private func saveUserDefaults() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: "OnBoardingWasViewed")
+        dismiss(animated: true, completion: nil)
     }
     
     private func setupView() {
