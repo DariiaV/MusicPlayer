@@ -20,9 +20,10 @@ private extension CGFloat {
 
 final class DefaultTextField: UITextField {
 
-    init(placeholder: String? = nil) {
+    init(placeholder: String? = nil, isSecureTextEntry: Bool) {
         super.init(frame: .zero)
         self.placeholder = placeholder
+        self.isSecureTextEntry = isSecureTextEntry
         configureTextField()
     }
 
@@ -35,6 +36,7 @@ final class DefaultTextField: UITextField {
         layer.backgroundColor = UIColor.white.cgColor
         layer.cornerRadius = CGFloat.baseCornerRadius
         clearButtonMode = .whileEditing
+        autocorrectionType = .no
         attributedPlaceholder = NSAttributedString(
             string: placeholder ?? "",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]

@@ -28,20 +28,19 @@ class ArtistScreenViewController: UIViewController {
         
         
         setupView()
-        getTracksArtist()
-        setupTitle()
-    }
+        getTracksArtist()    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        setupTitle(backgroundColor: .black)
         tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        setupTitle(backgroundColor: .clear)
         tabBarController?.tabBar.isHidden = false
     }
     
@@ -57,13 +56,13 @@ class ArtistScreenViewController: UIViewController {
         ])
     }
     
-    private func setupTitle() {
+    private func setupTitle(backgroundColor: UIColor) {
         title = nameArtist
         
         
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .black
+        appearance.backgroundColor = backgroundColor
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         navigationController?.navigationBar.standardAppearance = appearance
