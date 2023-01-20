@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048371296C302A00123A53 /* DownloadsViewController.swift */; };
-		50048374296C303A00123A53 /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048373296C303A00123A53 /* DownloadsView.swift */; };
-		50048376296C327900123A53 /* DownloadsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048375296C327900123A53 /* DownloadsCell.swift */; };
-		50048378296C4ED600123A53 /* 01. You Know You're Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */; };
-		5004837A296D4A9100123A53 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048379296D4A9100123A53 /* DataModel.swift */; };
 		50048382296E91B400123A53 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50048381296E91B400123A53 /* TabBarController.swift */; };
 		50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306514296ACF9A00E46455 /* SoundLayerController.swift */; };
 		50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50306516296ACFB300E46455 /* SoundLayerView.swift */; };
@@ -21,12 +16,15 @@
 		D8281E8D2977086C006EF86F /* TreckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8281E882977086C006EF86F /* TreckModel.swift */; };
 		D8281E9C29771CFA006EF86F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8281E9B29771CFA006EF86F /* NetworkManager.swift */; };
 		D8281E9E29772285006EF86F /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8281E9D29772285006EF86F /* MainScreenViewController.swift */; };
+		D8290144297B17C90091802A /* TrackCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8290142297B17C90091802A /* TrackCoreData.xcdatamodeld */; };
+		D8290147297B18120091802A /* TrackData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8290145297B18120091802A /* TrackData+CoreDataClass.swift */; };
+		D8290148297B18120091802A /* TrackData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8290146297B18120091802A /* TrackData+CoreDataProperties.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
-		D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */; };
 		D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8337FDE296AB0AA00F60521 /* Assets.xcassets */; };
 		D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */; };
-		D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FF4296AB4D900F60521 /* CoreDataManager.swift */; };
+		D83B1312297ACDFC0003101F /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83B1311297ACDFC0003101F /* MusicManager.swift */; };
+		D83B1314297B13B50003101F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83B1313297B13B50003101F /* StorageManager.swift */; };
 		D864CBC32977D2550059E68D /* PopularAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */; };
 		D864CBC52977EB3D0059E68D /* SelectorCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC42977EB3D0059E68D /* SelectorCountriesView.swift */; };
 		D864CBC72977EBC60059E68D /* CountryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC62977EBC60059E68D /* CountryButtonView.swift */; };
@@ -66,11 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50048371296C302A00123A53 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
-		50048373296C303A00123A53 /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
-		50048375296C327900123A53 /* DownloadsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsCell.swift; sourceTree = "<group>"; };
-		50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01. You Know You're Right.mp3"; sourceTree = "<group>"; };
-		50048379296D4A9100123A53 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		50048381296E91B400123A53 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		50306514296ACF9A00E46455 /* SoundLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerController.swift; sourceTree = "<group>"; };
 		50306516296ACFB300E46455 /* SoundLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLayerView.swift; sourceTree = "<group>"; };
@@ -80,14 +73,17 @@
 		D8281E882977086C006EF86F /* TreckModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreckModel.swift; sourceTree = "<group>"; };
 		D8281E9B29771CFA006EF86F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D8281E9D29772285006EF86F /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		D8290143297B17C90091802A /* TrackCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackCoreData.xcdatamodel; sourceTree = "<group>"; };
+		D8290145297B18120091802A /* TrackData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrackData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D8290146297B18120091802A /* TrackData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrackData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8337FDC296AB0A900F60521 /* MusicPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicPlayer.xcdatamodel; sourceTree = "<group>"; };
 		D8337FDE296AB0AA00F60521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8337FE1296AB0AA00F60521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8337FE3296AB0AA00F60521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8337FF4296AB4D900F60521 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D83B1311297ACDFC0003101F /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		D83B1313297B13B50003101F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAlbumsCell.swift; sourceTree = "<group>"; };
 		D864CBC42977EB3D0059E68D /* SelectorCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCountriesView.swift; sourceTree = "<group>"; };
 		D864CBC62977EBC60059E68D /* CountryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryButtonView.swift; sourceTree = "<group>"; };
@@ -137,31 +133,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5004836E296C2FF300123A53 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5004836F296C2FFB00123A53 /* Cell */,
-				50048373296C303A00123A53 /* DownloadsView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5004836F296C2FFB00123A53 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				50048375296C327900123A53 /* DownloadsCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		50048370296C300200123A53 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				50048371296C302A00123A53 /* DownloadsViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		50048387296E9CC400123A53 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,20 +169,10 @@
 		5030651D296BF0FF00E46455 /* FavouritesScreen */ = {
 			isa = PBXGroup;
 			children = (
-				50048379296D4A9100123A53 /* DataModel.swift */,
 				50306521296BF1F700E46455 /* View */,
 				50306525296BF21D00E46455 /* Controller */,
 			);
 			path = FavouritesScreen;
-			sourceTree = "<group>";
-		};
-		5030651E296BF17600E46455 /* DownloadsScreen */ = {
-			isa = PBXGroup;
-			children = (
-				5004836E296C2FF300123A53 /* View */,
-				50048370296C300200123A53 /* Controller */,
-			);
-			path = DownloadsScreen;
 			sourceTree = "<group>";
 		};
 		50306521296BF1F700E46455 /* View */ = {
@@ -312,7 +273,6 @@
 		D8337FD1296AB0A900F60521 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				50048377296C4ED600123A53 /* 01. You Know You're Right.mp3 */,
 				D8337FEE296AB2C600F60521 /* ApplicationServices */,
 				D8337FEF296AB3C100F60521 /* Modules */,
 				D8337FED296AB2BA00F60521 /* System */,
@@ -336,6 +296,7 @@
 		D8337FEE296AB2C600F60521 /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
+				D83B1310297ACDEE0003101F /* SoundLayer */,
 				D93339152979B30100BC720A /* Validator */,
 				D93339122979AB3E00BC720A /* AlertService */,
 				D933390129782E8D00BC720A /* AuthService */,
@@ -352,7 +313,6 @@
 				D8BB6CA52979C479003635BC /* ArtistScreen */,
 				D8BB6CA22979C46F003635BC /* OnboardingScreen */,
 				D8281E8F29770894006EF86F /* MainScreen */,
-				5030651E296BF17600E46455 /* DownloadsScreen */,
 				5030651D296BF0FF00E46455 /* FavouritesScreen */,
 				D9ACAB78296D66F40000805F /* Login */,
 				D9B29EF5296FF01D003E8825 /* Registration */,
@@ -366,10 +326,20 @@
 		D8337FF1296AB3DD00F60521 /* StorageLayer */ = {
 			isa = PBXGroup;
 			children = (
-				D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */,
-				D8337FF4296AB4D900F60521 /* CoreDataManager.swift */,
+				D83B1313297B13B50003101F /* StorageManager.swift */,
+				D8290145297B18120091802A /* TrackData+CoreDataClass.swift */,
+				D8290146297B18120091802A /* TrackData+CoreDataProperties.swift */,
+				D8290142297B17C90091802A /* TrackCoreData.xcdatamodeld */,
 			);
 			path = StorageLayer;
+			sourceTree = "<group>";
+		};
+		D83B1310297ACDEE0003101F /* SoundLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D83B1311297ACDFC0003101F /* MusicManager.swift */,
+			);
+			path = SoundLayer;
 			sourceTree = "<group>";
 		};
 		D8BB6CA22979C46F003635BC /* OnboardingScreen */ = {
@@ -629,7 +599,6 @@
 				D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */,
 				D9B29F0229704A61003E8825 /* GoogleService-Info.plist in Resources */,
 				D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */,
-				50048378296C4ED600123A53 /* 01. You Know You're Right.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,7 +613,6 @@
 				D873171F2978811500AC8ECD /* Country.swift in Sources */,
 				D873171529785B1C00AC8ECD /* ArtistModel.swift in Sources */,
 				50306520296BF1D000E46455 /* FavouritesViewController.swift in Sources */,
-				50048374296C303A00123A53 /* DownloadsView.swift in Sources */,
 				D8281E9C29771CFA006EF86F /* NetworkManager.swift in Sources */,
 				D864CBC52977EB3D0059E68D /* SelectorCountriesView.swift in Sources */,
 				D93339062978326500BC720A /* RegisterUserRequest.swift in Sources */,
@@ -652,14 +620,14 @@
 				D9B29EF7296FF095003E8825 /* RegistrationView.swift in Sources */,
 				D8281E9E29772285006EF86F /* MainScreenViewController.swift in Sources */,
 				50306517296ACFB300E46455 /* SoundLayerView.swift in Sources */,
-				50048372296C302A00123A53 /* DownloadsViewController.swift in Sources */,
 				D93339142979AB5500BC720A /* AlertManager.swift in Sources */,
 				D8BB6CAA2979C479003635BC /* TrackListCell.swift in Sources */,
 				D9ACAB80296D68090000805F /* TitleLabel.swift in Sources */,
 				D864CBC32977D2550059E68D /* PopularAlbumsCell.swift in Sources */,
+				D83B1314297B13B50003101F /* StorageManager.swift in Sources */,
 				D8BB6CA92979C479003635BC /* ArtistScreenViewController.swift in Sources */,
 				50048382296E91B400123A53 /* TabBarController.swift in Sources */,
-				5004837A296D4A9100123A53 /* DataModel.swift in Sources */,
+				D83B1312297ACDFC0003101F /* MusicManager.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D9B29EFB297037EB003E8825 /* UITapGestureRecognizer+Ext.swift in Sources */,
 				D933390329782EBD00BC720A /* AuthService.swift in Sources */,
@@ -668,9 +636,8 @@
 				D9B29E62296F34E5003E8825 /* Int+Scaling.swift in Sources */,
 				D9B29EF9296FF0B1003E8825 /* RegistrationViewController.swift in Sources */,
 				D933390D2978981C00BC720A /* UserInfoViewController.swift in Sources */,
-				D8337FF5296AB4D900F60521 /* CoreDataManager.swift in Sources */,
+				D8290147297B18120091802A /* TrackData+CoreDataClass.swift in Sources */,
 				D8281E8D2977086C006EF86F /* TreckModel.swift in Sources */,
-				D8337FDD296AB0A900F60521 /* MusicPlayer.xcdatamodeld in Sources */,
 				D9ACAB85296D71BF0000805F /* DescriptionLabel.swift in Sources */,
 				D933390B2978961300BC720A /* UserInfoView.swift in Sources */,
 				D9B29E67296F3531003E8825 /* UIStackView+Ext.swift in Sources */,
@@ -684,11 +651,12 @@
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
 				D9B29E64296F34E5003E8825 /* UIView+AddSubviews.swift in Sources */,
 				D9ACAB87296D733B0000805F /* DefaultTextField.swift in Sources */,
+				D8290144297B17C90091802A /* TrackCoreData.xcdatamodeld in Sources */,
+				D8290148297B18120091802A /* TrackData+CoreDataProperties.swift in Sources */,
 				50306515296ACF9A00E46455 /* SoundLayerController.swift in Sources */,
 				D9B29E63296F34E5003E8825 /* UIColorExtension+TabBar.swift in Sources */,
 				D9ACAB89296D91B10000805F /* DefaultButton.swift in Sources */,
 				50306523296BF20200E46455 /* FavouritesView.swift in Sources */,
-				50048376296C327900123A53 /* DownloadsCell.swift in Sources */,
 				D864CBC9297811610059E68D /* TopCountryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -921,13 +889,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		D8337FDB296AB0A900F60521 /* MusicPlayer.xcdatamodeld */ = {
+		D8290142297B17C90091802A /* TrackCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D8337FDC296AB0A900F60521 /* MusicPlayer.xcdatamodel */,
+				D8290143297B17C90091802A /* TrackCoreData.xcdatamodel */,
 			);
-			currentVersion = D8337FDC296AB0A900F60521 /* MusicPlayer.xcdatamodel */;
-			path = MusicPlayer.xcdatamodeld;
+			currentVersion = D8290143297B17C90091802A /* TrackCoreData.xcdatamodel */;
+			path = TrackCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

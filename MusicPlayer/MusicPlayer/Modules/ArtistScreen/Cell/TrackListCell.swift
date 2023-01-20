@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol TrackListCellDelegate: AnyObject {
+    func didTapPlayButton(with index: Int?)
+}
+
 class TrackListCell: UITableViewCell {
+    
+    weak var delegate: TrackListCellDelegate?
+    var index: Int?
     
     private let trackLabel: UILabel = {
         let label = UILabel()
@@ -19,41 +26,48 @@ class TrackListCell: UITableViewCell {
         return label
     }()
     
-    private let playTrack: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "play")
-        image.contentMode = .scaleAspectFill
-        return image
+    private lazy var playButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "play"), for: .normal)
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(playButtonTap), for: .touchUpInside)
+        return button
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-       
+        
         configure()
+        selectionStyle = .none
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(nameTrack: String?) {
+    func setup(nameTrack: String?, index: Int?) {
         trackLabel.text = nameTrack
+        self.index = index
+    }
+    
+    @objc private func playButtonTap(_ sender: UIButton) {
+        delegate?.didTapPlayButton(with: index)
     }
     
     private func configure() {
         backgroundColor = .black
-        addSubviews([trackLabel, playTrack])
+        contentView.addSubviews([trackLabel, playButton])
         
         NSLayoutConstraint.activate([
             trackLabel.topAnchor.constraint(equalTo: topAnchor),
             trackLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             trackLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .leadingMargin),
-            trackLabel.trailingAnchor.constraint(equalTo: playTrack.leadingAnchor, constant: .trailingMargin),
+            trackLabel.trailingAnchor.constraint(equalTo: playButton.leadingAnchor, constant: .trailingMargin),
             
-            playTrack.centerYAnchor.constraint(equalTo: centerYAnchor),
-            playTrack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .trailingMargin),
-            playTrack.heightAnchor.constraint(equalToConstant: .playTrackHeight),
-            playTrack.widthAnchor.constraint(equalToConstant: .playTrackHeight),
+            playButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            playButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .trailingMargin),
+            playButton.heightAnchor.constraint(equalToConstant: .playTrackHeight),
+            playButton.widthAnchor.constraint(equalToConstant: .playTrackHeight),
         ])
     }
 }
@@ -61,5 +75,5 @@ class TrackListCell: UITableViewCell {
 private extension CGFloat {
     static let leadingMargin: CGFloat = 10
     static let trailingMargin: CGFloat = -10
-    static let playTrackHeight: CGFloat = 20
+    static let playTrackHeight: CGFloat = 40
 }

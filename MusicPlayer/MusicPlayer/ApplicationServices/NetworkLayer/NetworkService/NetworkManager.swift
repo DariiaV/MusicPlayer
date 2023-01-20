@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol SoundManagerDelegate {
+    func didUpdateDetailSuoundScreen(recipe: TrackModel)
+}
+
 class NetworkManager {
     
-    static let shared   = NetworkManager()
+     static let shared   = NetworkManager()
     private let cache = NSCache<NSString, UIImage>()
     
     private let baseURL = "https://itunes.apple.com/search?term=music"
+    var delegate: SoundManagerDelegate?
     private init() {}
     
     func getAllMusic(from country: Country, completed: @escaping (Result<AlbumResult, MusicError>) -> Void) {

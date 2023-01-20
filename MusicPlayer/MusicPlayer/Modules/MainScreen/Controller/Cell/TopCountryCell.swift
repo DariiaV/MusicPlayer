@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol TopCountryCellDelegate: AnyObject {
+    func didTapPlayButton(with index: Int?)
+}
+
 class TopCountryCell: UITableViewCell {
+    
+    weak var delegate: TopCountryCellDelegate?
+    var index: Int?
     
     private let imageTrack: UIImageView = {
         let image = UIImageView()
@@ -46,11 +53,12 @@ class TopCountryCell: UITableViewCell {
         return label
     }()
     
-    private let playTrack: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "play")
-        image.contentMode = .scaleAspectFill
-        return image
+    private lazy var playTrack: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "play"), for: .normal)
+        button.addTarget(self, action: #selector(playButMain), for: .touchUpInside)
+        button.layer.masksToBounds = true
+        return button
     }()
     
     private let activityIndicator = UIActivityIndicatorView(style: .large)
@@ -74,9 +82,10 @@ class TopCountryCell: UITableViewCell {
         imageTrack.image = nil
     }
     
-    func setup(nameArtist: String?, nameTrack: String?, minutesTrack: Int?, imageURL: String?) {
+    func setup(nameArtist: String?, nameTrack: String?, minutesTrack: Int?, imageURL: String?,previewUrl:String?) {
         nameArtistLabel.text = nameArtist
         nameTrackLabel.text = nameTrack
+     
         if let minutesTrack {
             timeTrackLabel.text = String(format: "%.2f", Double(minutesTrack) / 60000)
         }
@@ -90,6 +99,10 @@ class TopCountryCell: UITableViewCell {
                 self.imageTrack.image = image
             }
         }
+    }
+    
+    @objc private func playButMain () {
+        delegate?.didTapPlayButton(with: index)
     }
     
     private func configure() {
@@ -109,6 +122,7 @@ class TopCountryCell: UITableViewCell {
             
             nameArtistLabel.topAnchor.constraint(equalTo: imageTrack.topAnchor),
             nameArtistLabel.leadingAnchor.constraint(equalTo: imageTrack.trailingAnchor, constant: .leadingMargin),
+            nameArtistLabel.trailingAnchor.constraint(equalTo: playTrack.leadingAnchor, constant: .trailingMargin),
             
             nameTrackLabel.topAnchor.constraint(equalTo: nameArtistLabel.bottomAnchor, constant: .nameTrackTopMargin),
             nameTrackLabel.leadingAnchor.constraint(equalTo: imageTrack.trailingAnchor, constant: .leadingMargin),

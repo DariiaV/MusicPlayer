@@ -7,58 +7,51 @@
 
 import UIKit
 
-class SoundLayerView: UIView  {
-    
+class SoundLayerView: UIView {
+
     // MARK: - UI Elements
     
     lazy var imageViewMain: UIImageView = {
-        
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "nirvana")
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
-    lazy var authorLabel : UILabel = {
-        
+    lazy var authorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Nirvana"
+        label.text = "Loading..."
         label.font = UIFont.systemFont(ofSize: 20)
         label.textAlignment = .left
         label.textColor = .white
         return label
     }()
     
-    lazy var nameMusicLabel : UILabel = {
-        
+    lazy var nameMusicLabel: UILabel = {
         let label = UILabel()
-        label.text = "Where did you sleep last night?"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .left
         label.textColor = .white
         return label
     }()
     
-    lazy var favouritesButton : UIButton = {
-        
-        let button = UIButton ()
+    lazy var favouritesButton: UIButton = {
+        let button = UIButton()
         button.setTitleColor(UIColor.blue, for: .normal)
-        button.setImage(UIImage(named: "heart 1"), for: .normal)
+        button.setImage(UIImage(named: "heart2"), for: .normal)
         return button
     }()
     
-    lazy var musicSlider : UISlider = {
-        
-        let slider = UISlider ()
+    lazy var musicSlider: UISlider = {
+        let slider = UISlider()
         slider.minimumTrackTintColor = .systemMint
         slider.maximumTrackTintColor = .gray
         slider.thumbTintColor = .systemMint
         return slider
     }()
     
-    lazy var minuteStartLabel : UILabel = {
-        
+    lazy var minuteStartLabel: UILabel = {
         let label = UILabel()
         label.text = "0:00"
         label.font = UIFont.systemFont(ofSize: 16)
@@ -67,8 +60,7 @@ class SoundLayerView: UIView  {
         return label
     }()
     
-    lazy var minuteFinishLabel : UILabel = {
-        
+    lazy var minuteFinishLabel: UILabel = {
         let label = UILabel()
         label.text = "0:00"
         label.font = UIFont.systemFont(ofSize: 16)
@@ -77,33 +69,30 @@ class SoundLayerView: UIView  {
         return label
     }()
     
-    lazy var playButton : UIButton = {
-        
-        let button = UIButton ()
+    lazy var playButton: UIButton = {
+        let button = UIButton()
         button.setImage(UIImage(named: "play"), for: .normal)
         button.layer.masksToBounds = true
         return button
     }()
     
-    lazy var leftButton : UIButton = {
-        
-        let button = UIButton ()
+    lazy var leftButton: UIButton = {
+        let button = UIButton()
         button.setImage(UIImage(named: "left 1"), for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         button.layer.masksToBounds = true
         return button
     }()
     
-    lazy var rightButton : UIButton = {
-        
-        let button = UIButton ()
+    lazy var rightButton: UIButton = {
+        let button = UIButton()
         button.setImage(UIImage(named: "right 1"), for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         button.layer.masksToBounds = true
         return button
     }()
     
-    lazy var buttonStack : UIStackView = {
+    lazy var buttonStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.alignment = .center
@@ -111,12 +100,15 @@ class SoundLayerView: UIView  {
         return stack
     }()
     
+    let activityIndicator = UIActivityIndicatorView(style: .large)
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         backgroundColor = .black
+        activityIndicator.color = .cyan
         addSybView()
         setupConstraints()
     }
@@ -151,7 +143,7 @@ extension SoundLayerView {
             imageViewMain.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageViewMain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -.imageViewAnchor),
             imageViewMain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: .imageViewAnchor),
-            imageViewMain.heightAnchor.constraint(equalToConstant:  1.halfScreen),
+            imageViewMain.heightAnchor.constraint(equalToConstant: 1.halfScreen),
             
             authorLabel.topAnchor.constraint(equalTo: imageViewMain.bottomAnchor, constant: .authorLabelTopAnchor),
             authorLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .leadingTrailingAnchor),
@@ -185,9 +177,6 @@ private extension CGFloat {
     static let imageViewAnchor: CGFloat = 30
     static let topAnchor: CGFloat = 10
     static let leadingTrailingAnchor: CGFloat = 15
-    static let authorLabelTopAnchor: CGFloat = 50
-    static let buttonStackTopAnchor: CGFloat = 32
+    static let authorLabelTopAnchor: CGFloat = 75
+    static let buttonStackTopAnchor: CGFloat = 15
 }
-
-
-

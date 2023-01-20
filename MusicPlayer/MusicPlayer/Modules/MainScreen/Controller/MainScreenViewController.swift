@@ -7,11 +7,16 @@
 
 import UIKit
 import AVKit
+
 class MainScreenViewController: UIViewController {
+    
+    private var artists = ArtistModel.createArtists()
+    private var countryTracks = [TrackModel]()
     
     private let selectorCountriesView = SelectorCountriesView()
     private let cellReuseIdentifier = "cell"
     private let identifierCollectionView = "cell"
+    
     private let greetingLabel: UILabel = {
         let label = UILabel()
         label.text = "Hello!"
@@ -69,8 +74,7 @@ class MainScreenViewController: UIViewController {
         return label
     }()
     
-    private var artists = ArtistModel.createArtists()
-    private var countryTracks = [TrackModel]()
+    private let musicManager = MusicManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,12 +141,11 @@ class MainScreenViewController: UIViewController {
     
     
     private func fetchAlbum(from country: Country) {
-        NetworkManager.shared.getAllMusic(from: country) { result in
+        NetworkManager.shared.getAllMusic(from: country) { [self] result in
             switch result {
-                
             case .success(let album):
                 DispatchQueue.main.async {
-                    self.countryTracks = album.results
+                    self.countryTracks = album.results.filter { $0.trackName != nil && $0.previewUrl != nil }
                     self.tableView.reloadData()
                     
                 }
@@ -153,8 +156,10 @@ class MainScreenViewController: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDataSource
+
 extension MainScreenViewController: UICollectionViewDataSource {
-    // MARK: - UICollectionViewDataSource
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         artists.count
     }
@@ -168,9 +173,10 @@ extension MainScreenViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension MainScreenViewController: UICollectionViewDelegate {
-    // MARK: - UICollectionViewDelegate
-    
+   
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let artistVC = ArtistScreenViewController()
         artistVC.nameArtist = artists[indexPath.item].name
@@ -178,8 +184,10 @@ extension MainScreenViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension MainScreenViewController: UITableViewDataSource {
-    // MARK: - UITableViewDataSource
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         countryTracks.count
     }
@@ -189,25 +197,35 @@ extension MainScreenViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let album = countryTracks[indexPath.row]
-        cell.setup(nameArtist: album.artistName, nameTrack: album.trackName, minutesTrack: album.trackTimeMillis, imageURL: album.artworkUrl100)
+        cell.setup(nameArtist: album.artistName,
+                   nameTrack: album.trackName,
+                   minutesTrack: album.trackTimeMillis,
+                   imageURL: album.artworkUrl100,
+                   previewUrl: album.previewUrl)
+        cell.index = indexPath.row
+        cell.delegate = self
         return cell
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension MainScreenViewController: UITableViewDelegate {
-    
-    // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let track = countryTracks[indexPath.row]
-        #warning("Открыть экран с музыкой модель track выше")
-    }
-    
+}
+
+extension MainScreenViewController: TopCountryCellDelegate {
+    func didTapPlayButton(with index: Int?) {
+        guard let index else {
+            return
+        }
+        musicManager.createTrackList(countryTracks)
+        musicManager.playTrack(by: index)
         
+    }
 }
 
 extension MainScreenViewController: SelectorCountriesViewDelegate {

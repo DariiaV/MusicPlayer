@@ -35,7 +35,6 @@ final class RegistrationViewController: UIViewController {
     }
 
     @objc private func singInButtonTapped() {
-
         let registerUserRequest = RegisterUserRequest(username: customView.nameTextField.text ?? "",
                                                       email: customView.emailTextField.text ?? "",
                                                       password: customView.passwordTextField.text ?? "")
