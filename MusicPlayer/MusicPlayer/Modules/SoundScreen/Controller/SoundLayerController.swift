@@ -157,8 +157,10 @@ final class SoundLayerController: UIViewController {
                                           for: .normal)
             if storageManager.hasModel(model) {
                 changeFavorite(isFavorite: true)
+                isFavorite = true
             } else {
                 changeFavorite(isFavorite: false)
+                isFavorite = false
             }
             setupPlayer()
         }

@@ -30,6 +30,7 @@ class StorageManager {
         return container
     }()
     
+    @discardableResult
     func fetchItems() -> [TrackModel] {
         let fetchRequest = TrackData.fetchRequest()
         do {
@@ -49,6 +50,7 @@ class StorageManager {
         let item = createItem(from: track)
         viewContext.insert(item)
         saveContext()
+        fetchItems()
     }
     
     func delete(_ trackModel: TrackModel) {
@@ -57,6 +59,7 @@ class StorageManager {
         }
         viewContext.delete(track)
         saveContext()
+        fetchItems()
     }
     
     func hasModel(_ trackModel: TrackModel) -> Bool {

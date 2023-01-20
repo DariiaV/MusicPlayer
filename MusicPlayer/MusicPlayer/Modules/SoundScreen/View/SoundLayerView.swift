@@ -150,9 +150,12 @@ extension SoundLayerView {
             
             nameMusicLabel.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: .topAnchor),
             nameMusicLabel.leadingAnchor.constraint(equalTo: authorLabel.leadingAnchor),
+            nameMusicLabel.trailingAnchor.constraint(equalTo: favouritesButton.leadingAnchor, constant: .trailingMargin),
             
             favouritesButton.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: -.topAnchor),
             favouritesButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -.leadingTrailingAnchor),
+            favouritesButton.heightAnchor.constraint(equalToConstant: .favoritesHeight),
+            favouritesButton.widthAnchor.constraint(equalToConstant: .favoritesHeight),
             
             musicSlider.topAnchor.constraint(equalTo: nameMusicLabel.bottomAnchor, constant: .imageViewAnchor),
             musicSlider.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: .leadingTrailingAnchor),
@@ -176,7 +179,9 @@ private extension CGFloat {
   
     static let imageViewAnchor: CGFloat = 30
     static let topAnchor: CGFloat = 10
+    static let trailingMargin: CGFloat = -10
     static let leadingTrailingAnchor: CGFloat = 15
     static let authorLabelTopAnchor: CGFloat = 75
     static let buttonStackTopAnchor: CGFloat = 15
+    static let favoritesHeight: CGFloat = 30
 }
