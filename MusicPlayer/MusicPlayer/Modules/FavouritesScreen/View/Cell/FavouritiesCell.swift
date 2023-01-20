@@ -39,7 +39,7 @@ final class FavouritiesCell: UITableViewCell {
     lazy var nameMusicLabelCell: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
-        label.textAlignment = .right
+        label.textAlignment = .left
         label.textColor = .white
         return label
     }()
@@ -95,6 +95,7 @@ extension FavouritiesCell {
             
             nameMusicLabelCell.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
             nameMusicLabelCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            nameMusicLabelCell.trailingAnchor.constraint(equalTo: playButton.leadingAnchor),
             
             playButton.centerYAnchor.constraint(equalTo: centerYAnchor),
             playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
