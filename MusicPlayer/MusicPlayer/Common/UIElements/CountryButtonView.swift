@@ -16,7 +16,7 @@ final class CountryButtonView: UIButton {
         label.text = "RU"
         label.textColor = .white
         label.textAlignment = .center
-        label.font = UIFont(name: "Noteworthy Bold", size: 15)
+        label.font = .interBold(size: 15)
         return label
     }()
     

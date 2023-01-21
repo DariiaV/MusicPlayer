@@ -7,10 +7,6 @@
 
 import UIKit
 
-private extension CGFloat {
-    static let titleFont: CGFloat = 14
-}
-
 final class DescriptionLabel: UILabel {
 
     init(title: String) {
@@ -24,7 +20,7 @@ final class DescriptionLabel: UILabel {
     }
 
     private func configureTitleLabel() {
-        font = UIFont.systemFont(ofSize: CGFloat.titleFont)
+        font = .interRegular(size: 14)
         textAlignment = .left
         textColor = .white
     }

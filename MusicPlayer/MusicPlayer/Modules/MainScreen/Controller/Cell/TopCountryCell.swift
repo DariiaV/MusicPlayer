@@ -30,7 +30,7 @@ class TopCountryCell: UITableViewCell {
         label.textColor = .white
         label.textAlignment = .left
         
-        label.font = UIFont(name: "Noteworthy Bold", size: 17)
+        label.font = .interRegular(size: 14)
         return label
     }()
     
@@ -40,7 +40,7 @@ class TopCountryCell: UITableViewCell {
         label.textColor = .white
         label.textAlignment = .left
         label.numberOfLines = 2
-        label.font = UIFont(name: "Noteworthy", size: 13)
+        label.font = .interRegular(size: 14)
         return label
     }()
     
@@ -49,7 +49,7 @@ class TopCountryCell: UITableViewCell {
         label.text = "3.56"
         label.textColor = .white
         label.textAlignment = .left
-        label.font = UIFont(name: "Noteworthy", size: 13)
+        label.font = .interRegular(size: 14)
         return label
     }()
     

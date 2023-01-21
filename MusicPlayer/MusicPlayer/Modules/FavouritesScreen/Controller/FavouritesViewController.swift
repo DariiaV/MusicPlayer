@@ -17,6 +17,7 @@ final class FavouritesViewController: UIViewController {
     private let musicManager = MusicManager.shared
     private let storageManager = StorageManager.shared
     
+    
     // MARK: - Lifecycle
     
     override func loadView() {
@@ -35,13 +36,30 @@ final class FavouritesViewController: UIViewController {
         
         trackList = storageManager.fetchItems()
         favouritesView.tableView.reloadData()
+        
+        if trackList.isEmpty {
+            showEmptyStateView()
+        } else {
+            removeEmptyStateView()
+        }
     }
+    
     
     // MARK: - Private Method
     
     private func setupDelegate() {
         favouritesView.tableView.dataSource = self
         favouritesView.tableView.delegate = self
+        
+    }
+    
+    private func showEmptyStateView() {
+        view.bringSubviewToFront(favouritesView.emptyStateView)
+        
+    }
+    
+    private func removeEmptyStateView() {
+        view.bringSubviewToFront(favouritesView.tableView)
         
     }
 }
@@ -70,13 +88,20 @@ extension FavouritesViewController: UITableViewDataSource {
 
 extension FavouritesViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [self] _, _, _ in
             let track = trackList[indexPath.row]
             storageManager.delete(track)
             trackList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            if trackList.isEmpty {
+                showEmptyStateView()
+            } else {
+                removeEmptyStateView()
+            }
         }
+        deleteAction.backgroundColor = .systemMint
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

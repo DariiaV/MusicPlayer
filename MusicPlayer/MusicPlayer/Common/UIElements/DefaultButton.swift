@@ -7,16 +7,12 @@
 
 import UIKit
 
-private extension CGFloat {
-    static let buttonFont: CGFloat = 14
-}
-
 final class DefaultButton: UIButton {
 
     init(titleText: String) {
         super.init(frame: .zero)
         setTitle(titleText, for: .normal)
-        titleLabel?.font = UIFont.systemFont(ofSize: CGFloat.buttonFont)
+        titleLabel?.font = .interRegular(size: 14)
         layer.cornerRadius = CGFloat.baseCornerRadius
         backgroundColor = .systemMint
         translatesAutoresizingMaskIntoConstraints = false

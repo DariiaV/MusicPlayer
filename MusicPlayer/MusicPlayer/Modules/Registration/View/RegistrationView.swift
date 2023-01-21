@@ -9,6 +9,7 @@ import UIKit
 
 private extension CGFloat {
     static let height: CGFloat = 50
+    static let logoHeight: CGFloat = 74
 }
 
 final class RegistrationView: BaseView {
@@ -19,7 +20,7 @@ final class RegistrationView: BaseView {
         let label = UILabel()
         label.text = "Already have an account? Sign in"
         label.textColor = .white
-        label.font = .systemFont(ofSize: 16)
+        label.font = .interRegular(size: 16)
         label.isUserInteractionEnabled = true
         label.textAlignment = .center
 
@@ -55,8 +56,8 @@ final class RegistrationView: BaseView {
         let label = UILabel()
         label.text = "Welcome to Music Player"
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 24, weight: .bold)
-        label.textColor = .systemBlue
+        label.font = .poppinsBold(size: 24)
+        label.textColor = .cyan
         return label
     }()
 
@@ -102,14 +103,14 @@ final class RegistrationView: BaseView {
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.baseLightSpacing),
             contentStackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
 
-            logoImage.heightAnchor.constraint(equalToConstant: CGFloat.height),
+            logoImage.heightAnchor.constraint(equalToConstant: CGFloat.logoHeight),
             title.heightAnchor.constraint(equalToConstant: CGFloat.height),
             name.heightAnchor.constraint(equalToConstant: CGFloat.height),
-            nameLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
+            
             nameTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
-            emailLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
+            
             emailTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
-            passwordLabel.heightAnchor.constraint(equalToConstant: CGFloat.baseSpacing),
+            
             passwordTextField.heightAnchor.constraint(equalToConstant: CGFloat.height),
             singInButton.heightAnchor.constraint(equalToConstant: CGFloat.height)
         ])

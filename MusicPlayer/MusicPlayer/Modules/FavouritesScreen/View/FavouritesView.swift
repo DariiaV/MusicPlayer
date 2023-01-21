@@ -38,19 +38,20 @@ final class FavouritesView: UIView {
         button.layer.cornerRadius = 23
         return button
     }()
+    lazy var emptyStateView = EmptyStateView()
     
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .black
+        backgroundColor = UIColor(named: "mainColor")
         addSybView()
         setupConstraints()
         
         tableView.register(FavouritiesCell.self, forCellReuseIdentifier: "CellID")
         tableView.rowHeight = 65
-        tableView.backgroundColor = .black
+        tableView.backgroundColor = UIColor(named: "mainColor")
         tableView.separatorColor = .clear
     }
     
@@ -64,21 +65,16 @@ final class FavouritesView: UIView {
 extension FavouritesView {
     
     func addSybView() {
-        
-        addSubview(favoritesButton)
-        addSubview(imageViewFavorites)
-        addSubview(menuButton)
-        addSubview(tableView)
-        
-        favoritesButton.translatesAutoresizingMaskIntoConstraints = false
-        imageViewFavorites.translatesAutoresizingMaskIntoConstraints = false
-        menuButton.translatesAutoresizingMaskIntoConstraints = false
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+        addSubviews([emptyStateView, favoritesButton, imageViewFavorites, menuButton, tableView])
     }
     
     func setupConstraints() {
-        
         NSLayoutConstraint.activate([
+            emptyStateView.topAnchor.constraint(equalTo: topAnchor),
+            emptyStateView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            emptyStateView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            emptyStateView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
             favoritesButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: .favoritesButtonTopAnchor),
             favoritesButton.heightAnchor.constraint(equalToConstant: .sizeAnchor),
             favoritesButton.widthAnchor.constraint(equalToConstant: .sizeAnchor),

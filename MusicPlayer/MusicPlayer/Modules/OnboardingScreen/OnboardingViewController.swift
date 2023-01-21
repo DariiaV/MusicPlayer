@@ -17,7 +17,7 @@ class OnboardingViewController: UIViewController {
     private let welcomeLabel: UILabel = {
         let label = UILabel()
         label.text = "Welcome to the world of music"
-        label.font = UIFont(name: "Marker Felt", size: 24)
+        label.font = .poppinsBold(size: 24)
         label.textAlignment = .center
         label.numberOfLines = 2
         label.textColor = .white
@@ -27,7 +27,7 @@ class OnboardingViewController: UIViewController {
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "We are a small boutique music venue in the heart of..."
-        label.font = UIFont(name: "Marker Felt", size: 16)
+        label.font = .poppinsRegular(size: 16)
         label.textAlignment = .center
         label.numberOfLines = 2
         label.textColor = .white
@@ -110,7 +110,6 @@ class OnboardingViewController: UIViewController {
     }
     
     @objc private func skipOnboarding() {
-        // next screen
         dismiss(animated: true)
     }
     
