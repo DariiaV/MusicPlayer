@@ -22,7 +22,7 @@ class SoundLayerView: UIView {
     lazy var authorLabel: UILabel = {
         let label = UILabel()
         label.text = "Loading..."
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = .interRegular(size: 22)
         label.textAlignment = .left
         label.textColor = .white
         return label
@@ -30,7 +30,7 @@ class SoundLayerView: UIView {
     
     lazy var nameMusicLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = .interRegular(size: 16)
         label.textAlignment = .left
         label.textColor = .white
         return label
@@ -45,16 +45,16 @@ class SoundLayerView: UIView {
     
     lazy var musicSlider: UISlider = {
         let slider = UISlider()
-        slider.minimumTrackTintColor = .systemMint
+        slider.minimumTrackTintColor = .cyan
         slider.maximumTrackTintColor = .gray
-        slider.thumbTintColor = .systemMint
+        slider.thumbTintColor = .cyan
         return slider
     }()
     
     lazy var minuteStartLabel: UILabel = {
         let label = UILabel()
         label.text = "0:00"
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = .interRegular(size: 16)
         label.textAlignment = .left
         label.textColor = .white
         return label
@@ -63,7 +63,7 @@ class SoundLayerView: UIView {
     lazy var minuteFinishLabel: UILabel = {
         let label = UILabel()
         label.text = "0:00"
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = .interRegular(size: 16)
         label.textAlignment = .right
         label.textColor = .white
         return label
@@ -107,7 +107,7 @@ class SoundLayerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .black
+        backgroundColor = UIColor(named: "mainColor")
         activityIndicator.color = .cyan
         addSybView()
         setupConstraints()

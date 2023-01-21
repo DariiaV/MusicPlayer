@@ -30,15 +30,15 @@ final class FavouritiesCell: UITableViewCell {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.white.cgColor, UIColor.blue.cgColor]
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = .interRegular(size: 18)
         label.textAlignment = .right
-        label.textColor = .systemMint
+        label.textColor = .cyan
         return label
     }()
 
     lazy var nameMusicLabelCell: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = .interRegular(size: 16)
         label.textAlignment = .left
         label.textColor = .white
         return label
@@ -60,7 +60,7 @@ final class FavouritiesCell: UITableViewCell {
 
         addSybViewCell()
         setupConstraintsCell()
-        contentView.backgroundColor = .black
+        contentView.backgroundColor = UIColor(named: "mainColor")
     }
 
     required init?(coder: NSCoder) {
@@ -77,14 +77,7 @@ final class FavouritiesCell: UITableViewCell {
 extension FavouritiesCell {
 
     func addSybViewCell() {
-        
-        contentView.addSubview(performerMusicLabelCell)
-        contentView.addSubview(nameMusicLabelCell)
-        contentView.addSubview(playButton)
-        
-        performerMusicLabelCell.translatesAutoresizingMaskIntoConstraints = false
-        nameMusicLabelCell.translatesAutoresizingMaskIntoConstraints = false
-        playButton.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubviews([performerMusicLabelCell, nameMusicLabelCell, playButton])
     }
     
     func setupConstraintsCell() {

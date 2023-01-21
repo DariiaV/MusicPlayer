@@ -22,7 +22,7 @@ class MainScreenViewController: UIViewController {
         label.text = "Hello!"
         label.textAlignment = .left
         label.textColor = .white
-        label.font = UIFont(name: "Noteworthy", size: 20)
+        label.font = .interRegular(size: 16)
         return label
     }()
     private let questionLabel: UILabel = {
@@ -30,7 +30,7 @@ class MainScreenViewController: UIViewController {
         label.text = "What You want to hear today?"
         label.textAlignment = .left
         label.textColor = .white
-        label.font = UIFont(name: "Noteworthy", size: 17)
+        label.font = .interRegular(size: 14)
         return label
     }()
     
@@ -39,7 +39,7 @@ class MainScreenViewController: UIViewController {
         label.text = "Popular Artists"
         label.textAlignment = .left
         label.textColor = .white
-        label.font = UIFont(name: "Noteworthy Bold", size: 20)
+        label.font = .interBold(size: 18)
         return label
     }()
     
@@ -70,7 +70,7 @@ class MainScreenViewController: UIViewController {
         label.text = "Top chart in countries"
         label.textAlignment = .left
         label.textColor = .white
-        label.font = UIFont(name: "Noteworthy Bold", size: 20)
+        label.font = .interBold(size: 18)
         return label
     }()
     
@@ -85,7 +85,7 @@ class MainScreenViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(named: "mainColor")
         view.addSubviews([greetingLabel,
                           questionLabel,
                           popularAlbumsLabel,

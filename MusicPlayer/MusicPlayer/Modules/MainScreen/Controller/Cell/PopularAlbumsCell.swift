@@ -21,7 +21,7 @@ class PopularAlbumsCell: UICollectionViewCell {
     private let artistLabel: UILabel = {
         let label = UILabel()
         label.text = "Album name"
-        label.font = UIFont(name: "Noteworthy Bold", size: 18)
+        label.font = .interRegular(size: 12)
         label.textAlignment = .left
         label.textColor = .white
         
@@ -31,7 +31,7 @@ class PopularAlbumsCell: UICollectionViewCell {
     
     private let alphaView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(named: "mainColor")
         view.alpha = 0.3
         return view
     }()

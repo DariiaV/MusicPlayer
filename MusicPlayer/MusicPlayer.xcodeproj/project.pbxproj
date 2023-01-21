@@ -19,6 +19,11 @@
 		D8290144297B17C90091802A /* TrackCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8290142297B17C90091802A /* TrackCoreData.xcdatamodeld */; };
 		D8290147297B18120091802A /* TrackData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8290145297B18120091802A /* TrackData+CoreDataClass.swift */; };
 		D8290148297B18120091802A /* TrackData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8290146297B18120091802A /* TrackData+CoreDataProperties.swift */; };
+		D82E5C83297C607E008B9A8C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8811CB7297C371F007A39CC /* Poppins-Regular.ttf */; };
+		D82E5C84297C6082008B9A8C /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8811CB6297C3708007A39CC /* Poppins-Bold.ttf */; };
+		D82E5C85297C6084008B9A8C /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8811CB5297C366C007A39CC /* Inter-Regular.ttf */; };
+		D82E5C86297C6087008B9A8C /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8811CB4297C365C007A39CC /* Inter-Bold.ttf */; };
+		D82E5C88297C7692008B9A8C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82E5C87297C7692008B9A8C /* EmptyStateView.swift */; };
 		D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD2296AB0A900F60521 /* AppDelegate.swift */; };
 		D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8337FD4296AB0A900F60521 /* SceneDelegate.swift */; };
 		D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8337FDE296AB0AA00F60521 /* Assets.xcassets */; };
@@ -32,6 +37,7 @@
 		D873171529785B1C00AC8ECD /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873171429785B1C00AC8ECD /* ArtistModel.swift */; };
 		D873171D2978807D00AC8ECD /* MusicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873171C2978807D00AC8ECD /* MusicError.swift */; };
 		D873171F2978811500AC8ECD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873171E2978811500AC8ECD /* Country.swift */; };
+		D8811CB9297C38D5007A39CC /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8811CB8297C38D5007A39CC /* UIFont+Ext.swift */; };
 		D8BB6CA42979C46F003635BC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB6CA32979C46F003635BC /* OnboardingViewController.swift */; };
 		D8BB6CA92979C479003635BC /* ArtistScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB6CA62979C479003635BC /* ArtistScreenViewController.swift */; };
 		D8BB6CAA2979C479003635BC /* TrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB6CA82979C479003635BC /* TrackListCell.swift */; };
@@ -76,6 +82,7 @@
 		D8290143297B17C90091802A /* TrackCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackCoreData.xcdatamodel; sourceTree = "<group>"; };
 		D8290145297B18120091802A /* TrackData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrackData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D8290146297B18120091802A /* TrackData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrackData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D82E5C87297C7692008B9A8C /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		D8337FCF296AB0A900F60521 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8337FD2296AB0A900F60521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8337FD4296AB0A900F60521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +98,11 @@
 		D873171429785B1C00AC8ECD /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 		D873171C2978807D00AC8ECD /* MusicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicError.swift; sourceTree = "<group>"; };
 		D873171E2978811500AC8ECD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		D8811CB4297C365C007A39CC /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		D8811CB5297C366C007A39CC /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		D8811CB6297C3708007A39CC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		D8811CB7297C371F007A39CC /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		D8811CB8297C38D5007A39CC /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		D8BB6CA32979C46F003635BC /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D8BB6CA62979C479003635BC /* ArtistScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistScreenViewController.swift; sourceTree = "<group>"; };
 		D8BB6CA82979C479003635BC /* TrackListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackListCell.swift; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 			children = (
 				50306524296BF21400E46455 /* Cell */,
 				50306522296BF20200E46455 /* FavouritesView.swift */,
+				D82E5C87297C7692008B9A8C /* EmptyStateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +296,7 @@
 		D8337FED296AB2BA00F60521 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				D8811CB3297C35D9007A39CC /* Fonts */,
 				D9B29F0129704A61003E8825 /* GoogleService-Info.plist */,
 				D8337FD2296AB0A900F60521 /* AppDelegate.swift */,
 				D8337FD4296AB0A900F60521 /* SceneDelegate.swift */,
@@ -340,6 +354,17 @@
 				D83B1311297ACDFC0003101F /* MusicManager.swift */,
 			);
 			path = SoundLayer;
+			sourceTree = "<group>";
+		};
+		D8811CB3297C35D9007A39CC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D8811CB7297C371F007A39CC /* Poppins-Regular.ttf */,
+				D8811CB6297C3708007A39CC /* Poppins-Bold.ttf */,
+				D8811CB5297C366C007A39CC /* Inter-Regular.ttf */,
+				D8811CB4297C365C007A39CC /* Inter-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		D8BB6CA22979C46F003635BC /* OnboardingScreen */ = {
@@ -517,6 +542,7 @@
 				D9B29E61296F34E5003E8825 /* UIView+AddSubviews.swift */,
 				D9B29E66296F3531003E8825 /* UIStackView+Ext.swift */,
 				D9B29EFA297037EB003E8825 /* UITapGestureRecognizer+Ext.swift */,
+				D8811CB8297C38D5007A39CC /* UIFont+Ext.swift */,
 			);
 			name = Extensions;
 			path = ../ApplicationServices/Extensions;
@@ -598,7 +624,11 @@
 			files = (
 				D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */,
 				D9B29F0229704A61003E8825 /* GoogleService-Info.plist in Resources */,
+				D82E5C84297C6082008B9A8C /* Poppins-Bold.ttf in Resources */,
+				D82E5C86297C6087008B9A8C /* Inter-Bold.ttf in Resources */,
 				D8337FDF296AB0AA00F60521 /* Assets.xcassets in Resources */,
+				D82E5C85297C6084008B9A8C /* Inter-Regular.ttf in Resources */,
+				D82E5C83297C607E008B9A8C /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +657,7 @@
 				D83B1314297B13B50003101F /* StorageManager.swift in Sources */,
 				D8BB6CA92979C479003635BC /* ArtistScreenViewController.swift in Sources */,
 				50048382296E91B400123A53 /* TabBarController.swift in Sources */,
+				D8811CB9297C38D5007A39CC /* UIFont+Ext.swift in Sources */,
 				D83B1312297ACDFC0003101F /* MusicManager.swift in Sources */,
 				D8337FD3296AB0A900F60521 /* AppDelegate.swift in Sources */,
 				D9B29EFB297037EB003E8825 /* UITapGestureRecognizer+Ext.swift in Sources */,
@@ -647,6 +678,7 @@
 				D93339082978397400BC720A /* LoginUserRequest.swift in Sources */,
 				D9ACAB7A296D67050000805F /* LoginView.swift in Sources */,
 				D873171D2978807D00AC8ECD /* MusicError.swift in Sources */,
+				D82E5C88297C7692008B9A8C /* EmptyStateView.swift in Sources */,
 				D933391129799B5A00BC720A /* DetailUserViewController.swift in Sources */,
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
 				D9B29E64296F34E5003E8825 /* UIView+AddSubviews.swift in Sources */,
