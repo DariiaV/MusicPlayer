@@ -31,6 +31,7 @@
 		D83B1312297ACDFC0003101F /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83B1311297ACDFC0003101F /* MusicManager.swift */; };
 		D83B1314297B13B50003101F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83B1313297B13B50003101F /* StorageManager.swift */; };
 		D8443230297D385600EC2C04 /* TopCountryCellConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844322F297D385600EC2C04 /* TopCountryCellConfig.swift */; };
+		D8443232297D62A900EC2C04 /* ObserveTrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8443231297D62A900EC2C04 /* ObserveTrackModel.swift */; };
 		D864CBC32977D2550059E68D /* PopularAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */; };
 		D864CBC52977EB3D0059E68D /* SelectorCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC42977EB3D0059E68D /* SelectorCountriesView.swift */; };
 		D864CBC72977EBC60059E68D /* CountryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC62977EBC60059E68D /* CountryButtonView.swift */; };
@@ -93,6 +94,7 @@
 		D83B1311297ACDFC0003101F /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		D83B1313297B13B50003101F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		D844322F297D385600EC2C04 /* TopCountryCellConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCountryCellConfig.swift; sourceTree = "<group>"; };
+		D8443231297D62A900EC2C04 /* ObserveTrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveTrackModel.swift; sourceTree = "<group>"; };
 		D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAlbumsCell.swift; sourceTree = "<group>"; };
 		D864CBC42977EB3D0059E68D /* SelectorCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCountriesView.swift; sourceTree = "<group>"; };
 		D864CBC62977EBC60059E68D /* CountryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryButtonView.swift; sourceTree = "<group>"; };
@@ -355,8 +357,17 @@
 			isa = PBXGroup;
 			children = (
 				D83B1311297ACDFC0003101F /* MusicManager.swift */,
+				D8443233297D62C000EC2C04 /* Model */,
 			);
 			path = SoundLayer;
+			sourceTree = "<group>";
+		};
+		D8443233297D62C000EC2C04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8443231297D62A900EC2C04 /* ObserveTrackModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D8811CB3297C35D9007A39CC /* Fonts */ = {
@@ -683,6 +694,7 @@
 				D9ACAB7A296D67050000805F /* LoginView.swift in Sources */,
 				D873171D2978807D00AC8ECD /* MusicError.swift in Sources */,
 				D82E5C88297C7692008B9A8C /* EmptyStateView.swift in Sources */,
+				D8443232297D62A900EC2C04 /* ObserveTrackModel.swift in Sources */,
 				D933391129799B5A00BC720A /* DetailUserViewController.swift in Sources */,
 				D8337FD5296AB0A900F60521 /* SceneDelegate.swift in Sources */,
 				D9B29E64296F34E5003E8825 /* UIView+AddSubviews.swift in Sources */,

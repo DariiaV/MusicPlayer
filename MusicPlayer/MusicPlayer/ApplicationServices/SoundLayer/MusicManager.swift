@@ -8,14 +8,6 @@
 import Foundation
 import AVKit
 
-struct ObserveTrackModel {
-    let maximumValue: Float
-    let currentValue: Float
-    let startTime: String
-    let finishTime: String
-}
-
-
 final class MusicManager {
     
     static let shared = MusicManager()
@@ -70,18 +62,6 @@ final class MusicManager {
         player = AVPlayer(playerItem: playerItem)
         addObserver()
         playTrack()
-    }
-    
-    func addTrack(previewUrl: String?) {
-        player = nil
-        
-        guard let previewUrl,
-              let url = URL(string: previewUrl) else {
-            return
-        }
-        
-        let playerItem = AVPlayerItem(url: url)
-        player = AVPlayer(playerItem: playerItem)
     }
     
     func playTrack() {

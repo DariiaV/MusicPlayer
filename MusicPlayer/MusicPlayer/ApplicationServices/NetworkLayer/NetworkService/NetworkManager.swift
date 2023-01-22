@@ -6,18 +6,11 @@
 //
 
 import UIKit
-
-protocol SoundManagerDelegate {
-    func didUpdateDetailSuoundScreen(recipe: TrackModel)
-}
-
 class NetworkManager {
     
-     static let shared   = NetworkManager()
+    static let shared = NetworkManager()
     private let cache = NSCache<NSString, UIImage>()
     
-    private let baseURL = "https://itunes.apple.com/search?term=music"
-    var delegate: SoundManagerDelegate?
     private init() {}
     
     func getAllMusic(from country: Country, completed: @escaping (Result<AlbumResult, MusicError>) -> Void) {
@@ -26,7 +19,6 @@ class NetworkManager {
             completed(.failure(.invalidURL))
             return
         }
-        
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
@@ -117,9 +109,9 @@ class NetworkManager {
                   let response = response as? HTTPURLResponse, response.statusCode == 200,
                   let data = data,
                   let image = UIImage(data: data) else {
-                      completed(nil)
-                      return
-                  }
+                completed(nil)
+                return
+            }
             
             self.cache.setObject(image, forKey: cacheKey)
             completed(image)
