@@ -62,10 +62,9 @@ class ArtistScreenViewController: UIViewController {
     private func setupTitle(backgroundColor: UIColor) {
         title = nameArtist
         
-        
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(named: "mainColor")
+        appearance.backgroundColor = backgroundColor
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         navigationController?.navigationBar.standardAppearance = appearance
