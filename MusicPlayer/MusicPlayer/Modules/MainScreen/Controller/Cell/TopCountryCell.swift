@@ -27,10 +27,10 @@ class TopCountryCell: UITableViewCell {
     private let nameArtistLabel: UILabel = {
         let label = UILabel()
         label.text = "Artist"
-        label.textColor = .white
+        label.textColor = .cyan
         label.textAlignment = .left
         
-        label.font = .interRegular(size: 14)
+        label.font = .interBold(size: 14)
         return label
     }()
     
@@ -82,14 +82,15 @@ class TopCountryCell: UITableViewCell {
         imageTrack.image = nil
     }
     
-    func setup(nameArtist: String?, nameTrack: String?, minutesTrack: Int?, imageURL: String?,previewUrl:String?) {
-        nameArtistLabel.text = nameArtist
-        nameTrackLabel.text = nameTrack
+    func setup(config: TopCountryCellConfig) {
+        nameArtistLabel.text = config.nameArtist
+        nameTrackLabel.text = config.nameTrack
      
-        if let minutesTrack {
+        if let minutesTrack = config.minutesTrack {
             timeTrackLabel.text = String(format: "%.2f", Double(minutesTrack) / 60000)
         }
-        guard let imageURL else {
+        
+        guard let imageURL = config.imageURL else {
             return
         }
         

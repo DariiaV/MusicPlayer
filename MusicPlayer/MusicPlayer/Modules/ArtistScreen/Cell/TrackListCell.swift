@@ -22,7 +22,7 @@ class TrackListCell: UITableViewCell {
         label.textColor = .white
         label.textAlignment = .left
         label.numberOfLines = 2
-        label.font = UIFont(name: "Noteworthy", size: 17)
+        label.font = .interRegular(size: 17)
         return label
     }()
     

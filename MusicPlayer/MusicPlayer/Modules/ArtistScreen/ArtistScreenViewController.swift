@@ -36,7 +36,7 @@ class ArtistScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setupTitle(backgroundColor: .black)
+        setupTitle(backgroundColor: UIColor(named: "mainColor") ?? .black)
         tabBarController?.tabBar.isHidden = true
     }
     
@@ -48,7 +48,7 @@ class ArtistScreenViewController: UIViewController {
     }
     
     private func setupView() {
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(named: "mainColor")
         view.addSubviews([tableView])
         
         NSLayoutConstraint.activate([
@@ -65,7 +65,7 @@ class ArtistScreenViewController: UIViewController {
         
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = backgroundColor
+        appearance.backgroundColor = UIColor(named: "mainColor")
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         navigationController?.navigationBar.standardAppearance = appearance
@@ -104,6 +104,7 @@ extension ArtistScreenViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TrackListCell else { return UITableViewCell() }
         cell.setup(nameTrack: trackList[indexPath.row].trackName, index: indexPath.row)
         cell.delegate = self
+        cell.backgroundColor = UIColor(named: "mainColor")
         return cell
     }
 }

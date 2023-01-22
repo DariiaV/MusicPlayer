@@ -26,10 +26,10 @@ class OnboardingViewController: UIViewController {
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "We are a small boutique music venue in the heart of..."
-        label.font = .poppinsRegular(size: 16)
+        label.text = "We are a small boutique music venue in the heart of internet"
+        label.font = .poppinsRegular(size: 13)
         label.textAlignment = .center
-        label.numberOfLines = 2
+        label.numberOfLines = 3
         label.textColor = .white
         return label
     }()
