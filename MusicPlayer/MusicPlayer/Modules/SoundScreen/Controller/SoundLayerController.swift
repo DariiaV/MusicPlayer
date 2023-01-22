@@ -68,8 +68,6 @@ final class SoundLayerController: UIViewController {
         navigationController?.navigationBar.tintColor = .white
     }
     
-    // MARK: - Public Methods
-    
     private func setupTarget() {
         soundView.playButton.addTarget(self, action: #selector(playBut), for: .touchUpInside)
         soundView.musicSlider.addTarget(self, action: #selector(sliderBut), for: .touchUpInside)
@@ -77,8 +75,6 @@ final class SoundLayerController: UIViewController {
         soundView.leftButton.addTarget(self, action: #selector(leftBut), for: .touchUpInside)
         soundView.rightButton.addTarget(self, action: #selector(rightBut), for: .touchUpInside)
     }
-    
-    
     
     private func setupPlayer() {
         musicManager.observeTrack { [self] observeTrackModel, isNextTrack  in
@@ -104,10 +100,7 @@ final class SoundLayerController: UIViewController {
         }
     }
     
-    // MARK: - Private Methods
-    
-    @objc
-    private func playBut () {
+    @objc private func playBut () {
         if musicManager.isPlayed {
             soundView.playButton.setImage(UIImage(named: "play"), for: .normal)
             musicManager.pauseTrack()
@@ -117,13 +110,11 @@ final class SoundLayerController: UIViewController {
         }
     }
     
-    @objc
-    private func sliderBut () {
+    @objc private func sliderBut () {
         musicManager.changeTrackTime(value: Double(soundView.musicSlider.value))
     }
     
-    @objc
-    private func favouritesTapButton () {
+    @objc private func favouritesTapButton () {
         guard let data else {
             return
         }
@@ -137,18 +128,15 @@ final class SoundLayerController: UIViewController {
         changeFavorite(isFavorite: isFavorite)
     }
     
-    @objc
-    private func leftBut () {
+    @objc private func leftBut () {
         musicManager.previousTrack()
         getMusicData()
     }
     
-    @objc
-    private func rightBut () {
+    @objc private func rightBut () {
         musicManager.nextTrack()
         getMusicData()
     }
-    
     
     private func getMusicData() {
         if let model = musicManager.getModel() {

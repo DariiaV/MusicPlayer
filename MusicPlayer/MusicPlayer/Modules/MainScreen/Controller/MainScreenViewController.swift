@@ -78,6 +78,7 @@ class MainScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupViews()
         fetchAlbum(from: .usa)
         selectorCountriesView.delegate = self
@@ -197,11 +198,11 @@ extension MainScreenViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let album = countryTracks[indexPath.row]
-        cell.setup(nameArtist: album.artistName,
-                   nameTrack: album.trackName,
-                   minutesTrack: album.trackTimeMillis,
-                   imageURL: album.artworkUrl100,
-                   previewUrl: album.previewUrl)
+        let config = TopCountryCellConfig(nameArtist: album.artistName,
+                                          nameTrack: album.trackName,
+                                          minutesTrack: album.trackTimeMillis,
+                                          imageURL: album.artworkUrl100)
+        cell.setup(config: config)
         cell.index = indexPath.row
         cell.delegate = self
         return cell
@@ -222,9 +223,9 @@ extension MainScreenViewController: TopCountryCellDelegate {
         guard let index else {
             return
         }
+        
         musicManager.createTrackList(countryTracks)
         musicManager.playTrack(by: index)
-        
     }
 }
 
@@ -236,7 +237,6 @@ extension MainScreenViewController: SelectorCountriesViewDelegate {
         fetchAlbum(from: country)
     }
 }
-
 private extension CGFloat {
     static let leadingMargin: CGFloat = 10
     static let trailingMargin: CGFloat = -10

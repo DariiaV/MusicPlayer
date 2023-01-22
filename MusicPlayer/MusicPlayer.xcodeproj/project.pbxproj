@@ -30,6 +30,7 @@
 		D8337FE2296AB0AA00F60521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8337FE0296AB0AA00F60521 /* LaunchScreen.storyboard */; };
 		D83B1312297ACDFC0003101F /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83B1311297ACDFC0003101F /* MusicManager.swift */; };
 		D83B1314297B13B50003101F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83B1313297B13B50003101F /* StorageManager.swift */; };
+		D8443230297D385600EC2C04 /* TopCountryCellConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844322F297D385600EC2C04 /* TopCountryCellConfig.swift */; };
 		D864CBC32977D2550059E68D /* PopularAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */; };
 		D864CBC52977EB3D0059E68D /* SelectorCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC42977EB3D0059E68D /* SelectorCountriesView.swift */; };
 		D864CBC72977EBC60059E68D /* CountryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864CBC62977EBC60059E68D /* CountryButtonView.swift */; };
@@ -91,6 +92,7 @@
 		D8337FE3296AB0AA00F60521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D83B1311297ACDFC0003101F /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		D83B1313297B13B50003101F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		D844322F297D385600EC2C04 /* TopCountryCellConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCountryCellConfig.swift; sourceTree = "<group>"; };
 		D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAlbumsCell.swift; sourceTree = "<group>"; };
 		D864CBC42977EB3D0059E68D /* SelectorCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCountriesView.swift; sourceTree = "<group>"; };
 		D864CBC62977EBC60059E68D /* CountryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryButtonView.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				D864CBC22977D2550059E68D /* PopularAlbumsCell.swift */,
 				D864CBC8297811610059E68D /* TopCountryCell.swift */,
+				D844322F297D385600EC2C04 /* TopCountryCellConfig.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				D933390D2978981C00BC720A /* UserInfoViewController.swift in Sources */,
 				D8290147297B18120091802A /* TrackData+CoreDataClass.swift in Sources */,
 				D8281E8D2977086C006EF86F /* TreckModel.swift in Sources */,
+				D8443230297D385600EC2C04 /* TopCountryCellConfig.swift in Sources */,
 				D9ACAB85296D71BF0000805F /* DescriptionLabel.swift in Sources */,
 				D933390B2978961300BC720A /* UserInfoView.swift in Sources */,
 				D9B29E67296F3531003E8825 /* UIStackView+Ext.swift in Sources */,

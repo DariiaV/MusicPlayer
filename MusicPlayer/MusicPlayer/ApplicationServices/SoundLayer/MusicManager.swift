@@ -129,7 +129,6 @@ final class MusicManager {
         player?.seek(to: CMTime(seconds: value, preferredTimescale: 1000))
     }
     
-    
     func getModel() -> TrackModel? {
         if let index {
             return trackList[index]

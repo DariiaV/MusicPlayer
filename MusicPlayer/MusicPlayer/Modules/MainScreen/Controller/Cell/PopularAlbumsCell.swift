@@ -21,7 +21,7 @@ class PopularAlbumsCell: UICollectionViewCell {
     private let artistLabel: UILabel = {
         let label = UILabel()
         label.text = "Album name"
-        label.font = .interRegular(size: 12)
+        label.font = .interBold(size: 14)
         label.textAlignment = .left
         label.textColor = .white
         
