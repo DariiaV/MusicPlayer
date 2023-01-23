@@ -10,6 +10,8 @@ import UIKit
 final class DetailUserViewController: UIViewController {
 
     let titleLabel = TitleLabel(title: "You are don't register!")
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,9 @@ final class DetailUserViewController: UIViewController {
     private func setupHierarchy() {
         view.addSubview(titleLabel)
     }
-
+    
+    // MARK: - Setup Constrains
+    
     private func setupLayout() {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
